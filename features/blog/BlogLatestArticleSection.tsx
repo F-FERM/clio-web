@@ -1,0 +1,77 @@
+import { latestArticleContent } from "@/features/latest-article/latestArticle.constants";
+import Image from "next/image";
+
+const cardImages = [
+  "/images/blog/blog2.jpg",
+  "/images/blog/blog3.jpg",
+  "/images/blog/blog4.jpg",
+] as const;
+const tagColors = ["bg-[#f06464]", "bg-[#4d7cff]", "bg-[#6aa04f]"] as const;
+
+export function BlogLatestArticleSection() {
+  return (
+    <section className="w-full px-6 pb-14 lg:px-28 lg:pb-16 mt-20">
+      <div className="mx-auto w-full max-w-[1240px]">
+        <h2 className="text-4xl leading-none font-bold tracking-[-0.03em] text-[#8f1131]">
+          {latestArticleContent.heading}
+        </h2>
+
+        <div className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-3">
+          {latestArticleContent.cards.map((card, index) => (
+            <article
+              key={card.title}
+              className="group relative h-[270px] overflow-hidden rounded-[14px] cursor-pointer"
+            >
+              <Image
+                src={cardImages[index] ?? cardImages[0]}
+                alt={card.title}
+                fill
+                className="object-cover object-center"
+              />
+
+              {/* Default dark gradient */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/35 to-transparent transition-opacity duration-300 group-hover:opacity-60" />
+
+              {/* Hover overlay with Read More button */}
+              <div className="absolute inset-0 bg-[rgba(30,20,60,0.55)] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <button className="bg-[#d4d8dc]/70  text-[#1a1a2e] text-[15px] font-semibold px-9 py-3 rounded-full">
+                  Read More
+                </button>
+              </div>
+
+              {/* Bottom content: date + badge + title + desc + tags */}
+              <div className="absolute left-4 right-4 bottom-4">
+                {/* Date and badge row */}
+                <div className="flex items-center justify-between mb-1.5">
+                  <span className="flex items-center gap-1 text-[9px] font-medium text-white/90">
+                    <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                      <rect x="1" y="2" width="8" height="7" rx="1" stroke="rgba(255,255,255,0.9)" strokeWidth="1"/>
+                      <path d="M3 1v2M7 1v2M1 5h8" stroke="rgba(255,255,255,0.9)" strokeWidth="1"/>
+                    </svg>
+                    {card.date}
+                  </span>
+                  <span
+                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-semibold text-white ${tagColors[index] ?? tagColors[0]}`}
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />
+                    {card.tag}
+                  </span>
+                </div>
+
+                <h3 className="text-[15px] leading-tight font-semibold text-white">
+                  {card.title}
+                </h3>
+                <p className="mt-1 text-[12px] leading-[1.35] text-white/85">
+                  {card.description}
+                </p>
+                <p className="mt-1 text-[12px] font-medium text-white">
+                  Tags: {card.tag}
+                </p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

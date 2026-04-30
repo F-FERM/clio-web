@@ -1,0 +1,17 @@
+import { ArrowUpRight } from "lucide-react";
+
+type FaqContactButtonProps = {
+  label: string;
+};
+
+export function FaqContactButton({ label }: FaqContactButtonProps) {
+  return (
+    <button
+      type="button"
+      className="inline-flex items-center gap-3 rounded-full border border-[#1f2937] px-5 py-2.5 text-sm font-medium text-[#111318]"
+    >
+      <span>{label}</span>
+      <ArrowUpRight className="h-4 w-4" />
+    </button>
+  );
+}
