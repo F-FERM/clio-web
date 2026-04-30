@@ -20,7 +20,7 @@ export function SmartFleetPanel({ title, description }: SmartFleetPanelProps) {
       />
 
       {/* Overlay Card */}
-      <div className="absolute top-5 left-5 right-5 sm:right-auto sm:max-w-[360px] rounded-[20px] bg-white/75 p-4 sm:p-5 backdrop-blur-[2px] shadow-md transition-transform duration-300 hover:-translate-y-2">
+      <div className="absolute top-5 left-5 right-5  sm:max-w-[360px] rounded-[20px] bg-white/75 p-4 sm:p-5 backdrop-blur-[2px] shadow-md transition-transform duration-300 hover:-translate-y-2">
         
         <h3 className="text-base sm:text-lg font-semibold tracking-[-0.02em] text-[#8f1131]">
           {title}

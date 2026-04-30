@@ -57,26 +57,25 @@ export function WorkflowStepCard({
   return (
     <article
       className={`
-        relative overflow-hidden rounded-[22px] p-7 h-full
+        relative overflow-hidden rounded-[16px] sm:rounded-[22px]
+        p-4 sm:p-5 md:p-7 h-full
         ${cardVariantStyles[variant]}
       `}
     >
-      {(variant === "maroon" || variant === "yellow") && (
-        <TopoSVG stroke={variant === "maroon" ? "white" : "#9d1839"} />
-      )}
+      <TopoSVG stroke={variant === "maroon" ? "white" : "#1f2937"} />
 
       <p
-        className={`relative z-10 text-[36px] font-medium leading-none tracking-[-0.02em] ${numVariantStyles[variant]}`}
+        className={`relative z-10 text-[24px] sm:text-[30px] md:text-[36px] font-medium leading-none tracking-[-0.02em] ${numVariantStyles[variant]}`}
       >
         {id}
       </p>
       <h3
-        className={`relative z-10 mt-5 text-[18px] font-bold leading-[1.2] tracking-[-0.015em] ${titleVariantStyles[variant]}`}
+        className={`relative z-10 mt-3 sm:mt-4 md:mt-5 text-[14px] sm:text-[16px] md:text-[18px] font-bold leading-[1.2] tracking-[-0.015em] ${titleVariantStyles[variant]}`}
       >
         {title}
       </h3>
       <p
-        className={`relative z-10 mt-3 text-[13px] leading-[1.6] ${descVariantStyles[variant]}`}
+        className={`relative z-10 mt-2 md:mt-3 text-[11px] sm:text-[12px] md:text-[13px] leading-[1.6] ${descVariantStyles[variant]}`}
       >
         {description}
       </p>

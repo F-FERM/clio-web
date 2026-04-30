@@ -1,5 +1,5 @@
 export const shipManagementContent = {
-  heading: "END-TO-END SHIP MANAGEMENT & LOGISTICS SOLUTIONS",
+  heading: "END - TO - END SHIP MANAGEMENT & LOGISTICS SOLUTIONS",
   description:
     "Seamlessly manage your fleet, operations, and global logistics with precision and efficiency-anytime, anywhere.",
   sideCardTitle: "Smart Fleet Control",
