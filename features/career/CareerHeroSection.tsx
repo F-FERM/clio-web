@@ -38,13 +38,13 @@ const careerHighlights = [
 
 export function CareerHeroSection() {
   return (
-    <section className="w-full px-6 py-12 lg:px-20 lg:py-14">
-      <div className="mx-auto grid w-full max-w-[1240px] items-start gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+    <section className="w-full px-6 py-12 lg:px-20 lg:py-5">
+      <div className="mx-auto grid w-full  items-start gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative z-20 pt-1">
-          <h1 className="max-w-[500px] text-[66px] leading-[0.98] font-bold tracking-[-0.03em] text-[#45474d]">
+          <h1 className="max-w-[950px] text-[64px] leading-[1.28] font-bold tracking-[-0.03em] text-[#45474d]">
             Build Your Future in Maritime Excellence
           </h1>
-          <p className="mt-6 max-w-[470px] text-[14px] leading-normal text-[#3b3f45]">
+          <p className="mt-6 max-w-[390px] text-[14px] leading-normal text-[#3b3f45]">
             Join a team that&apos;s redefining global ship management. At Clio,
             we combine innovation, expertise, and opportunity to help you grow
             in a dynamic maritime environment.
@@ -57,7 +57,7 @@ export function CareerHeroSection() {
         <div className="relative z-10 min-h-[395px] lg:ml-6">
           <div className="absolute inset-0 overflow-hidden rounded-[18px]">
             <Image
-              src="/images/image.png"
+              src="/images/career/career.png"
               alt="Maritime careers"
               fill
               priority
@@ -65,7 +65,7 @@ export function CareerHeroSection() {
             />
           </div>
 
-          <div className="absolute left-[-190px] bottom-0 w-full max-w-[500px] rounded-[12px] bg-[#8f9397]/78 p-4 text-white backdrop-blur-[1.5px]">
+          <div className="absolute top-[200px] left-[-150px] bottom-0 w-full max-w-[350px] h-[300px] rounded-[12px] bg-[#8f9397]/78 p-4 text-white backdrop-blur-[1.5px]">
             <h2 className="text-[28px] leading-none font-semibold">
               WHY WORK WITH CLIO
             </h2>

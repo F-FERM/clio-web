@@ -4,9 +4,9 @@ export function FleetHeroSection() {
   return (
     <section className="w-full px-6 pt-10 lg:px-12 lg:pt-12">
       <div className="mx-auto w-full max-w-[1240px]">
-        <div className="relative h-[420px] overflow-hidden rounded-[18px]">
+        <div className="relative h-[520px] overflow-hidden rounded-[18px]">
           <Image
-            src="/images/home.jpg"
+            src="/images/fleet/Rectangle.png"
             alt="Modern fleet"
             fill
             priority
