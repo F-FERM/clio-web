@@ -27,7 +27,7 @@ export default function HeroSection() {
           </svg>
 
           {/* Image Section */}
-          <div className="relative h-[300px] sm:h-[420px] w-full rounded-[20px] sm:rounded-[30px] overflow-hidden">
+          <div className="relative h-[300px] w-[1050px] sm:h-[420px] rounded-[20px] sm:rounded-[30px] overflow-hidden">
             <Image
               src="/images/network/Union.png"
               alt="Ship"
@@ -92,8 +92,8 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT BOTTOM CARD */}
-          <div className="mt-4 sm:absolute sm:top-78 sm:bottom-6 sm:left-200 w-full sm:w-[406px] p-6 rounded-2xl sm:rounded-none shadow-md sm:shadow-none bg-white/80 sm:bg-transparent">
-            <p className="text-[12px] sm:text-sm text-gray-800 sm:text-gray-600">
+          <div className="sm:absolute sm:top-78 sm:bottom-6 sm:left-172 w-full sm:w-[406px] p-2 rounded-2xl sm:rounded-none shadow-md sm:shadow-none bg-white/80 sm:bg-transparent right-20">
+            <p className="text-sm sm:text-sm text-gray-800 sm:text-gray-600">
               Clio Ship Management operates across key global shipping routes,
               delivering seamless vessel management, logistics coordination, and
               technical support wherever your fleet operates.
