@@ -81,7 +81,7 @@ export default function MaritimeHero() {
         </h1>
       </section>
       {/* DESCRIPTION */}
-      <p className="mt-10 max-w-[1000px] text-sm leading-[1.65] text-[#464646] sm:text-[15px] md:text-base font-normal">
+      <p className="mt-10 max-w-[1000px] text-sm  text-[#464646] sm:text-[15px] md:text-base font-normal">
         {globalLeadersContent.description}
       </p>
     </>
