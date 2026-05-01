@@ -5,7 +5,8 @@ import { usePathname } from "next/navigation";
 
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-
+import Image from "next/image";
+import logo from "../../../public/images/logo/cliologo.png"
 type NavItem = {
   label: string;
   href: string;
@@ -36,10 +37,11 @@ export function VesselTopNav({
 
   return (
     <>
-      <header className="fixed top-4 left-4 right-4 sm:top-10 sm:left-12 sm:right-12 z-50 flex items-center justify-between h-16 sm:h-[73px] rounded-xl sm:rounded-[20px] bg-[#ACACAC66] px-4 sm:px-[17px] py-2 sm:py-[18px] gap-2 sm:gap-[10px] shadow-lg backdrop-blur-sm">
-        <p className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101114]">
+      <header className="fixed top-4 left-4 right-9 sm:top-10 sm:left-12 sm:right-12 z-50 flex items-center justify-between h-[100px] sm:h-[88px] rounded-xl sm:rounded-[20px] bg-[#ACACAC66] px-4 sm:px-[17px] py-5 sm:py-[30px] gap-2 sm:gap-[10px] shadow-lg backdrop-blur-sm">
+        {/* <p className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101114]">
           {brand}
-        </p>
+        </p> */}
+        <Image src={logo} alt="clio logo"    width={200} height={200} />
         
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 xl:flex xl:gap-[40px]">
@@ -50,7 +52,7 @@ export function VesselTopNav({
               className={`font-medium text-base leading-none tracking-normal transition-colors cursor-pointer ${
                 isActive(item.href)
                   ? "text-[#9b1033]"
-                  : "text-[#45474d] hover:text-[#101114]"
+                  : "text-white hover:text-[#101114]"
               }`}
             >
               {item.label}
