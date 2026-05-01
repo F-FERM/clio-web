@@ -24,10 +24,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-className={poppins.variable}
+      className={poppins.variable}
       style={{ colorScheme: "light" }}
     >
-      <body className={`${poppins.className} bg-white text-black min-h-screen flex flex-col`}>
+      <body
+        className={`${poppins.className} bg-white text-black min-h-screen flex flex-col`}
+      >
         <VesselTopNav
           brand="CLIO"
           navItems={[

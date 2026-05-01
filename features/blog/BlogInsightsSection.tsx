@@ -5,9 +5,8 @@ import Blog7 from "../../public/images/blog/Blog7.jpg";
 
 export function BlogInsightsSection() {
   return (
-    <section className="w-full px-4 pb-12 sm:px-6 sm:pb-16 lg:px-28 lg:pb-20 mt-10 sm:mt-16 lg:mt-20">
+    <section className="w-full px-4 pb-12 sm:px-6 sm:pb-16 lg:px-34 lg:pb-20 mt-10 sm:mt-16 lg:mt-20">
       <div className="mx-auto w-full max-w-[1240px]">
-
         {/* Row 1 */}
         <div className="grid items-center gap-6 sm:gap-4 md:grid-cols-[0.78fr_1.22fr]">
           <div>
@@ -50,7 +49,6 @@ export function BlogInsightsSection() {
             </p>
           </div>
         </div>
-
       </div>
     </section>
   );

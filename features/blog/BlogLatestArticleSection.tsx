@@ -10,7 +10,7 @@ const tagColors = ["bg-[#f06464]", "bg-[#4d7cff]", "bg-[#6aa04f]"] as const;
 
 export function BlogLatestArticleSection() {
   return (
-    <section className="w-full px-6 pb-14 lg:px-28 lg:pb-16 mt-20">
+    <section className="w-full px-6 pb-14 lg:px-34 lg:pb-16 mt-20">
       <div className="mx-auto w-full max-w-[1240px]">
         <h2 className="text-4xl leading-none font-bold tracking-[-0.03em] text-[#8f1131]">
           {latestArticleContent.heading}
@@ -45,8 +45,20 @@ export function BlogLatestArticleSection() {
                 <div className="flex items-center justify-between mb-1.5">
                   <span className="flex items-center gap-1 text-[9px] font-medium text-white/90">
                     <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
-                      <rect x="1" y="2" width="8" height="7" rx="1" stroke="rgba(255,255,255,0.9)" strokeWidth="1"/>
-                      <path d="M3 1v2M7 1v2M1 5h8" stroke="rgba(255,255,255,0.9)" strokeWidth="1"/>
+                      <rect
+                        x="1"
+                        y="2"
+                        width="8"
+                        height="7"
+                        rx="1"
+                        stroke="rgba(255,255,255,0.9)"
+                        strokeWidth="1"
+                      />
+                      <path
+                        d="M3 1v2M7 1v2M1 5h8"
+                        stroke="rgba(255,255,255,0.9)"
+                        strokeWidth="1"
+                      />
                     </svg>
                     {card.date}
                   </span>

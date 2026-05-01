@@ -36,7 +36,7 @@ export default function MaritimeHero() {
       </section>
       {/* DESCRIPTION */}
       {/* DESCRIPTION */}
-      <p className="mt-6 max-w-[1000px] text-sm leading-[1.65] text-[#464646] sm:text-[15px] md:text-base font-normal">
+      <p className="px-30 mt-6 max-w-[1200px] text-sm leading-[1.65] text-[#464646] sm:text-[15px] md:text-sm font-normal">
         {globalLeadersContent.description}
       </p>
     </>

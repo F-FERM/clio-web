@@ -37,59 +37,59 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/10 sm:bg-transparent" />
 
             {/* Title - On Top of Image */}
-            <h1 className="absolute top-4 left-4 sm:top-[-5] sm:left-10 text-3xl sm:text-5xl lg:text-[52px] font-bold text-white sm:text-black z-10 whitespace-normal sm:whitespace-nowrap">
+            <h1 className="absolute top-4 left-4 sm:top-[-5] sm:left-10 text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#464646] sm:text-black z-10 whitespace-normal sm:whitespace-nowrap">
               Global Maritime <br className="sm:hidden" />
-              Network
+              Net<span className={styles.outline}>work</span>
             </h1>
           </div>
 
           {/* LEFT CARD */}
-         {/* LEFT CARD */}
-{/* LEFT CARD */}
-<div
-  className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 w-[calc(100%-2rem)] sm:w-[480px] z-20
+          {/* LEFT CARD */}
+          {/* LEFT CARD */}
+          <div
+            className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 w-[calc(100%-2rem)] sm:w-[480px] z-20
             bg-white/20 backdrop-blur-md border border-white/25
             rounded-2xl shadow-xl text-white
             px-4 sm:px-6 py-3 sm:py-2 pr-4 sm:pr-[205px]"
->
-  <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-2 sm:mb-3">
-    Our Global Presence
-  </h3>
-  <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed mb-3 sm:mb-4 max-w-full sm:max-w-[280px]">
-    From major ports to strategic maritime hubs, our network ensures
-    uninterrupted operations and reliable support across international
-    waters.
-  </p>
+          >
+            <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-2 sm:mb-3">
+              Our Global Presence
+            </h3>
+            <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed mb-3 sm:mb-4 max-w-full sm:max-w-[280px]">
+              From major ports to strategic maritime hubs, our network ensures
+              uninterrupted operations and reliable support across international
+              waters.
+            </p>
 
-  <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[10px] sm:text-xs font-medium text-white/90">
-    {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
-      (r) => (
-        <span key={r} className="flex items-center gap-1.5">
-          <span className="text-sm leading-none text-white/60">
-            •
-          </span>
-          {r}
-        </span>
-      ),
-    )}
-  </div>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[10px] sm:text-xs font-medium text-white/90">
+              {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
+                (r) => (
+                  <span key={r} className="flex items-center gap-1.5">
+                    <span className="text-sm leading-none text-white/60">
+                      •
+                    </span>
+                    {r}
+                  </span>
+                ),
+              )}
+            </div>
 
-  {/* Inner ship card - Hidden on mobile for space */}
-  <div
-    className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-1.5
+            {/* Inner ship card - Hidden on mobile for space */}
+            <div
+              className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-1.5
               w-[185px] h-[150px] bg-white/10 
               border border-white/25 rounded-2xl p-2 shadow-lg overflow-hidden"
-  >
-    <div className="relative w-full h-full">
-      <Image
-        src="/images/network/Rectangle.png"
-        alt="Ship at sea"
-        fill
-        className="rounded-xl object-cover"
-      />
-    </div>
-  </div>
-</div>
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src="/images/network/Rectangle.png"
+                  alt="Ship at sea"
+                  fill
+                  className="rounded-xl object-cover"
+                />
+              </div>
+            </div>
+          </div>
 
           {/* RIGHT BOTTOM CARD */}
           <div className="mt-4 sm:absolute sm:top-78 sm:bottom-6 sm:left-200 w-full sm:w-[406px] p-6 rounded-2xl sm:rounded-none shadow-md sm:shadow-none bg-white/80 sm:bg-transparent">

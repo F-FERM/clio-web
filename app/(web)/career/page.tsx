@@ -4,7 +4,7 @@ import { OpenPositionsSection } from "@/features/career/OpenPositionsSection";
 
 const page = () => {
   return (
-    <div className="mt-32 space-y-12 lg:space-y-60">
+    <div className="mt-32 space-y-6 lg:space-y-40">
       <CareerHeroSection />
       <CareerWhoWeAreBanner />
       <OpenPositionsSection />

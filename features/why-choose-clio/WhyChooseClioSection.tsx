@@ -8,9 +8,8 @@ export function WhyChooseClioSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full px-6 py-10 lg:px-28 lg:py-16">
+    <section className="w-full px-6 py-10 lg:px-34 lg:py-16">
       <div className="mx-auto grid w-full max-w-[1240px] gap-8 lg:grid-cols-2 lg:gap-12">
-        
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[-0.03em] text-[#901027]">
@@ -34,9 +33,7 @@ export function WhyChooseClioSection() {
             return (
               <div
                 key={index}
-                onClick={() =>
-                  setActiveIndex(isActive ? null : index)
-                }
+                onClick={() => setActiveIndex(isActive ? null : index)}
                 className="group relative cursor-pointer overflow-hidden rounded-[14px] border border-[#c8ced6] px-4 py-4 sm:px-5 transition-all duration-300 hover:bg-white hover:shadow-md"
               >
                 {/* Top Row */}
@@ -70,7 +67,6 @@ export function WhyChooseClioSection() {
             );
           })}
         </div>
-
       </div>
     </section>
   );

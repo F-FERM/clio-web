@@ -1,8 +1,6 @@
 import { networkContent } from "@/features/network/network.constant";
 import MaritimeNetwork from "@/features/network/networkHeroSection";
 import { SmartGlobalOperations } from "@/features/network/SmartGlobalOperations";
-import { StrategicPortCoverage } from "@/features/network/StrategicPortCoverage";
-import { TechnologyDrivenConnectivity } from "@/features/network/TechnologyDrivenConnectivity";
 import { PurposeTile } from "@/features/who-we-are/components/PurposeTile";
 
 const page = () => {

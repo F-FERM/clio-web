@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import logo from "../../../public/images/logo/cliologo.png"
+import logo from "../../../public/images/logo/cliologo.png";
 type NavItem = {
   label: string;
   href: string;
@@ -41,17 +41,17 @@ export function VesselTopNav({
         {/* <p className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101114]">
           {brand}
         </p> */}
-        <Image src={logo} alt="clio logo"    width={200} height={200} />
-        
+        <Image src={logo} alt="clio logo" width={200} height={200} />
+
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 xl:flex xl:gap-[40px]">
           {navItems.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className={`font-medium text-base leading-none tracking-normal transition-colors cursor-pointer ${
+              className={`font-medium text-xs leading-none tracking-normal transition-colors cursor-pointer ${
                 isActive(item.href)
-                  ? "text-[#9b1033]"
+                  ? "text-[#9b1033] font-semibold"
                   : "text-white hover:text-[#101114]"
               }`}
             >
@@ -67,7 +67,7 @@ export function VesselTopNav({
           >
             {contactLabel}
           </Link>
-          
+
           {/* Mobile Menu Toggle */}
           <button
             type="button"

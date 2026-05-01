@@ -14,7 +14,7 @@ export default function MaritimeHero() {
             width={990}
             height={300}
             priority
-            className="object-cover object-center w-full h-full"
+            // className="object-cover object-center w-full h-full"
           />
           {/* Heading - Top Left */}
           <div className="absolute top-0  left-6 lg:left-12 z-10 mt-[-0.05rem] pl-2 leading-[1.1]">
@@ -23,7 +23,7 @@ export default function MaritimeHero() {
             </h1>
           </div>
           {/* Description Card - Bottom Right */}
-          <div className="absolute -bottom-8 right-10 z-10 max-w-[420px] bg-white rounded-[12px] p-4  shadow-lg">
+          <div className="absolute -bottom-1 right-[-50] z-10 max-w-[480px]  px-4 ">
             <p className="text-sm leading-relaxed text-gray-700">
               Stay updated with the latest in ship management, global logistics,
               and maritime innovation—curated by Clio experts.

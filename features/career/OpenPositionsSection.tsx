@@ -20,7 +20,7 @@ const positions = [
 
 export function OpenPositionsSection() {
   return (
-    <section className="w-full px-6 pb-16 lg:px-28 lg:pb-20 mt-20">
+    <section className="w-full px-6  lg:px-28 lg:pb-20 ">
       <div className="mx-auto w-full max-w-[1240px]">
         <h2 className="text-center text-4xl leading-none font-bold tracking-[-0.03em] text-[#8f1131]">
           OPEN POSITIONS
