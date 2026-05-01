@@ -26,8 +26,8 @@ export function ServiceCard({
   hoverText,
 }: ServiceCardProps) {
   return (
-    <article className="">
-      <div className="group relative h-[210px] overflow-hidden rounded-[20px]">
+    <article className="w-full sm:w-[467px] ">
+      <div className="group relative h-[288px] w-full overflow-hidden rounded-[20px]">
         <Image
           src={image}
           alt={title}
@@ -54,14 +54,14 @@ export function ServiceCard({
 
           {/* Text appears below badge on hover */}
           <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:max-h-20 group-hover:mt-2">
-            <span className="inline-block rounded-lg bg-black/75 px-3 py-1.5 text-xs text-white backdrop-blur-sm">
+            <span className="inline-block rounded-lg  px-3 py-1.5 text-[18px] text-white ">
               {hoverText}
             </span>
           </div>
         </div>
       </div>
 
-      <h3 className="mt-2 text-base leading-[1.2] font-semibold tracking-[-0.01em] text-[#8f1131]">
+      <h3 className="mt-3 text-lg  font-medium leading-[1.2] tracking-[-0.01em] text-[#8f1131]">
         {title}
       </h3>
     </article>

@@ -1,11 +1,10 @@
 import { CareerHeroSection } from "@/features/career/CareerHeroSection";
 import { CareerWhoWeAreBanner } from "@/features/career/CareerWhoWeAreBanner";
 import { OpenPositionsSection } from "@/features/career/OpenPositionsSection";
-import React from "react";
 
 const page = () => {
   return (
-    <div className="mt-32">
+    <div className="mt-32 space-y-12 lg:space-y-60">
       <CareerHeroSection />
       <CareerWhoWeAreBanner />
       <OpenPositionsSection />

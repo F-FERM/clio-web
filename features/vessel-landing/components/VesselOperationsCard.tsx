@@ -4,7 +4,7 @@ import shipMini from "../../../public/images/home/HeroVessel.jpg";
 
 export function VesselOperationsCard() {
   return (
-    <aside className="w-full sm:max-w-[320px] lg:w-[280px] rounded-xl lg:rounded-2xl bg-white/10 p-4 lg:p-4 text-white backdrop-blur-sm border border-white/20 shadow-xl">
+    <aside className="w-full sm:max-w-[320px] lg:w-[341px] h-[350px] rounded-xl px-9 lg:rounded-2xl bg-white/10 p-4 lg:p-4 space-y-4 text-white backdrop-blur-md border border-white/20 shadow-xl">
       <h3 className="text-[17px] sm:text-[19px] lg:text-[22px] font-semibold">
         Vessel Operations
       </h3>
@@ -25,7 +25,7 @@ export function VesselOperationsCard() {
       </ul>
 
       {/* Bottom image */}
-      <div className="mt-2.5 lg:mt-4 relative h-[60px] lg:h-[80px] w-full overflow-hidden rounded-lg lg:rounded-xl">
+      <div className="mt-2.5 lg:mt-4 relative h-[100px] lg:h-[150px] w-full overflow-hidden rounded-lg lg:rounded-xl">
         <Image
           src={shipMini}
           alt="Vessel overview"

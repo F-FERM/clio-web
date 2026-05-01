@@ -1,4 +1,5 @@
 import { WhatWeDoCta } from "@/features/what-we-do/components/WhatWeDoCta";
+import { GetStartedButton } from "../transport-maritime/components/GetStartedButton";
 
 const positions = [
   {
@@ -38,7 +39,7 @@ export function OpenPositionsSection() {
                 {position.description}
               </p>
               <div className="mt-6">
-                <WhatWeDoCta label="Apply Now" />
+                <GetStartedButton label="Apply Now" />
               </div>
             </article>
           ))}

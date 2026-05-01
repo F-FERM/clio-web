@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { FooterColumn } from "@/features/footer-dark/components/FooterColumn";
 import { FooterSocials } from "@/features/footer-dark/components/FooterSocials";
 import { footerDarkContent } from "@/features/footer-dark/footerDark.constants";
@@ -33,24 +34,26 @@ export function FooterDarkSection() {
             <p className="max-w-[620px] text-2xl leading-[1.12] font-semibold tracking-[-0.02em] text-white">
               {footerDarkContent.cta}
             </p>
-            <button
-              type="button"
-              className="h-[48px] rounded-xl bg-[#f1df3f] px-12 text-[16px] font-semibold text-[#181a1f]"
-            >
-              {footerDarkContent.ctaButton}
-            </button>
+            <Link href="/contact-us">
+              <button
+                type="button"
+                className="h-[48px] rounded-xl bg-[#f1df3f] px-12 text-[16px] font-semibold text-[#181a1f] cursor-pointer hover:bg-[#f3e45c] transition-colors"
+              >
+                {footerDarkContent.ctaButton}
+              </button>
+            </Link>
           </div>
 
           <div className="mt-10 border-t border-white/28 pt-9">
             <div className="grid gap-6 text-base leading-[1.45] text-white/95 lg:grid-cols-[1.2fr_0.8fr_1fr_auto]">
               <p className="max-w-[660px]">{footerDarkContent.address}</p>
               <div>
-                <p>{footerDarkContent.email}</p>
-                <p>{footerDarkContent.phone}</p>
+                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.email}</p>
+                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.phone}</p>
               </div>
               <div>
-                <p>{footerDarkContent.policies[0]}</p>
-                <p>{footerDarkContent.policies[1]}</p>
+                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.policies[0]}</p>
+                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.policies[1]}</p>
               </div>
               <div className="flex items-end justify-start lg:justify-end">
                 <FooterSocials />

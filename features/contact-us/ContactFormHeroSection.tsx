@@ -1,20 +1,25 @@
 import { Clock3, Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
+import ContactUs from "../../public/images/contact/ContactUs.jpg";
 
 const contactCards = [
   { icon: Mail, title: "Email", value: "info@clioship.com" },
   { icon: MapPin, title: "Office Location", value: "Dubai, UAE" },
   { icon: Phone, title: "Phone Number", value: "00971 4 3702800" },
-  { icon: Clock3, title: "Working Hours", value: "Monday - Saturday | 9:00 AM - 6:00 PM" },
+  {
+    icon: Clock3,
+    title: "Working Hours",
+    value: "Monday - Saturday | 9:00 AM - 6:00 PM",
+  },
 ] as const;
 
 export function ContactFormHeroSection() {
   return (
-    <section className="w-full px-6 pt-10 lg:px-12 lg:pt-12">
+    <section className="w-full px-6 pt-10 lg:px-20 lg:pt-12">
       <div className="mx-auto w-full max-w-[1240px]">
         <div className="relative overflow-hidden rounded-[14px]">
           <Image
-            src="/images/home.jpg"
+            src={ContactUs}
             alt="Contact maritime operations"
             fill
             priority
@@ -29,9 +34,10 @@ export function ContactFormHeroSection() {
                   Let&apos;s Navigate Success Together
                 </h2>
                 <p className="mt-2 text-[12px] leading-normal text-white/90">
-                  Whether you need vessel management, technical support, or global
-                  maritime solutions, the Clio team is here to help. Reach out and
-                  let&apos;s discuss how we can support your operations.
+                  Whether you need vessel management, technical support, or
+                  global maritime solutions, the Clio team is here to help.
+                  Reach out and let&apos;s discuss how we can support your
+                  operations.
                 </p>
               </div>
 
@@ -41,15 +47,15 @@ export function ContactFormHeroSection() {
                   return (
                     <article
                       key={card.title}
-                      className="rounded-[10px] bg-white px-4 py-3"
+                      className="rounded-[10px] bg-white/80 p-5"
                     >
                       <div className="flex items-center gap-2">
-                        <Icon className="h-4 w-4 text-[#9a1131]" />
+                        <Icon className="h-8 w-8 text-[#9a1131]" />
                         <h3 className="text-[27px] leading-none font-semibold text-[#20242c]">
                           {card.title}
                         </h3>
                       </div>
-                      <p className="mt-2 text-[10px] leading-normal text-[#555b64]">
+                      <p className="mt-2 text-[12px] leading-normal text-[#555b64]">
                         {card.value}
                       </p>
                     </article>
@@ -64,11 +70,13 @@ export function ContactFormHeroSection() {
               </h3>
               <div className="mt-3 space-y-2">
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">Name</span>
+                  <span className="text-[12px] font-medium text-white">
+                    Name
+                  </span>
                   <input
                     type="text"
                     placeholder="Your Name..."
-                    className="mt-1 h-9 w-full rounded-[6px] bg-white px-3 text-[12px] text-[#222] outline-none"
+                    className="mt-1 h-9 w-full rounded-[6px] bg-white/80 px-3 text-[12px] text-[#222] outline-none"
                   />
                 </label>
                 <label className="block">
@@ -78,15 +86,17 @@ export function ContactFormHeroSection() {
                   <input
                     type="text"
                     placeholder="Company Name"
-                    className="mt-1 h-9 w-full rounded-[6px] bg-white px-3 text-[12px] text-[#222] outline-none"
+                    className="mt-1 h-9 w-full rounded-[6px] bg-white/80 px-3 text-[12px] text-[#222] outline-none"
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">Email</span>
+                  <span className="text-[12px] font-medium text-white">
+                    Email
+                  </span>
                   <input
                     type="email"
                     placeholder="example@gmail.com"
-                    className="mt-1 h-9 w-full rounded-[6px] bg-white px-3 text-[12px] text-[#222] outline-none"
+                    className="mt-1 h-9 w-full rounded-[6px] bg-white/80 px-3 text-[12px] text-[#222] outline-none"
                   />
                 </label>
                 <label className="block">
@@ -96,14 +106,16 @@ export function ContactFormHeroSection() {
                   <input
                     type="text"
                     placeholder="Title..."
-                    className="mt-1 h-9 w-full rounded-[6px] bg-white px-3 text-[12px] text-[#222] outline-none"
+                    className="mt-1 h-9 w-full rounded-[6px] bg-white/80 px-3 text-[12px] text-[#222] outline-none"
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">Message</span>
+                  <span className="text-[12px] font-medium text-white">
+                    Message
+                  </span>
                   <textarea
                     placeholder="Type Here..."
-                    className="mt-1 h-[70px] w-full rounded-[6px] bg-white px-3 py-2 text-[12px] text-[#222] outline-none"
+                    className="mt-1 h-[70px] w-full rounded-[6px] bg-white/80 px-3 py-2 text-[12px] text-[#222] outline-none"
                   />
                 </label>
               </div>

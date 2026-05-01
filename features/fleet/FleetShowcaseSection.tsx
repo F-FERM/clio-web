@@ -1,11 +1,6 @@
 import Image from "next/image";
-
-const fleetCards = [
-  { name: "Gas Trust", tag: "High Capacity", image: "/images/homeo.jpg" },
-  { name: "Gas Diamond", tag: "Heavy Load", image: "/images/home.jpg" },
-  { name: "Ocean Carrier", tag: "Fast Transit", image: "/images/image.png" },
-  { name: "Blue Horizon", tag: "Offshore Ready", image: "/images/homeo.jpg" },
-] as const;
+import { ServiceCard } from "../our-service/components/ServiceCard";
+import { ourFleetContent } from "./fleet.constants";
 
 export function FleetShowcaseSection() {
   return (
@@ -21,34 +16,16 @@ export function FleetShowcaseSection() {
         </p>
 
         <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {fleetCards.map((card, index) => (
-            <article key={card.name}>
-              <div className="relative h-[250px] overflow-hidden rounded-[18px]">
-                <Image
-                  src={card.image}
-                  alt={card.name}
-                  fill
-                  className="object-cover object-center"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/38 via-transparent to-transparent" />
-                <span
-                  className={`absolute left-3 bottom-3 rounded-full px-3 py-1 text-[10px] font-semibold text-white ${
-                    index === 0
-                      ? "bg-[#d78b1f]"
-                      : index === 1
-                        ? "bg-[#9f2134]"
-                        : index === 2
-                          ? "bg-[#d1b33b]"
-                          : "bg-[#3d7c32]"
-                  }`}
-                >
-                  {card.tag}
-                </span>
-              </div>
-              <h3 className="mt-3 text-[34px] leading-none font-semibold text-[#8f1131]">
-                {card.name}
-              </h3>
-            </article>
+          {ourFleetContent.cards?.map((card, index) => (
+            <ServiceCard
+              key={card.title}
+              title={card.title}
+              tag={card.tag}
+              image={card.image}
+              imagePosition={card.imagePosition}
+              tagColor={card.tagColor}
+              hoverText={card.hoverText}
+            />
           ))}
         </div>
       </div>
