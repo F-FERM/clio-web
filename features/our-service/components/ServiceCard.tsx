@@ -26,7 +26,7 @@ export function ServiceCard({
   hoverText,
 }: ServiceCardProps) {
   return (
-    <article className="w-full max-w-[300px]">
+    <article className="w-full ">
       <div className="group relative h-[280px] w-full overflow-hidden rounded-[24px] shadow-lg transition-all duration-300 hover:shadow-xl">
         <Image
           src={image}

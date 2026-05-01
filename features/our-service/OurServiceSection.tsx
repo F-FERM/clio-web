@@ -10,7 +10,7 @@ export function OurServiceSection() {
       </h1>
 
       {/* Cards */}
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10 pt-9 pb-7">
+      <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-5 pt-9 pb-7 px-15">
         {ourServiceContent.cards.map((card) => (
           <ServiceCard
             key={card.title}
