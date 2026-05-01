@@ -3,7 +3,7 @@ import { WhoWeAreHero } from "@/features/who-we-are/components/WhoWeAreHero";
 import { whoWeAreContent } from "@/features/who-we-are/whoWeAre.constants";
 export function WhoWeAreSection() {
   return (
-    <section className="w-full px-4 py-10 sm:px-6 lg:px-10 lg:py-14">
+    <section className="w-full px-6 py-10 lg:px-28 lg:py-14">
       <div className="mx-auto w-full max-w-[1240px]">
         <WhoWeAreHero
           title={whoWeAreContent.title}

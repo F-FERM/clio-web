@@ -3,6 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
+
 type NavItem = {
   label: string;
   href: string;
@@ -22,6 +25,7 @@ export function VesselTopNav({
   contactHref,
 }: VesselTopNavProps) {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const isActive = (href: string) => {
     if (href === "/") {
@@ -31,31 +35,75 @@ export function VesselTopNav({
   };
 
   return (
-    <header className="fixed top-[42px] left-[48px] right-[48px] z-50 flex items-center justify-between h-[73px] rounded-[20px] bg-[#c8d9e2]/80 px-[17px] py-[18px] gap-[10px]">
-      <p className="text-5xl font-bold tracking-tight text-[#101114]">
-        {brand}
-      </p>
-      <nav className="hidden items-center gap-[40px] xl:flex">
-        {navItems.map((item) => (
+    <>
+      <header className="fixed top-4 left-4 right-4 sm:top-10 sm:left-12 sm:right-12 z-50 flex items-center justify-between h-16 sm:h-[73px] rounded-xl sm:rounded-[20px] bg-[#ACACAC66] px-4 sm:px-[17px] py-2 sm:py-[18px] gap-2 sm:gap-[10px] shadow-lg backdrop-blur-sm">
+        <p className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101114]">
+          {brand}
+        </p>
+        
+        {/* Desktop Nav */}
+        <nav className="hidden items-center gap-6 xl:flex xl:gap-[40px]">
+          {navItems.map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className={`font-medium text-base leading-none tracking-normal transition-colors cursor-pointer ${
+                isActive(item.href)
+                  ? "text-[#9b1033]"
+                  : "text-[#45474d] hover:text-[#101114]"
+              }`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <div className="flex items-center gap-3">
           <Link
-            key={item.label}
-            href={item.href}
-            className={`font-medium text-[16px] leading-none tracking-normal text-right transition-colors ${
-              isActive(item.href)
-                ? "text-[#9b1033]"
-                : "text-white/80 hover:text-white"
-            }`}
+            href={contactHref}
+            className="hidden sm:block rounded-xl cursor-pointer bg-[#f1df3f] px-8 py-3.5 text-lg font-semibold text-[#111217] transition-transform hover:scale-105"
           >
-            {item.label}
+            {contactLabel}
           </Link>
-        ))}
-      </nav>
-      <Link
-        href={contactHref}
-        className="rounded-xl bg-[#f1df3f] px-8 py-4 text-[18px] font-semibold text-[#111217]"
-      >
-        {contactLabel}
-      </Link>
-    </header>
+          
+          {/* Mobile Menu Toggle */}
+          <button
+            type="button"
+            className="xl:hidden p-2 text-[#101114] cursor-pointer"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-[#c8d9e2] pt-28 px-8 xl:hidden overflow-y-auto">
+          <nav className="flex flex-col gap-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                className={`text-2xl font-bold tracking-tight cursor-pointer ${
+                  isActive(item.href) ? "text-[#9b1033]" : "text-[#101114]"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+            <Link
+              href={contactHref}
+              className="mt-4 rounded-xl cursor-pointer bg-[#f1df3f] px-8 py-4 text-center text-xl font-bold text-[#111217]"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {contactLabel}
+            </Link>
+          </nav>
+        </div>
+      )}
+    </>
   );
 }

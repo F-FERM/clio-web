@@ -5,7 +5,7 @@ import { WhyChooseClioSection } from "@/features/why-choose-clio/WhyChooseClioSe
 
 const page = () => {
   return (
-    <div className="mt-30">
+    <div className="mt-20 lg:mt-30">
       <main style={{ padding: "5px", maxWidth: "1251px", margin: "0 auto" }}>
         <MaritimeHero />
       </main>

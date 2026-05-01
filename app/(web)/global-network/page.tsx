@@ -11,7 +11,7 @@ const page = () => {
       <MaritimeNetwork />
       <SmartGlobalOperations />
 
-      <section className="w-full px-6 py-12 lg:px-36 lg:py-16">
+      <section className="w-full px-6 py-12 lg:px-28 lg:py-16">
         <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
           <PurposeTile
             title={networkContent.missionTitle}

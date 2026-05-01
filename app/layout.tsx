@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import { VesselTopNav } from "@/features/vessel-landing/components/VesselTopNav";
 import { FooterDarkSection } from "@/features/footer-dark/FooterDarkSection";
 import "./globals.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
   display: "swap",
 });
@@ -27,7 +27,7 @@ export default function RootLayout({
 className={poppins.variable}
       style={{ colorScheme: "light" }}
     >
-      <body className="bg-white text-black min-h-screen flex flex-col">
+      <body className={`${poppins.className} bg-white text-black min-h-screen flex flex-col`}>
         <VesselTopNav
           brand="CLIO"
           navItems={[

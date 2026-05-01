@@ -4,8 +4,8 @@ import styles from "../global-leaders/marine.module.css";
 
 export default function HeroSection() {
   return (
-    <div className="py-10 px-6">
-      <div className="max-w-5xl mx-auto">
+    <div className=" sm:pt-32 lg:pt-10 px-6 lg:px-20">
+      <div className="w-full max-w-[1240px] mx-auto">
         {/* Container */}
         <div className="relative">
           {/* SVG Wave Clip */}
@@ -27,75 +27,73 @@ export default function HeroSection() {
           </svg>
 
           {/* Image Section */}
-          <div
-            className="relative h-[420px] w-full rounded-[30px] overflow-hidden"
-            // style={{ clipPath: "url(#waveClip)" }}
-          >
+          <div className="relative h-[300px] sm:h-[420px] w-full rounded-[20px] sm:rounded-[30px] overflow-hidden">
             <Image
-              src={"images/network/Union.png"}
+              src="/images/network/Union.png"
               alt="Ship"
               fill
               className="object-cover"
             />
-
-            {/* LEFT GRADIENT FADE */}
-            <div className="absolute inset-0 " />
+            <div className="absolute inset-0 bg-black/10 sm:bg-transparent" />
 
             {/* Title - On Top of Image */}
-            <h1 className="absolute top-[-12] left-20 text-[52px] font-bold text-black z-10">
-              Global Maritime Net<span className={styles.outline}>work</span>
+            <h1 className="absolute top-4 left-4 sm:top-[-5] sm:left-10 text-3xl sm:text-5xl lg:text-[52px] font-bold text-white sm:text-black z-10 whitespace-normal sm:whitespace-nowrap">
+              Global Maritime <br className="sm:hidden" />
+              Network
             </h1>
           </div>
 
           {/* LEFT CARD */}
-          <div
-            className="absolute top-1/2 left-8 -translate-y-1/2 w-[480px] z-20
-                      bg-white/20 backdrop-blur-md border border-white/25
-                      rounded-2xl shadow-xl text-white
-                      pr-[205px] pl-6 py-2"
-          >
-            <h3 className="text-sm font-extrabold uppercase tracking-widest mb-3">
-              Our Global Presence
-            </h3>
-            <p className="text-xs text-white/85 leading-relaxed mb-4 max-w-[240px]">
-              From major ports to strategic maritime hubs, our network ensures
-              uninterrupted operations and reliable support across international
-              waters.
-            </p>
+         {/* LEFT CARD */}
+{/* LEFT CARD */}
+<div
+  className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 w-[calc(100%-2rem)] sm:w-[480px] z-20
+            bg-white/20 backdrop-blur-md border border-white/25
+            rounded-2xl shadow-xl text-white
+            px-4 sm:px-6 py-3 sm:py-2 pr-4 sm:pr-[205px]"
+>
+  <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-2 sm:mb-3">
+    Our Global Presence
+  </h3>
+  <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed mb-3 sm:mb-4 max-w-full sm:max-w-[280px]">
+    From major ports to strategic maritime hubs, our network ensures
+    uninterrupted operations and reliable support across international
+    waters.
+  </p>
 
-            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-xs font-medium text-white/90">
-              {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
-                (r) => (
-                  <span key={r} className="flex items-center gap-1.5">
-                    <span className="text-base leading-none text-white/60">
-                      •
-                    </span>
-                    {r}
-                  </span>
-                ),
-              )}
-            </div>
+  <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[10px] sm:text-xs font-medium text-white/90">
+    {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
+      (r) => (
+        <span key={r} className="flex items-center gap-1.5">
+          <span className="text-sm leading-none text-white/60">
+            •
+          </span>
+          {r}
+        </span>
+      ),
+    )}
+  </div>
 
-            {/* Inner ship card */}
-            <div
-              className="absolute top-1/2 -translate-y-1/2 right-1.5
-                        w-[185px] h-[150px] bg-white/10 
-                        border border-white/25 rounded-2xl p-2 shadow-lg"
-            >
-              <Image
-                src="/images/network/Rectangle.png"
-                alt="Ship at sea"
-                fill
-                className="rounded-xl object-cover"
-              />
-            </div>
-          </div>
-
-          {/* FLOATING IMAGE CARD */}
+  {/* Inner ship card - Hidden on mobile for space */}
+  <div
+    className="hidden sm:block absolute top-1/2 -translate-y-1/2 right-1.5
+              w-[185px] h-[150px] bg-white/10 
+              border border-white/25 rounded-2xl p-2 shadow-lg overflow-hidden"
+  >
+    <div className="relative w-full h-full">
+      <Image
+        src="/images/network/Rectangle.png"
+        alt="Ship at sea"
+        fill
+        className="rounded-xl object-cover"
+      />
+    </div>
+  </div>
+</div>
 
           {/* RIGHT BOTTOM CARD */}
-          <div className="absolute top-78 bottom-6 left-167 w-[406px] p-6 ">
-            <p className="text-sm text-gray-600">
+          <div className="mt-4 sm:absolute sm:top-78 sm:bottom-6 sm:left-200 w-full sm:w-[406px] p-6 rounded-2xl sm:rounded-none shadow-md sm:shadow-none bg-white/80 sm:bg-transparent">
+            <p className="text-[12px] sm:text-sm text-gray-800 sm:text-gray-600">
               Clio Ship Management operates across key global shipping routes,
               delivering seamless vessel management, logistics coordination, and
               technical support wherever your fleet operates.
@@ -103,7 +101,7 @@ export default function HeroSection() {
           </div>
 
           {/* SCROLL BUTTON */}
-          <div className="absolute bottom-4 right-4 translate-x-14">
+          <div className="hidden sm:block absolute bottom-4 right-4 translate-x-14">
             <div className="w-10 h-10 bg-white rounded-full shadow flex items-center justify-center">
               ↑
             </div>

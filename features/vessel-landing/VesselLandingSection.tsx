@@ -7,7 +7,7 @@ import { VesselInfoPill } from "./components/VesselInfoPill";
 export function VesselLandingSection() {
   return (
     <section className="w-full">
-      <div className="relative h-[600px] sm:h-[580px] md:h-[600px] lg:h-[620px] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl">
+      <div className="relative h-[680px] sm:h-[580px] md:h-[600px] lg:h-[620px] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl">
         {/* Background Image */}
         <Image
           src={HeaderMainShip}
@@ -21,13 +21,13 @@ export function VesselLandingSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#5f8598]/80 via-[#7ea8bb]/40 to-transparent" />
 
         {/* Content Container */}
-        <div className="relative z-10 h-full px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 lg:py-10">
+        <div className="relative z-10 h-full px-4 sm:px-6 md:px-8 lg:px-12 pt-20 sm:pt-32 lg:py-10 flex flex-col justify-between lg:block">
           
           {/* MAIN HEADING */}
-          <div className="mt-4 sm:mt-8 lg:mt-16 max-w-[1400px]">
-            <h1 className="mt-2 sm:mt-4 lg:mt-10 text-[28px] sm:text-[38px] md:text-[48px] lg:text-[62px] leading-[1.18] font-extrabold text-white max-w-[820px]">
-              MOST RELIABLE WAY <br />
-              TO MANAGE YOUR <br />
+          <div className="lg:mt-16 max-w-[1400px]">
+            <h1 className="lg:mt-10 text-[24px] sm:text-[38px] md:text-[48px] lg:text-[62px] leading-[1.1] sm:leading-[1.18] font-extrabold text-white max-w-[820px] drop-shadow-lg">
+              MOST RELIABLE WAY <br className="hidden sm:block" />
+              TO MANAGE YOUR <br className="hidden sm:block" />
               VESSELS
             </h1>
           </div>
@@ -37,23 +37,23 @@ export function VesselLandingSection() {
             <VesselOperationsCard />
           </div>
 
-          {/* BOTTOM SECTION - Mobile & Tablet */}
-          <div className="absolute bottom-4 sm:bottom-6 lg:bottom-12 left-4 sm:left-6 md:left-8 lg:left-12 right-4 sm:right-6 lg:right-auto">
+          {/* BOTTOM SECTION - Mobile & Tablet (Relative in flex) vs Desktop (Absolute) */}
+          <div className="lg:absolute lg:bottom-12 lg:left-12 lg:right-auto mt-auto lg:mt-0 pb-6 lg:pb-0">
             
-            {/* Mobile/Tablet: Two Column Layout */}
-            <div className="lg:hidden grid grid-cols-1 gap-4 mb-4">
-              {/* Left column: Pill and Paragraph */}
+            {/* Mobile/Tablet: Stacked Layout */}
+            <div className="lg:hidden flex flex-col gap-5">
+              {/* Pill and Paragraph */}
               <div className="space-y-3">
                 <VesselInfoPill />
-                <p className="text-[13px] sm:text-[15px] leading-[1.5] text-white/90">
+                <p className="text-[12px] sm:text-[15px] leading-relaxed text-white/95">
                   From fleet management to compliance and global coordination, we
                   ensure smooth, secure, and cost-effective shipping operations
                   worldwide.
                 </p>
               </div>
               
-              {/* Card below on mobile */}
-              <div>
+              {/* Card below */}
+              <div className="transform scale-95 origin-left sm:scale-100">
                 <VesselOperationsCard />
               </div>
             </div>

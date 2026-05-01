@@ -15,7 +15,7 @@ const contactCards = [
 
 export function ContactFormHeroSection() {
   return (
-    <section className="w-full px-6 pt-10 lg:px-12 lg:pt-12">
+    <section className="w-full px-6 pt-10 lg:px-20 lg:pt-12">
       <div className="mx-auto w-full max-w-[1240px]">
         <div className="relative overflow-hidden rounded-[14px]">
           <Image

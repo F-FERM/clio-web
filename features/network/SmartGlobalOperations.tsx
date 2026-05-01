@@ -35,7 +35,7 @@ const networkImages: NetworkImage[] = [
 ];
 export function SmartGlobalOperations() {
   return (
-    <section className="w-full px-6 py-12 lg:px-36 lg:py-16">
+    <section className="w-full px-6 py-12 lg:px-28 lg:py-16">
       <div className="mx-auto grid w-full max-w-[1240px] gap-12 items-center lg:grid-cols-[0.9fr_1.1fr]">
         {/* Left Column */}
         <div>

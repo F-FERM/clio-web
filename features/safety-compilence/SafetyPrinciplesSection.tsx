@@ -29,7 +29,7 @@ export function SafetyPrinciplesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full px-4 py-10 sm:px-6 lg:px-12 lg:py-16">
+    <section className="w-full px-6 py-10 lg:px-28 lg:py-16">
       <div className="mx-auto grid w-full max-w-[1240px] gap-8 lg:grid-cols-2 lg:gap-12">
         {/* LEFT CONTENT */}
         <div>

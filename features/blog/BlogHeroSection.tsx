@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MaritimeHero() {
   return (
-    <section className="w-full px-6 py-12 lg:px-20 lg:py-14">
+    <section className="w-full px-6  pb-12 lg:px-20 lg:py-14">
       <div className="mx-auto w-full max-w-[1240px]">
         <div className="relative h-[300px] overflow-visible flex justify-end">
           {" "}
