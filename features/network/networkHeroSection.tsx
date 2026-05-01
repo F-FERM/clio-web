@@ -48,40 +48,50 @@ export default function HeroSection() {
           </div>
 
           {/* LEFT CARD */}
-          <div className="absolute top-12 left-12 w-[420px] bg-white/30 backdrop-blur-md text-white p-8 rounded-[16px] shadow-lg border border-white/20 z-20">
-            <h3 className="font-bold text-2xl mb-4">OUR GLOBAL PRESENCE</h3>
-            <p className="text-sm mb-6 leading-relaxed">
+          <div
+            className="absolute top-1/2 left-8 -translate-y-1/2 w-[480px] z-20
+                      bg-white/20 backdrop-blur-md border border-white/25
+                      rounded-2xl shadow-xl text-white
+                      pr-[205px] pl-6 py-2"
+          >
+            <h3 className="text-sm font-extrabold uppercase tracking-widest mb-3">
+              Our Global Presence
+            </h3>
+            <p className="text-xs text-white/85 leading-relaxed mb-4 max-w-[240px]">
               From major ports to strategic maritime hubs, our network ensures
               uninterrupted operations and reliable support across international
               waters.
             </p>
 
-            <div className="grid grid-cols-2 text-sm gap-x-4 gap-y-3">
-              <span className="flex items-center">
-                <span className="mr-2">•</span>Middle East
-              </span>
-              <span className="flex items-center">
-                <span className="mr-2">•</span>Asia-Pacific
-              </span>
-              <span className="flex items-center">
-                <span className="mr-2">•</span>Europe
-              </span>
-              <span className="flex items-center">
-                <span className="mr-2">•</span>Americas
-              </span>
+            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-xs font-medium text-white/90">
+              {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
+                (r) => (
+                  <span key={r} className="flex items-center gap-1.5">
+                    <span className="text-base leading-none text-white/60">
+                      •
+                    </span>
+                    {r}
+                  </span>
+                ),
+              )}
+            </div>
+
+            {/* Inner ship card */}
+            <div
+              className="absolute top-1/2 -translate-y-1/2 right-1.5
+                        w-[185px] h-[150px] bg-white/10 
+                        border border-white/25 rounded-2xl p-2 shadow-lg"
+            >
+              <Image
+                src="/images/network/Rectangle.png"
+                alt="Ship at sea"
+                fill
+                className="rounded-xl object-cover"
+              />
             </div>
           </div>
 
           {/* FLOATING IMAGE CARD */}
-          <div className="absolute top-20 left-[340px] backdrop-blur-lg p-3 rounded-2xl shadow-lg">
-            <Image
-              src="/ship-small.jpg"
-              alt="Ship"
-              width={220}
-              height={130}
-              className="rounded-xl object-cover"
-            />
-          </div>
 
           {/* RIGHT BOTTOM CARD */}
           <div className="absolute top-78 bottom-6 left-167 w-[406px] p-6 ">
