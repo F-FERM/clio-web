@@ -26,42 +26,43 @@ export function ServiceCard({
   hoverText,
 }: ServiceCardProps) {
   return (
-    <article className="w-full sm:w-[467px] ">
-      <div className="group relative h-[288px] w-full overflow-hidden rounded-[20px]">
+    <article className="w-full max-w-[300px]">
+      <div className="group relative h-[280px] w-full overflow-hidden rounded-[24px] shadow-lg transition-all duration-300 hover:shadow-xl">
         <Image
           src={image}
           alt={title}
           fill
-          className={`object-cover transition-transform duration-500 group-hover:scale-105 ${imagePositionClasses[imagePosition]}`}
+          className={`object-cover transition-transform duration-500 group-hover:scale-110 ${imagePositionClasses[imagePosition]}`}
         />
+
+        {/* Overlay on hover */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
         {/* Arrow Button */}
         <button
           type="button"
-          className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full bg-white/75 text-[#1f2937] backdrop-blur-md transition-all duration-300 group-hover:bg-white"
+          className="absolute top-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#7dd3fc] text-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#1f2937]"
           aria-label={`Learn more about ${title}`}
         >
-          <ArrowRight className="h-5 w-5" />
+          <ArrowRight className="h-6 w-6" />
         </button>
 
         {/* Tag Badge - Always visible */}
         <div className="absolute bottom-4 left-4">
           <span
-            className={`${tagColor} inline-block rounded-full px-3 py-1 text-xs text-white`}
+            className={`${tagColor} inline-block rounded-full px-4 py-2 text-xs font-semibold text-white shadow-md`}
           >
             {tag}
           </span>
 
           {/* Text appears below badge on hover */}
-          <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:max-h-20 group-hover:mt-2">
-            <span className="inline-block rounded-lg  px-3 py-1.5 text-[18px] text-white ">
-              {hoverText}
-            </span>
+          <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:max-h-32 group-hover:mt-3">
+            <p className="text-sm text-white leading-relaxed">{hoverText}</p>
           </div>
         </div>
       </div>
 
-      <h3 className="mt-3 text-lg  font-medium leading-[1.2] tracking-[-0.01em] text-[#8f1131]">
+      <h3 className="mt-3 text-lg font-semibold leading-tight tracking-[-0.01em] text-[#8f1131]">
         {title}
       </h3>
     </article>

@@ -25,10 +25,10 @@ export function FleetCapabilitiesSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full px-6 pb-16 lg:px-28 lg:pb-20 mt-20">
+    <section className="w-full px-6 pb-16 lg:px-34 lg:pb-20 mt-20">
       <div className="mx-auto grid w-full max-w-[1240px] gap-8 md:grid-cols-[0.86fr_1.14fr]">
         <div>
-          <h2 className="max-w-[480px] text-4xl leading-[1.02] font-bold tracking-[-0.03em] text-[#8f1131]">
+          <h2 className="max-w-[340px] text-4xl leading-[1.52] font-semibold tracking-[-0.03em] text-[#8f1131]">
             Powering Global Maritime Operations
           </h2>
           <p className="mt-5 max-w-[500px] text-sm leading-normal text-[#323842]">
