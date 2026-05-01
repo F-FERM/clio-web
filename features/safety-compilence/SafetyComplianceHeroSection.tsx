@@ -15,9 +15,8 @@ export function SafetyComplianceHeroSection() {
         {/* LEFT CONTENT */}
         <div className="relative z-10">
           {/* HEADER */}
-          <h1 className="w-[600px] text-6xl leading-[1.17] font-bold tracking-[-0.03em] text-[#45474d] lg:mr-[-120px]">
-            Championin<span className={styles.outline}>g Safety</span> in
-            Maritime Operations
+          <h1 className=" text-6xl leading-[1.17] font-bold tracking-[-0.03em] text-[#45474d] ">
+            Championing Safety in Maritime Operations
           </h1>
 
           {/* DESCRIPTION */}

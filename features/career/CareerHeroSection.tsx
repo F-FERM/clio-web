@@ -7,6 +7,7 @@ import {
   Users,
 } from "lucide-react";
 import Image from "next/image";
+import { GetStartedButton } from "../transport-maritime/components/GetStartedButton";
 
 const careerHighlights = [
   {
@@ -50,7 +51,7 @@ export function CareerHeroSection() {
             in a dynamic maritime environment.
           </p>
           <div className="mt-7">
-            <WhatWeDoCta label="Get Started" />
+            <GetStartedButton label="Get Started" />
           </div>
         </div>
 
