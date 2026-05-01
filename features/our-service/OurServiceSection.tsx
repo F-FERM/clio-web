@@ -3,14 +3,14 @@ import { ourServiceContent } from "@/features/our-service/ourService.constants";
 
 export function OurServiceSection() {
   return (
-    <section className="mx-auto w-full max-w-[1480px] px-4 py-12 sm:px-6 sm:py-20">
+    <section className="mx-auto w-full max-w-[1280px] px-4 py-20 sm:px-6 sm:py-20">
       {/* Title */}
       <h1 className="text-center text-3xl font-bold tracking-[-0.02em] text-[#8f1131] sm:text-4xl">
         {ourServiceContent.title}
       </h1>
 
       {/* Cards */}
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
+      <div className="mt-8 grid grid-cols-1 gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-3 px-20">
         {ourServiceContent.cards.map((card) => (
           <ServiceCard
             key={card.title}
@@ -25,7 +25,7 @@ export function OurServiceSection() {
       </div>
 
       {/* Description */}
-      <p className="mx-auto mt-8 max-w-[860px] px-4 text-center text-base sm:mt-12 sm:text-lg">
+      <p className="mx-auto mt-8 max-w-[860px] px-4 text-center text-base sm:mt-12 ">
         {ourServiceContent.description}
       </p>
     </section>

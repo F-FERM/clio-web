@@ -4,11 +4,9 @@ import { transportMaritimeContent } from "@/features/transport-maritime/transpor
 
 export function TransportMaritimeSection() {
   return (
-    <section className="mx-auto w-full max-w-[1480px] px-4 sm:px-6 lg:px-10 xl:px-12 py-10 sm:py-14">
-      
+    <section className="mx-auto w-full max-w-[1480px] px-4 sm:px-6 lg:px-10 xl:px-20 py-10 sm:py-14">
       {/* TEXT CONTENT */}
       <div className="mx-auto max-w-[820px] text-center">
-        
         <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[-0.02em] text-[#8f1131] leading-snug">
           {transportMaritimeContent.heading}
         </h1>

@@ -1,10 +1,10 @@
 import { CircleCheck } from "lucide-react";
 import Image from "next/image";
-import shipMini from "../../../public/images/home/HeroVessel.jpg"
+import shipMini from "../../../public/images/home/HeroVessel.jpg";
 
 export function VesselOperationsCard() {
   return (
-    <aside className="w-full sm:max-w-[320px] lg:w-[320px] rounded-xl lg:rounded-2xl bg-white/10 p-4 lg:p-6 text-white backdrop-blur-md border border-white/20 shadow-xl">
+    <aside className="w-full sm:max-w-[320px] lg:w-[280px] rounded-xl lg:rounded-2xl bg-white/10 p-4 lg:p-4 text-white backdrop-blur-sm border border-white/20 shadow-xl">
       <h3 className="text-[17px] sm:text-[19px] lg:text-[22px] font-semibold">
         Vessel Operations
       </h3>

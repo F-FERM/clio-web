@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 type ServiceCardProps = {
   title: string;
   tag: string;
-  tagColor: string; 
+  tagColor: string;
   image: StaticImageData;
   imagePosition: "left" | "center" | "right";
   hoverText: string;
@@ -23,11 +23,11 @@ export function ServiceCard({
   image,
   imagePosition,
   tagColor,
-  hoverText
+  hoverText,
 }: ServiceCardProps) {
   return (
-    <article className="w-full sm:w-[300px]">
-      <div className="group relative h-[210px] w-full overflow-hidden rounded-[20px]">
+    <article className="">
+      <div className="group relative h-[210px] overflow-hidden rounded-[20px]">
         <Image
           src={image}
           alt={title}
@@ -46,10 +46,12 @@ export function ServiceCard({
 
         {/* Tag Badge - Always visible */}
         <div className="absolute bottom-4 left-4">
-          <span className={`${tagColor} inline-block rounded-full px-3 py-1 text-xs text-white`}>
+          <span
+            className={`${tagColor} inline-block rounded-full px-3 py-1 text-xs text-white`}
+          >
             {tag}
           </span>
-          
+
           {/* Text appears below badge on hover */}
           <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:max-h-20 group-hover:mt-2">
             <span className="inline-block rounded-lg bg-black/75 px-3 py-1.5 text-xs text-white backdrop-blur-sm">
@@ -59,7 +61,7 @@ export function ServiceCard({
         </div>
       </div>
 
-      <h3 className="mt-3 text-lg leading-[1.2] tracking-[-0.01em] text-[#8f1131]">
+      <h3 className="mt-2 text-base leading-[1.2] font-semibold tracking-[-0.01em] text-[#8f1131]">
         {title}
       </h3>
     </article>
