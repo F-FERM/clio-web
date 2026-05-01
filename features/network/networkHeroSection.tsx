@@ -51,7 +51,9 @@ export default function HeroSection() {
           <div className="absolute top-12 left-12 w-[420px] bg-white/30 backdrop-blur-md text-white p-8 rounded-[16px] shadow-lg border border-white/20 z-20">
             <h3 className="font-bold text-2xl mb-4">OUR GLOBAL PRESENCE</h3>
             <p className="text-sm mb-6 leading-relaxed">
-              From major ports to strategic maritime hubs, our network ensures uninterrupted operations and reliable support across international waters.
+              From major ports to strategic maritime hubs, our network ensures
+              uninterrupted operations and reliable support across international
+              waters.
             </p>
 
             <div className="grid grid-cols-2 text-sm gap-x-4 gap-y-3">
