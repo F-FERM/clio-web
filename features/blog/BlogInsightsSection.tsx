@@ -10,7 +10,7 @@ export function BlogInsightsSection() {
         {/* Row 1 */}
         <div className="grid items-center gap-6 sm:gap-4 md:grid-cols-[0.78fr_1.22fr]">
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.04] font-bold tracking-[-0.03em] text-[#8f1131] max-w-full md:max-w-[420px]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#8f1131] max-w-full md:max-w-[420px]">
               {latestArticleContent.leftTitle}
             </h2>
             <p className="mt-4 sm:mt-6 text-sm leading-[1.45] text-[#3f434b] max-w-full md:max-w-[430px]">
@@ -41,7 +41,7 @@ export function BlogInsightsSection() {
           </div>
 
           <div className="order-1 md:order-2">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.05] font-bold tracking-[-0.03em] text-[#8f1131] max-w-full md:max-w-[460px]">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#8f1131] max-w-full md:max-w-[460px]">
               {latestArticleContent.rightTitle}
             </h2>
             <p className="mt-4 sm:mt-6 text-sm leading-[1.45] text-[#3f434b]">

@@ -7,8 +7,8 @@ type WorkflowStepCardProps = {
 
 const cardVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
   maroon: "bg-[#9d1839]",
-  blue: "bg-[#d5e1ec]",
-  yellow: "bg-[#f1df3f]",
+  blue: "bg-[#E0EFFA]",
+  yellow: "bg-[#FAE651]",
 };
 
 const numVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {

@@ -39,7 +39,7 @@ export function SmartGlobalOperations() {
       <div className="mx-auto grid w-full max-w-[1240px] gap-12 items-center lg:grid-cols-[0.9fr_1.1fr]">
         {/* Left Column */}
         <div>
-          <h2 className="text-5xl lg:text-6xl leading-[1.1] font-bold tracking-[-0.03em] text-[#a62e2e]">
+          <h2 className="text-5xl lg:text-6xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#a62e2e]">
             SMART GLOBAL OPERATIONS
           </h2>
           <p className="mt-6 max-w-[470px] text-[14px] leading-normal text-[#3b3f45]">
@@ -82,9 +82,15 @@ export function SmartGlobalOperations() {
           {networkImages.map((image, i) => (
             <div
               key={i}
-              className="group/card relative flex-[1] overflow-hidden rounded-[18px]
-              transition-all duration-500 ease-in-out
-              group-hover:flex-[0.7] hover:!flex-[2.5]"
+              className={`group/card relative overflow-hidden rounded-[18px]
+        transition-all duration-500 ease-in-out
+        ${
+          i === 0
+            ? // First card: expanded by default, shrinks when group is hovered (another card is hovered)
+              "flex-[2.5] group-hover:flex-[0.7] hover:!flex-[2.5]"
+            : // Other cards: collapsed by default, expand on hover
+              "flex-[0.7] group-hover:flex-[0.7] hover:!flex-[2.5]"
+        }`}
             >
               <Image
                 src={image.src}
@@ -97,20 +103,26 @@ export function SmartGlobalOperations() {
               <div className="absolute inset-0 bg-black/25 transition-all duration-300 group-hover/card:bg-black/10" />
 
               {/* Overlay */}
+              {/* Overlay */}
               <div
-                className="
-              absolute
-              left-4 right-4 bottom-4
-              sm:left-6 sm:bottom-6 sm:max-w-[320px]
-              rounded-[12px]
-              bg-[#d4d8dc]/75
-              px-4 py-3
-              backdrop-blur-[2px]
-              opacity-0 translate-y-3
-              transition-all duration-300 delay-150
-              group-hover/card:opacity-100
-              group-hover/card:translate-y-0
-            "
+                className={`
+    absolute
+    left-4 right-4 bottom-4
+    sm:left-6 sm:bottom-6 sm:max-w-[320px]
+    rounded-[12px]
+    bg-[#d4d8dc]/75
+    px-4 py-3
+    backdrop-blur-[2px]
+    transition-all duration-300 delay-150
+    ${
+      i === 0
+        ? `opacity-100 translate-y-0
+           group-hover:opacity-0 group-hover:translate-y-3
+           group-hover/card:!opacity-100 group-hover/card:!translate-y-0`
+        : `opacity-0 translate-y-3
+           group-hover/card:opacity-100 group-hover/card:translate-y-0`
+    }
+  `}
               >
                 <h3 className="text-lg lg:text-xl font-semibold text-[#901027] leading-tight">
                   {image.title}

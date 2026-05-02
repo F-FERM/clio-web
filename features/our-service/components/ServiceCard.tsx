@@ -41,7 +41,7 @@ export function ServiceCard({
         {/* Arrow Button */}
         <button
           type="button"
-          className="absolute top-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-[#7dd3fc] text-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#1f2937]"
+          className="absolute top-5 right-5 flex h-12 w-12 items-center justify-center rounded-full bg-white/50 text-white shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-white group-hover:text-[#1f2937]"
           aria-label={`Learn more about ${title}`}
         >
           <ArrowRight className="h-6 w-6" />
