@@ -107,11 +107,11 @@ export function SmartGlobalOperations() {
 
               {/* Overlay */}
               {/* Overlay */}
-              <div
-                className={`
+             <div
+  className={`
     absolute
-    left-4 right-4 bottom-4
-    sm:left-6 sm:bottom-6 sm:max-w-[320px]
+    left-4 right-4 top-4
+    sm:left-6 sm:top-6 sm:max-w-[320px]
     rounded-[12px]
     bg-[#d4d8dc]/75
     px-4 py-3
@@ -120,20 +120,20 @@ export function SmartGlobalOperations() {
     ${
       i === 0
         ? `opacity-100 translate-y-0
-           group-hover:opacity-0 group-hover:translate-y-3
+           group-hover:opacity-0 group-hover:-translate-y-3
            group-hover/card:!opacity-100 group-hover/card:!translate-y-0`
-        : `opacity-0 translate-y-3
+        : `opacity-0 -translate-y-3
            group-hover/card:opacity-100 group-hover/card:translate-y-0`
     }
   `}
-              >
-                <h3 className="text-lg lg:text-xl font-semibold  leading-tight">
-                  {image.title}
-                </h3>
-                <p className="mt-1 text-xs lg:text-base text-[#901027] leading-relaxed">
-                  {image.description}
-                </p>
-              </div>
+>
+  <h3 className="text-lg lg:text-xl font-semibold leading-tight">
+    {image.title}
+  </h3>
+  <p className="mt-1 text-xs lg:text-base text-[#901027] leading-relaxed">
+    {image.description}
+  </p>
+</div>
             </div>
           ))}
         </div>

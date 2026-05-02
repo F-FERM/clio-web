@@ -2,9 +2,9 @@ import { latestArticleContent } from "@/features/latest-article/latestArticle.co
 import Image from "next/image";
 
 const cardImages = [
-  "/images/blog/blog2.jpg",
-  "/images/blog/blog3.jpg",
-  "/images/blog/blog4.jpg",
+  "/public/images/blog/blog2.jpg",
+  "/public/images/blog/blog3.jpg",
+  "/public/images/blog/blog4.jpg",
 ] as const;
 const tagColors = ["bg-[#f06464]", "bg-[#4d7cff]", "bg-[#6aa04f]"] as const;
 
