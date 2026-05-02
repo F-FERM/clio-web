@@ -53,9 +53,13 @@ export function FleetCapabilitiesSection() {
                 {/* Top Row */}
                 <div className="flex items-center gap-3">
                   {/* Icon */}
-                  <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#901027] text-[#901027] text-sm">
-                    ✓
-                  </div>
+                <div
+  className={`flex h-6 w-6 items-center justify-center rounded-full border border-[#901027] text-[#901027] text-sm transition-opacity duration-300
+    ${isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"}
+  `}
+>
+  ✓
+</div>
 
                   {/* Title */}
                   <h3 className="text-[14px] sm:text-[15px] lg:text-[16px] font-semibold text-[#901027]">

@@ -37,8 +37,8 @@ const pillarCards = [
   },
 ] as const;
 
-const CARD_WIDTH_DEFAULT = 260;
-const CARD_WIDTH_EXPANDED = 340;
+const CARD_WIDTH_DEFAULT = 360;
+const CARD_WIDTH_EXPANDED = 440;
 const CARD_OVERLAP = 85;
 const CARD_COUNT = pillarCards.length;
 
