@@ -34,8 +34,8 @@ export function WhatWeDoGallery({ cards }: WhatWeDoGalleryProps) {
               <Image src={image.src} alt={image.alt} fill className="object-cover" />
               <div className="absolute inset-0 bg-black/25" />
               <div className="absolute bottom-0 left-0 right-0 bg-[#d4d8dc]/80 p-4 backdrop-blur">
-                <h3 className="text-base font-semibold text-[#901027]">{card?.title}</h3>
-                <p className="text-xs text-[#3a3d43] mt-1">{card?.description}</p>
+                <h3 className="text-base font-semibold text-[#901027] ">{card?.title}</h3>
+                <p className="text-xs text-[#3a3d43] mt-1 ">{card?.description}</p>
               </div>
             </div>
           );

@@ -32,7 +32,7 @@ export function FleetHeroSection() {
           </div>
 
           {/* OVERVIEW CARD - Absolute on desktop, but more space on mobile */}
-          <div className="absolute right-4 bottom-4 sm:right-8 sm:bottom-10 w-[calc(100%-32px)] sm:w-full sm:max-w-[285px] rounded-[14px] bg-[#b8c8d3]/62 p-4 backdrop-blur-[1.5px]">
+          <div className="absolute right-4 bottom-4 sm:right-8 sm:bottom-10 w-[calc(100%-32px)] sm:w-full sm:max-w-[285px] rounded-[14px] bg-gray-600/40 p-4 backdrop-blur-[1.5px]">
             <h2 className="text-lg sm:text-[25px] leading-none font-semibold text-white">
               Fleet Overview
             </h2>

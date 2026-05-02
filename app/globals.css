@@ -2,7 +2,7 @@
 
 :root {
   color-scheme: light;
-  --background: #ffffff;
+  --background: #F6FBFF;
   --foreground: #171717;
 }
 
@@ -14,7 +14,7 @@
 
 html,
 body {
-  background-color: #ffffff;
+  background-color: #F6FBFF;
   color: #171717;
   font-family: var(--font-poppins), Arial, Helvetica, sans-serif;
   margin: 0;

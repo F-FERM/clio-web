@@ -34,7 +34,7 @@ export function WhoWeAreHero({ title, description }: WhoWeAreHeroProps) {
           {title}
         </h2>
 
-        <p className="mt-2 sm:mt-3 text-[13px] sm:text-[14px] leading-[1.5] text-[#2f3137]">
+        <p className="mt-2 sm:mt-3 text-[13px] sm:text-[14px] leading-[1.7] font-normal text-white">
           {description}
         </p>
       </div>

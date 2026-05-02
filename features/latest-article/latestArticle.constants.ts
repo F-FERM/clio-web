@@ -8,6 +8,7 @@ export const latestArticleContent = {
         "Discover how real-time data helps improve vessel efficiency and reduce downtime.",
       tag: "Performance",
       imagePosition: "left",
+      tags: "Analytics"
     },
     {
       date: "16-04-2024",
@@ -16,6 +17,8 @@ export const latestArticleContent = {
         "A look into emerging maritime trends shaping the future of logistics.",
       tag: "Global",
       imagePosition: "center",
+            tags: "Trends"
+
     },
     {
       date: "02-03-2024",
@@ -24,6 +27,8 @@ export const latestArticleContent = {
         "Why strict safety standards are critical for smooth and secure operations.",
       tag: "Compliance",
       imagePosition: "right",
+            tags: "Safety"
+
     },
   ],
   leftTitle: "Expert Perspectives from Clio",

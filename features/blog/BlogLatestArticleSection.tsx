@@ -20,7 +20,7 @@ export function BlogLatestArticleSection() {
           {latestArticleContent.cards.map((card, index) => (
             <article
               key={card.title}
-              className="group relative h-[270px] overflow-hidden rounded-[14px] cursor-pointer"
+              className="group relative h-[370px] overflow-hidden rounded-[14px] cursor-pointer"
             >
               <Image
                 src={cardImages[index] ?? cardImages[0]}
@@ -43,8 +43,8 @@ export function BlogLatestArticleSection() {
               <div className="absolute left-4 right-4 bottom-4">
                 {/* Date and badge row */}
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="flex items-center gap-1 text-[9px] font-medium text-white/90">
-                    <svg width="8" height="8" viewBox="0 0 10 10" fill="none">
+                  <span className="flex items-center gap-1 text-[9px] font-medium text-white/90 text-[12px]">
+                    <svg width="9" height="9" viewBox="0 0 10 10" fill="none">
                       <rect
                         x="1"
                         y="2"
@@ -63,21 +63,21 @@ export function BlogLatestArticleSection() {
                     {card.date}
                   </span>
                   <span
-                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[9px] font-semibold text-white ${tagColors[index] ?? tagColors[0]}`}
+                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[12px] font-semibold text-white ${tagColors[index] ?? tagColors[0]}`}
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-white inline-block" />
+                    <span className="w-2 h-2 rounded-full bg-white inline-block" />
                     {card.tag}
                   </span>
                 </div>
 
-                <h3 className="text-[15px] leading-tight font-semibold text-white">
+                <h3 className="text-[18px] leading-tight font-semibold text-white">
                   {card.title}
                 </h3>
-                <p className="mt-1 text-[12px] leading-[1.35] text-white/85">
+                <p className="mt-1 text-[16px] leading-[1.35] text-[#D7D7D7]">
                   {card.description}
                 </p>
-                <p className="mt-1 text-[12px] font-medium text-white">
-                  Tags: {card.tag}
+                <p className="mt-1 text-[14px] font-medium text-white">
+                  Tags: {card.tags}
                 </p>
               </div>
             </article>

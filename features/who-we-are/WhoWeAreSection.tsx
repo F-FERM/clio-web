@@ -10,7 +10,7 @@ export function WhoWeAreSection() {
           description={whoWeAreContent.heroDescription}
         />
 
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 pt-5">
           <PurposeTile
             title={whoWeAreContent.missionTitle}
             description={whoWeAreContent.missionDescription}

@@ -125,8 +125,8 @@ export function PurposeTile({ title, description, variant }: PurposeTileProps) {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col p-5">
-        <h3 className="mb-2 text-[16px] sm:text-[18px] font-semibold text-[#901027] ">
+      <div className="relative z-10 flex h-full flex-col py-5">
+        <h3 className="mb-2 text-[16px] sm:text-[18px] font-semibold text-[#901027] text-center ">
           {title}
         </h3>
 

@@ -37,9 +37,20 @@ benefits: [
       "Operating across international waters with deep industry knowledge.",
   },
   {
-    title: "Operational Excellence",
+    title: "Safety First Approach",
     description:
-      "Ensuring efficiency, safety, and compliance at every level.",
+      "Strict adherence to global maritime safety and compliance standards.",
+  },
+ 
+  {
+    title: "Operational Efficiency",
+    description:
+      "Optimized processes to reduce costs and improve performance.",
+  },
+  {
+    title: "Advanced Technology",
+    description:
+      "Smart systems for real-time monitoring and data-driven decisions.",
   },
 ] as const
 }

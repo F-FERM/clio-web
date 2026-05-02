@@ -70,21 +70,21 @@ export function CareerHeroSection() {
             <h2 className="text-xl sm:text-[28px] leading-none font-semibold">
               WHY WORK WITH CLIO
             </h2>
-            <p className="mt-1.5 text-[10px] sm:text-[11px] text-white/90">
+            <p className="mt-1.5 text-[10px] sm:text-[12px] text-white/70">
               We don&apos;t just offer jobs—we build careers.
             </p>
 
-            <div className="mt-3 grid grid-cols-2 gap-2 sm:block sm:space-y-2.5">
+            <div className="mt-3 grid grid-cols-2 gap-3 sm:block sm:space-y-2.5">
               {careerHighlights.map((item) => {
                 const Icon = item.icon;
                 return (
-                  <div key={item.title} className="flex items-start gap-2">
+                  <div key={item.title} className="flex items-start gap-3">
                     <Icon className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 shrink-0 text-white/90" />
                     <div>
-                      <p className="text-[10px] sm:text-[12px] leading-none font-semibold text-white">
+                      <p className="text-[10px] sm:text-[15px] leading-none font-medium text-white">
                         {item.title}
                       </p>
-                      <p className="mt-1 text-[8px] sm:text-[10px] leading-tight text-white/85">
+                      <p className="mt-2 text-[8px] sm:text-[12px] leading-tight text-white/85">
                         {item.description}
                       </p>
                     </div>

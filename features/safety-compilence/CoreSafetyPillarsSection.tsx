@@ -176,7 +176,7 @@ function PillarCard({ card }: { card: (typeof pillarCards)[number] }) {
       {"useSvg" in card && card.useSvg && <GreyWavesSvg />}
       {"useYellowSvg" in card && card.useYellowSvg && <YellowSvg />}
 
-      <h3 className="text-3xl font-semibold leading-[1.08] max-w-[220px] relative z-10">
+      <h3 className="text-3xl font-medium leading-[1.20] max-w-[220px] relative z-10">
         {card.title}
       </h3>
 

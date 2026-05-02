@@ -12,26 +12,26 @@ const networkImages: NetworkImage[] = [
   {
     src: "/images/network/Network1.jpg",
     alt: "Global operations 1",
-    title: "Global Network",
-    description: "Connecting ports across the world.",
+    title: "🔄",
+    description: "24/7 coordination & response.",
   },
   {
     src: "/images/network/Network2.jpg",
     alt: "Global operations 2",
-    title: "Fleet Management",
-    description: "Real-time vessel tracking.",
+    title: "📡",
+    description: "Global communication systems.",
   },
   {
     src: "/images/network/Network3.jpg",
     alt: "Global operations 3",
-    title: "Port Operations",
-    description: "Efficient cargo handling.",
+    title: "⚓",
+    description: "Port-to-port operational support.",
   },
   {
     src: "/images/network/Network4.jpg",
     alt: "Global operations 4",
-    title: "Logistics",
-    description: "End-to-end supply chain.",
+    title: "🌍",
+    description: " Real-time fleet monitoring.",
   },
 ];
 export function SmartGlobalOperations() {
@@ -43,7 +43,7 @@ export function SmartGlobalOperations() {
           <h2 className="text-5xl lg:text-6xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#a62e2e]">
             SMART GLOBAL OPERATIONS
           </h2>
-          <p className="mt-6 max-w-[470px] text-[14px] leading-normal text-[#3b3f45]">
+          <p className="mt-6 max-w-[470px] text-[19px] leading-normal text-[#3b3f45]">
             We combine local expertise with global coordination to ensure
             efficient vessel management across all regions.
           </p>
@@ -127,10 +127,10 @@ export function SmartGlobalOperations() {
     }
   `}
               >
-                <h3 className="text-lg lg:text-xl font-semibold text-[#901027] leading-tight">
+                <h3 className="text-lg lg:text-xl font-semibold  leading-tight">
                   {image.title}
                 </h3>
-                <p className="mt-1 text-xs lg:text-sm text-[#3a3d43] leading-relaxed">
+                <p className="mt-1 text-xs lg:text-base text-[#901027] leading-relaxed">
                   {image.description}
                 </p>
               </div>

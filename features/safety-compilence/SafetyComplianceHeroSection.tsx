@@ -41,8 +41,8 @@ export function SafetyComplianceHeroSection() {
           />
 
           {/* OVERLAY CARD */}
-          <div className="absolute right-4 bottom-4 w-[calc(100%-32px)] sm:max-w-[290px] rounded-[14px] bg-[#9ca8b0]/75 p-4 backdrop-blur-[2px] shadow-lg">
-            <h3 className="text-base sm:text-lg leading-none font-semibold text-white">
+          <div className="absolute right-4 bottom-4 w-[calc(100%-32px)] sm:max-w-[290px] rounded-[14px] bg-gray-600/40 p-4 backdrop-blur-[2px] shadow-lg">
+            <h3 className="text-base sm:text-lg leading-[1.50] font-semibold text-white">
               Global Compliance &amp; Certifications
             </h3>
 
