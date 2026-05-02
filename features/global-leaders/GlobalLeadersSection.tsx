@@ -36,7 +36,7 @@ export default function GlobalLeadersSection() {
       </section>
       {/* DESCRIPTION */}
       {/* DESCRIPTION */}
-      <p className="lg:px-25 px-5 mt-6 max-w-[1200px] text-sm leading-[1.65] text-[#464646] sm:text-[15px] md:text-sm font-normal">
+      <p className="mt-6 max-w-[1200px] text-sm leading-[1.65] text-[#464646] sm:text-[15px] md:text-sm font-normal">
         {globalLeadersContent.description}
       </p>
     </>
