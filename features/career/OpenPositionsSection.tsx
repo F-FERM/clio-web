@@ -30,12 +30,12 @@ export function OpenPositionsSection() {
           {positions.map((position) => (
             <article
               key={position.title}
-              className="rounded-[14px] border border-[#cfd4db] px-7 py-6"
+              className="rounded-[14px] border border-[#cfd4db] px-7 py-6 flex flex-col"
             >
               <h3 className="max-w-[260px] text-3xl leading-[1.2] font-semibold text-[#1f242b]">
                 {position.title}
               </h3>
-              <p className="mt-4 max-w-[270px] text-sm leading-[1.45] text-[#4c515a]">
+              <p className="mt-4 max-w-[270px] text-sm leading-[1.45] text-[#4c515a] flex-1">
                 {position.description}
               </p>
               <div className="mt-6">

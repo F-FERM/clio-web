@@ -6,7 +6,7 @@ export function GlobalReachSection() {
     <section className="w-full px-6 py-12 lg:px-28 lg:py-14">
       <div className="mx-auto grid w-full max-w-[1240px] items-center gap-8 md:grid-cols-[0.92fr_1.08fr]">
         <div>
-          <h2 className="text-[50px] leading-none font-bold tracking-[-0.03em] text-[#8f1131]">
+          <h2 className="text-[50px] leading-none font-semibold tracking-[-0.03em] text-[#8f1131]">
             OUR GLOBAL REACH
           </h2>
           <p className="mt-5 max-w-[470px] text-[14px] leading-normal text-[#444b54]">
