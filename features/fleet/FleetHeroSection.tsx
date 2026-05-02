@@ -31,7 +31,7 @@ export function FleetHeroSection() {
         </div>
 
         {/* OVERVIEW CARD */}
-        <div className="absolute right-4 bottom-4 sm:right-8 sm:bottom-10 w-[calc(100%-32px)] sm:w-[280px] lg:w-[320px] rounded-[24px] border border-white/20 bg-white/20 p-5 lg:p-6 backdrop-blur-[12px] z-10 md:z-30">
+        <div className="absolute right-4 bottom-4 sm:right-8 sm:bottom-10 w-[calc(100%-32px)] sm:w-[280px] lg:w-[320px] rounded-[24px] border border-blue-200 bg-white/20 p-5 lg:p-6 backdrop-blur-[12px] z-10 md:z-30">
           <h2 className="text-xl lg:text-[24px] font-semibold text-white mb-4 lg:mb-6">
             Fleet Overview
           </h2>
