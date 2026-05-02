@@ -82,8 +82,8 @@ export function VesselTopNav({
 
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-[#c8d9e2] pt-28 px-8 xl:hidden overflow-y-auto">
-          <nav className="flex flex-col gap-8">
+        <div className="fixed inset-0 z-40 bg-[#c8d9e2] pt-36 sm:pt-40 px-8 xl:hidden overflow-y-auto">
+          <nav className="flex flex-col gap-6 sm:gap-8">
             {navItems.map((item) => (
               <Link
                 key={item.label}

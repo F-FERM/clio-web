@@ -40,7 +40,7 @@ export function FleetCapabilitiesSection() {
           </p>
         </div>
 
-        <div className="space-y-3 sm:space-y-4 pt-20">
+        <div className="space-y-3 sm:space-y-4 pt-6 md:pt-20">
           {whatWeDoContent.benefits.map((item, index) => {
             const isActive = activeIndex === index;
 

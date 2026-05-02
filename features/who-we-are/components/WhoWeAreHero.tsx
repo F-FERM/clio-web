@@ -1,5 +1,5 @@
 import Image from "next/image";
-import About2 from "../../../public/images/about/About2.jpg"
+import About2 from "../../../public/images/about/About2.jpg";
 
 type WhoWeAreHeroProps = {
   title: string;
@@ -17,17 +17,19 @@ export function WhoWeAreHero({ title, description }: WhoWeAreHeroProps) {
         className="object-cover object-center"
       />
 
-      <div className="
+      <div
+        className="
         absolute 
         left-4 right-4 top-4 
         sm:left-6 sm:top-6 sm:max-w-[80%]
         md:left-8 md:max-w-[520px]
         rounded-[12px] 
-        bg-[#d4d8dc]/70 
+        bg-gray-300/60
         px-4 py-4 
         sm:px-6 sm:py-5 
         backdrop-blur-[2px]
-      ">
+      "
+      >
         <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-[-0.02em] text-[#901027] leading-tight">
           {title}
         </h2>

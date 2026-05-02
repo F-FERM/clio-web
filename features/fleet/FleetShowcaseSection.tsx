@@ -17,7 +17,7 @@ export function FleetShowcaseSection() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 justify-center md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8 justify-center">
           {ourFleetContent.cards?.map((card, index) => (
             <div key={card.title} className="flex-shrink-0">
               <ServiceCard
