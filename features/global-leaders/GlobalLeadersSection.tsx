@@ -4,7 +4,7 @@ import { globalLeadersContent } from "./globalLeaders.constants";
 import styles from "./marine.module.css";
 import Image from "next/image";
 
-export default function MaritimeHero() {
+export default function GlobalLeadersSection() {
   return (
     <>
       <section className={styles.hero}>

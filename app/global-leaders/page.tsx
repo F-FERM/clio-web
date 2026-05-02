@@ -1,4 +1,4 @@
-import { GlobalLeadersSection } from "@/features/global-leaders/GlobalLeadersSection";
+import GlobalLeadersSection from "@/features/global-leaders/GlobalLeadersSection";
 
 export default function GlobalLeadersPage() {
   return (
