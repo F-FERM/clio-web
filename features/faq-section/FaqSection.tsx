@@ -4,17 +4,17 @@ import { faqSectionContent } from "@/features/faq-section/faqSection.constants";
 
 export function FaqSection() {
   return (
-    <section className="mx-auto w-full max-w-[1480px] px-4 sm:px-8 md:px-16 lg:px-28 py-10 sm:py-14 md:py-20">
-      <div className="grid gap-10 md:grid-cols-[1fr_1.6fr]">
+    <section className="mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-8 lg:px-28 py-8 sm:py-10 md:py-14 lg:py-20">
+      <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
         {/* Left column */}
-        <div className="flex flex-col gap-6 md:gap-0">
-       <h1 className="text-3xl sm:text-4xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-[380px] mb-4 leading-tight">
-  {faqSectionContent.title}
-</h1>
-          <p className="text-base sm:text-lg leading-[1.45] text-[#171a20] max-w-[420px]">
+        <div className="flex flex-col gap-4 sm:gap-6 md:gap-0">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-full sm:max-w-[380px] mb-2 sm:mb-4 leading-tight">
+            {faqSectionContent.title}
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg leading-[1.45] text-[#171a20] max-w-full sm:max-w-[420px]">
             {faqSectionContent.description}
           </p>
-          <div className="md:mt-16">
+          <div className="mt-4 sm:mt-6 md:mt-16">
             <FaqContactButton label={faqSectionContent.cta} />
           </div>
         </div>
@@ -29,7 +29,7 @@ export function FaqSection() {
             />
           ))}
         </div>
-      </div>  
+      </div>
     </section>
   );
 }

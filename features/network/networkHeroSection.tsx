@@ -27,7 +27,7 @@ export default function HeroSection() {
           </svg>
 
           {/* Image Section */}
-          <div className="relative h-[300px] w-[1050px] sm:h-[420px] rounded-[20px] sm:rounded-[30px] overflow-hidden">
+          <div className="relative left-0 h-[200px] w-full sm:left-8 sm:h-[300px] sm:w-[1090px] md:h-[420px] rounded-[16px] sm:rounded-[20px] md:rounded-[30px] overflow-hidden">
             <Image
               src="/images/network/Union.png"
               alt="Ship"
@@ -37,7 +37,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/10 sm:bg-transparent" />
 
             {/* Title - On Top of Image */}
-            <h1 className="absolute top-4 left-4 sm:top-[-5] sm:left-10 text-3xl sm:text-5xl lg:text-[52px] font-bold text-[#464646] sm:text-black z-10 whitespace-normal sm:whitespace-nowrap">
+            <h1 className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-[-5] md:left-1 text-lg sm:text-3xl md:text-5xl lg:text-[59px] font-bold text-[#464646]  z-10 whitespace-normal sm:whitespace-nowrap">
               Global Maritime <br className="sm:hidden" />
               Net<span className={styles.outline}>work</span>
             </h1>
@@ -47,25 +47,25 @@ export default function HeroSection() {
           {/* LEFT CARD */}
           {/* LEFT CARD */}
           <div
-            className="absolute top-1/2 -translate-y-1/2 left-4 sm:left-8 w-[calc(100%-2rem)] sm:w-[480px] z-20
+            className="absolute top-1/2 -translate-y-1/2 left-2 sm:left-4 md:left-15 w-[calc(100%-1rem)] sm:w-[calc(100%-2rem)] md:w-[480px] z-20
             bg-white/20 backdrop-blur-md border border-white/25
-            rounded-2xl shadow-xl text-white
-            px-4 sm:px-6 py-3 sm:py-2 pr-4 sm:pr-[205px]"
+            rounded-lg sm:rounded-2xl shadow-xl text-white
+            px-2.5 sm:px-4 md:px-6 py-2 sm:py-3 md:py-2 pr-2.5 sm:pr-4 md:pr-[205px]"
           >
-            <h3 className="text-xs sm:text-sm font-extrabold uppercase tracking-widest mb-2 sm:mb-3">
+            <h3 className="text-[9px] sm:text-xs md:text-sm font-extrabold uppercase tracking-widest mb-1.5 sm:mb-2 md:mb-3">
               Our Global Presence
             </h3>
-            <p className="text-[10px] sm:text-xs text-white/90 leading-relaxed mb-3 sm:mb-4 max-w-full sm:max-w-[280px]">
+            <p className="text-[8px] sm:text-[10px] md:text-xs text-white/90 leading-relaxed mb-2 sm:mb-3 md:mb-4 max-w-full md:max-w-[280px]">
               From major ports to strategic maritime hubs, our network ensures
               uninterrupted operations and reliable support across international
               waters.
             </p>
 
-            <div className="grid grid-cols-2 gap-x-3 gap-y-1.5 text-[10px] sm:text-xs font-medium text-white/90">
+            <div className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-1 sm:gap-y-1.5 text-[8px] sm:text-[10px] md:text-xs font-medium text-white/90">
               {["Middle East", "Asia-Pacific", "Europe", "Americas"].map(
                 (r) => (
-                  <span key={r} className="flex items-center gap-1.5">
-                    <span className="text-sm leading-none text-white/60">
+                  <span key={r} className="flex items-center gap-1 sm:gap-1.5">
+                    <span className="text-xs sm:text-sm leading-none text-white/60">
                       •
                     </span>
                     {r}
@@ -92,8 +92,8 @@ export default function HeroSection() {
           </div>
 
           {/* RIGHT BOTTOM CARD */}
-          <div className="sm:absolute sm:top-78 sm:bottom-6 sm:left-172 w-full sm:w-[406px] p-2 rounded-2xl sm:rounded-none shadow-md sm:shadow-none bg-white/80 sm:bg-transparent right-20">
-            <p className="text-sm sm:text-sm text-gray-800 sm:text-gray-600">
+          <div className="relative sm:absolute mt-2 sm:mt-0 sm:top-78 sm:bottom-6 sm:left-186 w-full sm:w-[406px] p-2 rounded-lg sm:rounded-2xl md:rounded-none shadow-md sm:shadow-md md:shadow-none bg-white/85 sm:bg-white/80 md:bg-transparent right-0 sm:right-0 md:right-20">
+            <p className="text-xs sm:text-sm text-gray-800 md:text-gray-600">
               Clio Ship Management operates across key global shipping routes,
               delivering seamless vessel management, logistics coordination, and
               technical support wherever your fleet operates.

@@ -6,14 +6,14 @@
   min-height: 290px;
   display: flex;
   align-items: center;
-  padding: 2.5rem 8rem;
+  padding: 2.5rem 6rem;
   overflow: hidden;
   box-sizing: border-box;
 }
 
 .heroImg {
   position: absolute;
-  right: 7rem; /* Changed from 0 back to 1rem - balanced position */
+  right: 9rem; /* Changed from 0 back to 1rem - balanced position */
   top: 50%;
   transform: translateY(-50%);
   width: 48%;
