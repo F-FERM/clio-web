@@ -9,7 +9,7 @@ export function FaqSection() {
       <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
         {/* Left column */}
         <div className="flex flex-col gap-4 sm:gap-6 md:gap-0">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-full sm:max-w-[380px] mb-2 sm:mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-full sm:max-w-[380px] mb-2 sm:mb-4 leading-[1.70]">
             {faqSectionContent.title}
           </h1>
           <p className="text-sm sm:text-base md:text-lg leading-[1.45] text-[#171a20] max-w-full sm:max-w-[420px]">

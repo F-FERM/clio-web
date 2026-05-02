@@ -5,7 +5,7 @@ export function OurServiceSection() {
   return (
     <section className="mx-auto w-full max-w-[1280px] lg:px-4 py-20 sm:px-2 sm:py-20">
       {/* Title */}
-      <h1 className="text-center text-3xl font-bold tracking-[-0.02em] text-[#8f1131] sm:text-4xl pt-8">
+      <h1 className="text-center text-3xl font-bold tracking-[-0.02em] text-[#8f1131] sm:text-5xl pt-8">
         {ourServiceContent.title}
       </h1>
 

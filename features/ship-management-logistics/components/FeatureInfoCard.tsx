@@ -171,12 +171,12 @@ export function FeatureInfoCard({
         />
 
         {/* Title */}
-        <h3 className="mt-5 sm:mt-7 mb-2 text-[17px] sm:text-[19px] font-bold tracking-[-0.02em] text-[#8b1a2e]">
+        <h3 className="mt-5 sm:mt-7 mb-2 text-[17px] sm:text-[19px] font-medium tracking-[-0.02em] text-[#8b1a2e]">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="mb-4 text-xs sm:text-sm text-[#2f3137] leading-relaxed">
+        <p className="mb-4 text-xs sm:text-sm text-[#464646] leading-relaxed">
           {description}
         </p>
 

@@ -57,12 +57,12 @@ export function ServiceCard({
 
           {/* Text appears below badge on hover */}
           <div className="max-h-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:max-h-32 group-hover:mt-3">
-            <p className="text-sm text-white leading-relaxed">{hoverText}</p>
+            <p className="text-base text-white leading-relaxed">{hoverText}</p>
           </div>
         </div>
       </div>
 
-      <h3 className="mt-3 text-lg font-semibold leading-tight tracking-[-0.01em] text-[#8f1131]">
+      <h3 className="mt-3 text-xl font-semibold leading-tight tracking-[-0.01em] text-[#8f1131]">
         {title}
       </h3>
     </article>

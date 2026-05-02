@@ -63,7 +63,7 @@ export function VesselLandingSection() {
               <div className="mb-6">
                 <VesselInfoPill />
               </div>
-              <p className="text-sm  text-white/90 max-w-[600px]">
+              <p className="text-md  text-white/90 max-w-[600px]">
                 From fleet management to compliance and global coordination, we
                 ensure smooth, secure, and cost-effective shipping operations
                 worldwide.

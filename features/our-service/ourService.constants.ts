@@ -3,7 +3,7 @@ import service2 from "../../public/images/services/Service2.png";
 import service3 from "../../public/images/services/Service3.jpg";
 
 export const ourServiceContent = {
-  title: "Our Services",
+  title: "Our Service",
   description:
     "Full control of your maritime operations in one place.Clio Ship Management delivers integrated solutions that simplify vessel operations, enhance efficiency, and ensure global compliance.",
 

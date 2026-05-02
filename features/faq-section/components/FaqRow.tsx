@@ -18,7 +18,7 @@ export function FaqRow({ question, answer = "Lorem ipsum dolor sit amet, consect
         className="flex w-full items-center justify-between py-4 text-left"
         aria-expanded={isOpen}
       >
-        <span className="text-xl font-medium tracking-[-0.01em] text-[#14171c] pr-4">
+        <span className="text-2xl font-medium tracking-[-0.01em] text-[#14171c] pr-4">
           {question}
         </span>
         {isOpen
@@ -32,7 +32,7 @@ export function FaqRow({ question, answer = "Lorem ipsum dolor sit amet, consect
           isOpen ? "max-h-96 pb-4 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="text-base leading-relaxed text-[#4a5260]">{answer}</p>
+        <p className="text-xl leading-relaxed ">{answer}</p>
       </div>
     </div>
   );

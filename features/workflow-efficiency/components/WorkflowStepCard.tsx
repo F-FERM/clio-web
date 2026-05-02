@@ -70,7 +70,7 @@ export function WorkflowStepCard({
         {id}
       </p>
       <h3
-        className={`relative z-10 mt-3 sm:mt-4 md:mt-5 text-[14px] sm:text-[16px] md:text-[18px] font-bold leading-[1.2] tracking-[-0.015em] ${titleVariantStyles[variant]}`}
+        className={`relative z-10 mt-3 sm:mt-4 md:mt-5 text-[14px] sm:text-[16px] md:text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] ${titleVariantStyles[variant]}`}
       >
         {title}
       </h3>

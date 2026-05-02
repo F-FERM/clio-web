@@ -49,7 +49,7 @@ export function VesselTopNav({
             <Link
               key={item.label}
               href={item.href}
-              className={`font-medium text-[16px] leading-none tracking-normal transition-colors cursor-pointer ${
+              className={`font-normal text-[16px] leading-none tracking-normal transition-colors cursor-pointer ${
                 isActive(item.href)
                   ? "text-[#901027] font-semibold"
                   : "text-white hover:text-[#101114]"

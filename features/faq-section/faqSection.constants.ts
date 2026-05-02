@@ -6,23 +6,16 @@ export const faqSectionContent = {
   items: [
     {
       question: "What types of vessels do you manage?",
-      answer: "We manage a diverse fleet including bulk carriers, tankers, container vessels, and specialized offshore support ships.",
+      answer: "We manage a wide range of vessels including gas carriers,oil tankers,bulk carriers, and specialized ships, ensuring efficient and compliant operations across all categories.",
     },
     {
       question: "How can I track my vessel or shipment?",
-      answer: "All our vessels are equipped with advanced GPS tracking. You can monitor your shipment in real-time through our secure client portal.",
+      answer: "Our advanced tracking systems provide real-time visibility into your vessel's location,performance,and operational status through secure digital platforms.",
     },
     {
       question: "Do you offer international maritime services?",
-      answer: "Yes, we operate globally with expertise in all major shipping routes across Asia, Europe, Africa, and the Americas.",
+      answer: "Yes, we provide global ship management and logistics support,ensuring seamless operations across international waters and ports worldwide.",
     },
-    {
-      question: "How do you ensure safety and compliance?",
-      answer: "Safety is our top priority. We strictly follow international maritime regulations (SOLAS, MARPOL) and conduct regular audits to ensure full compliance.",
-    },
-    {
-      question: "What support services do you provide?",
-      answer: "We offer comprehensive support including technical management, crew services, commercial operations, and regulatory assistance.",
-    },
+    
   ],
 } as const;

@@ -9,7 +9,7 @@ export function WorkflowEfficiencySection() {
 
         {/* Left col */}
         <div className="flex flex-col">
-          <h1 className="text-balance text-3xl sm:text-4xl lg:text-5xl leading-[1.15] font-bold tracking-[-0.02em] text-[#8f1131]">
+          <h1 className="text-balance text-3xl sm:text-4xl lg:text-5xl leading-[1.70] font-bold tracking-[-0.02em] text-[#8f1131]">
             {workflowEfficiencyContent.heading}
           </h1>
           

@@ -7,7 +7,7 @@ import { WorkflowEfficiencySection } from "@/features/workflow-efficiency/Workfl
 
 export default function Home() {
   return (
-    <main className="w-full lg:p-4 p-2">
+    <main className="w-full lg:p-4 p-2 ">
       <VesselLandingSection /> <OurServiceSection />
       <ShipManagementLogisticsSection /> <TransportMaritimeSection />
       <WorkflowEfficiencySection />
