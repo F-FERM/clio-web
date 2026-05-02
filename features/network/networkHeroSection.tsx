@@ -100,12 +100,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* SCROLL BUTTON */}
-          <div className="hidden sm:block absolute bottom-4 right-4 translate-x-14">
-            <div className="w-10 h-10 bg-white rounded-full shadow flex items-center justify-center">
-              ↑
-            </div>
-          </div>
+       
         </div>
       </div>
     </div>

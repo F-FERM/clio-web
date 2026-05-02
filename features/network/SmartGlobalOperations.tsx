@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { WhatWeDoCta } from "@/features/what-we-do/components/WhatWeDoCta";
+import Link from "next/link";
 type NetworkImage = {
   src: string;
   alt: string;
@@ -47,7 +48,9 @@ export function SmartGlobalOperations() {
             efficient vessel management across all regions.
           </p>
           <div className="mt-8">
+            <Link href='/contact-us'>
             <WhatWeDoCta label="Contact Us" />
+            </Link>
           </div>
         </div>
 

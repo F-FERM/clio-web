@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 const principles = [
@@ -44,13 +45,14 @@ export function SafetyPrinciplesSection() {
           </p>
 
           <div className="mt-6 sm:mt-8">
-            <button
+            <Link href="/contact-us">  <button
               type="button"
-              className="inline-flex items-center gap-2 rounded-full border border-[#8f949c] px-5 py-2 text-sm font-semibold text-[#1f242b] transition-all hover:bg-[#8f1131] hover:text-white hover:border-[#8f1131]"
+              className="inline-flex items-center gap-2 rounded-full border cursor-pointer border-[#8f949c] px-5 py-2 text-sm font-semibold text-[#1f242b] transition-all hover:bg-[#8f1131] hover:text-white hover:border-[#8f1131]"
             >
               <span>Contact Us</span>
               <span className="text-sm">↗</span>
-            </button>
+            </button></Link>
+          
           </div>
         </div>
 

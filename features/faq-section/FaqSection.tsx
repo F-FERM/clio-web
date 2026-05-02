@@ -1,6 +1,7 @@
 import { FaqContactButton } from "@/features/faq-section/components/FaqContactButton";
 import { FaqRow } from "@/features/faq-section/components/FaqRow";
 import { faqSectionContent } from "@/features/faq-section/faqSection.constants";
+import Link from "next/link";
 
 export function FaqSection() {
   return (
@@ -15,7 +16,10 @@ export function FaqSection() {
             {faqSectionContent.description}
           </p>
           <div className="mt-4 sm:mt-6 md:mt-16">
-            <FaqContactButton label={faqSectionContent.cta} />
+            <Link href="/contact-us">
+                        <FaqContactButton label={faqSectionContent.cta} />
+
+            </Link>
           </div>
         </div>
 
