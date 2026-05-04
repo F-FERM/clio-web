@@ -51,12 +51,19 @@ export function FooterDarkSection() {
             <div className="flex flex-col gap-5 text-sm sm:text-base leading-[1.45] text-white/95 lg:grid lg:grid-cols-[1.2fr_0.8fr_1fr_auto]">
               <p className="max-w-[660px]">{footerDarkContent.address}</p>
               <div>
-                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.email}</p>
-                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.phone}</p>
+                <p className="cursor-pointer hover:text-white transition-colors">
+                  <a href={`mailto:${footerDarkContent.email}`}>{footerDarkContent.email}</a>
+                </p>
+                <p className="cursor-pointer hover:text-white transition-colors">
+                  <a href={`tel:${footerDarkContent.phone.replace(/\s+/g, "")}`}>{footerDarkContent.phone}</a>
+                </p>
               </div>
               <div>
-                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.policies[0]}</p>
-                <p className="cursor-pointer hover:text-white transition-colors">{footerDarkContent.policies[1]}</p>
+                {footerDarkContent.policies.map((policy) => (
+                  <p key={policy.label} className="cursor-pointer hover:text-white transition-colors">
+                    <Link href={policy.href}>{policy.label}</Link>
+                  </p>
+                ))}
               </div>
               <div className="flex items-center lg:items-end justify-start lg:justify-end">
                 <FooterSocials />

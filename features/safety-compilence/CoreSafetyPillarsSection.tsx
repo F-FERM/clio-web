@@ -165,7 +165,7 @@ function YellowSvg() {
 function PillarCard({ card }: { card: (typeof pillarCards)[number] }) {
   return (
     <div
-      className="w-full h-full px-7 py-7 flex flex-col justify-between relative overflow-hidden"
+      className="w-full h-full px-7 py-7 flex flex-col justify-end gap-3 relative overflow-hidden"
       style={{
         backgroundColor: card.bg,
         backgroundImage: card.backgroundImage,
@@ -176,12 +176,12 @@ function PillarCard({ card }: { card: (typeof pillarCards)[number] }) {
       {"useSvg" in card && card.useSvg && <GreyWavesSvg />}
       {"useYellowSvg" in card && card.useYellowSvg && <YellowSvg />}
 
-      <h3 className="text-3xl font-medium leading-[1.20] max-w-[220px] relative z-10">
+      <h3 className="text-3xl font-medium leading-[1.20]  relative z-10">
         {card.title}
       </h3>
 
       <p
-        className="mt-4 text-sm leading-[1.45]  relative z-10"
+        className=" text-sm leading-[1.45]  relative z-10"
         style={{ color: card.descColor }}
       >
         {card.description}

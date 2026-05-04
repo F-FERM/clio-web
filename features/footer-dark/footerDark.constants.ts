@@ -2,29 +2,37 @@ export const footerDarkContent = {
   columns: [
     {
       title: "Company",
-      items: ["Home", "About Us", "Contact"],
+      items: [
+        { label: "Home", href: "/" },
+        { label: "About", href: "/about" },
+        { label: "Contact", href: "/contact-us" },
+      ],
     },
     {
       title: "Services",
       items: [
-        "Vessel Management",
-        "Technical Services",
-        "Crew Management",
-        "Maritime Logistics",
+        { label: "Vessel Management", href: "/vessel-landing" },
+        { label: "Technical Services", href: "#" },
+        { label: "Crew Management", href: "#" },
+        { label: "Maritime Logistics", href: "#" },
       ],
     },
     {
       title: "Operations",
       items: [
-        "Fleet Monitoring",
-        "Global Routes",
-        "Compliance & Safety",
-        "Performance Optimization",
+        { label: "Fleet Monitoring", href: "/fleet" },
+        { label: "Global Routes", href: "/global-network" },
+        { label: "Compliance & Safety", href: "/safety-compilence" },
+        { label: "Performance Optimization", href: "#" },
       ],
     },
     {
       title: "Support",
-      items: ["Customer Support", "Service Request", "Help Center"],
+      items: [
+        { label: "Customer Support", href: "/contact-us" },
+        { label: "Service Request", href: "#" },
+        { label: "Help Center", href: "#" },
+      ],
     },
   ],
   brand: "CLIO",
@@ -34,5 +42,8 @@ export const footerDarkContent = {
   address: "Office: 1414 Boulevard Place, Tower 2 Downtown Burj Khalifa, Dubai - UAE",
   email: "info@clioship.com",
   phone: "00971 4 3702800",
-  policies: ["Privacy Policy", "Terms of Use"],
+  policies: [
+    { label: "Privacy Policy", href: "#" },
+    { label: "Terms of Use", href: "#" },
+  ],
 } as const;
