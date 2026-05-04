@@ -6,7 +6,7 @@ const pillarCards = [
   {
     title: "Prepared for Every Situation",
     description:
-      "Our crews are trained to respond to emergencies through structured drills and regular drills. We maintain robust response systems to ensure safe action with minimal impact.",
+      "Our crews are trained to respond effectively to emergencies through structured protocols and regular drills. We maintain strict emergency response systems to ensure quick action and minimal impact.",
     bg: "#9e1f3a",
     backgroundImage:
       "repeating-linear-gradient(145deg,rgba(255,255,255,0.08) 0px,rgba(255,255,255,0.08) 1px,transparent 1px,transparent 10px)",
@@ -16,7 +16,7 @@ const pillarCards = [
   {
     title: "Smart Safety Monitoring",
     description:
-      "We leverage modern technology to monitor safety through real-time tracking, predictive maintenance, and performance analytics that ensures early detection of potential operational risks.",
+      "We leverage modern technology to enhance safety through real-time tracking, predictive maintenance, and performance analytics. This ensures early detection of issues and minimizes operational risks.",
     bg: "#d6e1eb",
     backgroundImage: "none",
     textColor: "#8f1131",
@@ -181,7 +181,7 @@ function PillarCard({ card }: { card: (typeof pillarCards)[number] }) {
       </h3>
 
       <p
-        className="mt-4 text-sm leading-[1.45] line-clamp-4 relative z-10"
+        className="mt-4 text-sm leading-[1.45]  relative z-10"
         style={{ color: card.descColor }}
       >
         {card.description}
@@ -211,7 +211,7 @@ export function CoreSafetyPillarsSection() {
     <section className="w-full px-6 pb-16 lg:px-28 lg:pb-20">
       <div className="mx-auto w-full max-w-[1240px]">
         {/* TITLE */}
-        <h2 className="text-center text-4xl font-bold tracking-[-0.03em] text-[#8f1131]">
+        <h2 className="text-center text-3xl font-bold tracking-[-0.02em] text-[#8f1131] sm:text-5xl pt-8">
           Core Safety Pillars
         </h2>
 

@@ -126,12 +126,12 @@ export function PurposeTile({ title, description, variant }: PurposeTileProps) {
 
       {/* Content */}
       <div className="relative z-10 flex h-full flex-col py-5">
-        <h3 className="mb-2 text-[16px] sm:text-[18px] font-semibold text-[#901027] text-center ">
+        <h3 className="mb-2 text-[16px] sm:text-[20px] font-semibold text-[#901027] text-center ">
           {title}
         </h3>
 
         {typeof description === "string" && (
-          <p className="text-[14px] sm:text-[15px] text-[#464646] leading-relaxed max-w-[90%]">
+          <p className="text-[14px] sm:text-[16px] text-[#464646] font-normal leading-relaxed max-w-[90%]">
             {description}
           </p>
         )}

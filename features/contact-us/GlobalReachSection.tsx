@@ -9,7 +9,7 @@ export function GlobalReachSection() {
           <h2 className="text-[50px] leading-none font-semibold tracking-[-0.03em] text-[#8f1131]">
             OUR GLOBAL REACH
           </h2>
-          <p className="mt-5 max-w-[470px] text-[14px] leading-normal text-[#444b54]">
+          <p className="mt-5 max-w-[470px] text-[16px] leading-normal text-[#444b54]">
             With operations spanning key maritime regions, Clio ensures seamless
             communication and support wherever your vessels operate.
           </p>

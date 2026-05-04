@@ -176,7 +176,7 @@ export function FeatureInfoCard({
         </h3>
 
         {/* Description */}
-        <p className="mb-4 text-xs sm:text-sm text-[#464646] leading-relaxed">
+        <p className="mb-4 text-xs sm:text-sm text-[#464646] font-medium leading-relaxed">
           {description}
         </p>
 

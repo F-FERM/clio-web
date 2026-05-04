@@ -13,7 +13,7 @@ export function TransportHeroImage({
   cardDescription,
 }: TransportHeroImageProps) {
   return (
-<div className="group relative mt-8 sm:mt-10 h-[280px] xs:h-[320px] sm:h-[280px] md:h-[340px] lg:h-[400px] xl:h-[440px] w-full overflow-hidden rounded-[14px] sm:rounded-[18px] md:rounded-[22px]">
+    <div className="group relative mt-8 sm:mt-10 h-[280px] xs:h-[320px] sm:h-[280px] md:h-[340px] lg:h-[400px] xl:h-[440px] w-full overflow-hidden rounded-[14px] sm:rounded-[18px] md:rounded-[22px]">
       {/* MAIN IMAGE */}
       <Image
         src={Transport}
@@ -41,11 +41,8 @@ export function TransportHeroImage({
         />
 
         {/* OVERLAY CARD */}
-        <div className="absolute inset-0 flex items-start pt-3 sm:pt-4 md:pt-5 justify-start pl-2 sm:pl-3 md:pl-4 lg:pl-5">
-          <OverlayInfoCard
-            title={cardTitle}
-            description={cardDescription}
-          />
+        <div className="absolute inset-0 flex items-start pt-3 sm:pt-4 md:pt-5 justify-start pl-2 sm:pl-3 md:pl-4 lg:pl-5 pr-4">
+          <OverlayInfoCard title={cardTitle} description={cardDescription} />
         </div>
       </div>
     </div>

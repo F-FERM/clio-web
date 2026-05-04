@@ -8,11 +8,12 @@ export function OverlayInfoCard({ title, description }: OverlayInfoCardProps) {
     <div
       className="
         w-[140px] sm:w-[200px] md:w-[230px] lg:w-[260px] xl:w-[280px]
+        group-hover:w-full
         rounded-2xl sm:rounded-3xl
-        bg-white/70 backdrop-blur-[2px]
+        bg-[#E4E4E4]/50 backdrop-blur-[2px]
         p-3 sm:p-4 lg:p-5
         shadow-sm
-        transition-transform duration-500 ease-out
+        transition-all duration-500 ease-out
         group-hover:scale-[1.03]
       "
     >

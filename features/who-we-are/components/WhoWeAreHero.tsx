@@ -24,7 +24,7 @@ export function WhoWeAreHero({ title, description }: WhoWeAreHeroProps) {
         sm:left-6 sm:top-6 sm:max-w-[80%]
         md:left-8 md:max-w-[520px]
         rounded-[12px] 
-        bg-gray-300/60
+        bg-[#C2C2C2]/60
         px-4 py-4 
         sm:px-6 sm:py-5 
         backdrop-blur-[2px]
@@ -34,7 +34,7 @@ export function WhoWeAreHero({ title, description }: WhoWeAreHeroProps) {
           {title}
         </h2>
 
-        <p className="mt-2 sm:mt-3 text-[13px] sm:text-[14px] leading-[1.7] font-normal text-white">
+        <p className="mt-2 sm:mt-3 text-[13px] sm:text-[17px] leading-[1.7] font-normal text-white">
           {description}
         </p>
       </div>

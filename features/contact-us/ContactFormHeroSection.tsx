@@ -55,7 +55,7 @@ export function ContactFormHeroSection() {
                           {card.title}
                         </h3>
                       </div>
-                      <p className="mt-2 text-[12px] leading-normal text-[#555b64]">
+                      <p className="mt-2 text-[15px] leading-normal text-[#555b64]">
                         {card.value}
                       </p>
                     </article>

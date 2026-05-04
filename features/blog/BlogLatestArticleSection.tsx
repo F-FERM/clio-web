@@ -2,11 +2,11 @@ import { latestArticleContent } from "@/features/latest-article/latestArticle.co
 import Image from "next/image";
 
 const cardImages = [
- "/images/blog/Blog2.jpg", 
+  "/images/blog/Blog2.jpg",
   "/images/blog/Blog4.jpg",
   "/images/blog/Blog9.jpg",
 ] as const;
-const tagColors = ["bg-[#f06464]", "bg-[#4d7cff]", "bg-[#6aa04f]"] as const;
+const tagColors = ["bg-[#FF4040]", "bg-[#4069FF]", "bg-[#4C7823]"] as const;
 
 export function BlogLatestArticleSection() {
   return (

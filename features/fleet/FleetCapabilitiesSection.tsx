@@ -6,17 +6,17 @@ const whatWeDoContent = {
     {
       title: "Advanced Engineering",
       description:
-        "We leverage cutting-edge engineering solutions to optimize vessel performance, fuel efficiency, and operational reliability across our entire fleet.",
+        "Our vessels are built with cutting-edge technology to ensure safety,durability and peal",
     },
     {
       title: "Global Reach",
       description:
-        "With an extensive international network, we operate seamlessly across major ports and shipping lanes worldwide, ensuring timely and efficient delivery.",
+        "Operating across major international routes,enabling seamless logistics worldwide.",
     },
     {
       title: "Safety & Compliance",
       description:
-        "Our operations adhere to the highest international maritime safety standards and regulatory requirements, ensuring full compliance on every voyage.",
+        "Strict adherence to international maritime regulations and environmental standards.",
     },
   ],
 };
@@ -45,7 +45,7 @@ export function FleetCapabilitiesSection() {
             const isActive = activeIndex === index;
 
             return (
-             <div
+              <div
                 key={index}
                 onClick={() => setActiveIndex(isActive ? null : index)}
                 className={`group relative cursor-pointer overflow-hidden rounded-[14px] border border-[#c8ced6] px-4 py-4 sm:px-5 transition-all duration-300 lg:hover:bg-white lg:hover:shadow-md ${
@@ -83,7 +83,7 @@ export function FleetCapabilitiesSection() {
                     {item.description}
                   </p>
                 </div>
-              </div>  
+              </div>
             );
           })}
         </div>
