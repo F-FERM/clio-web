@@ -22,7 +22,7 @@ export const footerDarkContent = {
       items: [
         { label: "Fleet Monitoring", href: "/fleet" },
         { label: "Global Routes", href: "/global-network" },
-        { label: "Compliance & Safety", href: "/safety-compilence" },
+        { label: "Compliance & Safety", href: "/safety-compliance" },
         { label: "Performance Optimization", href: "#" },
       ],
     },

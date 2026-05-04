@@ -38,7 +38,7 @@ export default function RootLayout({
             { label: "Blog", href: "/blog" },
             { label: "Global Network", href: "/global-network" },
             { label: "Career", href: "/career" },
-            { label: "Safety Compliance", href: "/safety-compilence" },
+            { label: "Safety Compliance", href: "/safety-compliance" },
             { label: "Fleet", href: "/fleet" },
           ]}
           contactLabel="Contact Us"
