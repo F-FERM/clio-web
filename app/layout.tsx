@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { VesselTopNav } from "@/features/vessel-landing/components/VesselTopNav";
 import { FooterDarkSection } from "@/features/footer-dark/FooterDarkSection";
+import Providers from "./providers";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -26,26 +27,29 @@ export default function RootLayout({
       lang="en"
       className={poppins.variable}
       style={{ colorScheme: "light" }}
+      suppressHydrationWarning
     >
       <body
         className={`${poppins.className} bg-[#F6FBFF] text-black min-h-screen flex flex-col`}
       >
-        <VesselTopNav
-          brand="CLIO"
-          navItems={[
-            { label: "Home", href: "/" },
-            { label: "About", href: "/about" },
-            { label: "Blog", href: "/blog" },
-            { label: "Global Network", href: "/global-network" },
-            { label: "Career", href: "/career" },
-            { label: "Safety Compliance", href: "/safety-compliance" },
-            { label: "Fleet", href: "/fleet" },
-          ]}
-          contactLabel="Contact Us"
-          contactHref="/contact-us"
-        />
-        <main className="w-full flex-1">{children}</main>
-        <FooterDarkSection />
+        <Providers>
+          <VesselTopNav
+            brand="CLIO"
+            navItems={[
+              { label: "Home", href: "/" },
+              { label: "About", href: "/about" },
+              { label: "Blog", href: "/blog" },
+              { label: "Global Network", href: "/global-network" },
+              { label: "Career", href: "/career" },
+              { label: "Safety Compliance", href: "/safety-compliance" },
+              { label: "Fleet", href: "/fleet" },
+            ]}
+            contactLabel="Contact Us"
+            contactHref="/contact-us"
+          />
+          <main className="w-full flex-1">{children}</main>
+          <FooterDarkSection />
+        </Providers>
       </body>
     </html>
   );

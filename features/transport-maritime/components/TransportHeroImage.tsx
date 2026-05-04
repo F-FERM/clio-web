@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { OverlayInfoCard } from "@/features/transport-maritime/components/OverlayInfoCard";
 import Transport from "../../../public/images/fleet/transport.png";
 import RightImage from "../../../public/images/fleet/RightImage.jpg";
@@ -6,17 +6,21 @@ import RightImage from "../../../public/images/fleet/RightImage.jpg";
 type TransportHeroImageProps = {
   cardTitle: string;
   cardDescription: string;
+  mainImage?: string | StaticImageData;
+  sideImage?: string | StaticImageData;
 };
 
 export function TransportHeroImage({
   cardTitle,
   cardDescription,
+  mainImage,
+  sideImage,
 }: TransportHeroImageProps) {
   return (
     <div className="group relative mt-8 sm:mt-10 h-[280px] xs:h-[320px] sm:h-[280px] md:h-[340px] lg:h-[400px] xl:h-[440px] w-full overflow-hidden rounded-[14px] sm:rounded-[18px] md:rounded-[22px]">
       {/* MAIN IMAGE */}
       <Image
-        src={Transport}
+        src={mainImage || Transport}
         alt="Main background"
         fill
         priority
@@ -34,7 +38,7 @@ export function TransportHeroImage({
         "
       >
         <Image
-          src={RightImage}
+          src={sideImage || RightImage}
           alt="Side image"
           fill
           className="object-cover object-right"

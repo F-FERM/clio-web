@@ -4,25 +4,24 @@ import { ArrowRight } from "lucide-react";
 type ServiceCardProps = {
   title: string;
   tag: string;
-  tagColor: string;
-  image: StaticImageData;
-  imagePosition: "left" | "center" | "right";
+  tagColor?: string;
+  image: string | StaticImageData;
+  imagePosition?: "left" | "center" | "right";
   hoverText: string;
 };
 
-const imagePositionClasses: Record<ServiceCardProps["imagePosition"], string> =
-  {
-    left: "object-left",
-    center: "object-center",
-    right: "object-right",
-  };
+const imagePositionClasses: Record<"left" | "center" | "right", string> = {
+  left: "object-left",
+  center: "object-center",
+  right: "object-right",
+};
 
 export function ServiceCard({
   title,
   tag,
   image,
-  imagePosition,
-  tagColor,
+  imagePosition = "center",
+  tagColor = "bg-[#8f1131]",
   hoverText,
 }: ServiceCardProps) {
   return (

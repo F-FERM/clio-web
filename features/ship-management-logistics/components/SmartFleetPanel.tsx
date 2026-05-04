@@ -1,17 +1,23 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Fleet from "../../../public/images/fleet/Fleet.jpg";
 
 type SmartFleetPanelProps = {
   title: string;
   description: string;
+  image?: string | StaticImageData;
 };
 
-export function SmartFleetPanel({ title, description }: SmartFleetPanelProps) {
+export function SmartFleetPanel({
+  title,
+  description,
+  image,
+}: SmartFleetPanelProps) {
+  
   return (
     <div className="relative h-full min-h-[300px] sm:min-h-[380px] w-full overflow-hidden rounded-xl">
       {/* Background Image */}
       <Image
-        src={Fleet}
+        src={image || Fleet}
         alt="Top view of docked ship logistics"
         fill
         priority

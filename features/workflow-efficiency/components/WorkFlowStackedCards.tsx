@@ -4,13 +4,27 @@ import { useState } from "react";
 import { WorkflowStepCard } from "./WorkflowStepCard";
 import { workflowEfficiencyContent } from "@/features/workflow-efficiency/workflowEfficiency.constants";
 
-export function WorkflowStackedCards() {
+type Step = {
+  id: string;
+  title: string;
+  description: string;
+  variant: "maroon" | "blue" | "yellow";
+};
+
+type WorkflowStackedCardsProps = {
+  steps?: Step[];
+};
+
+export function WorkflowStackedCards({ steps }: WorkflowStackedCardsProps) {
   const [hovered, setHovered] = useState<number | null>(null);
+
+  const displaySteps =
+    steps && steps.length > 0 ? steps : (workflowEfficiencyContent.steps as Step[]);
 
   const CARD_WIDTH_DEFAULT = 360;
   const CARD_WIDTH_EXPANDED = 440;
   const CARD_OVERLAP = 85;
-  const CARD_COUNT = workflowEfficiencyContent.steps.length;
+  const CARD_COUNT = displaySteps.length;
 
   const totalWidth =
     CARD_COUNT * (CARD_WIDTH_DEFAULT - CARD_OVERLAP) + CARD_OVERLAP;
@@ -35,7 +49,7 @@ export function WorkflowStackedCards() {
     <>
       {/* ── Mobile: vertical stack ── */}
       <div className="flex md:hidden flex-col gap-4 w-full">
-        {workflowEfficiencyContent.steps.map((step) => (
+        {displaySteps.map((step) => (
           <div key={step.id} className="w-full">
             <WorkflowStepCard
               id={step.id}
@@ -56,7 +70,7 @@ export function WorkflowStackedCards() {
             transition: "width 0.4s cubic-bezier(0.4,0,0.2,1)",
           }}
         >
-          {workflowEfficiencyContent.steps.map((step, index) => (
+          {displaySteps.map((step, index) => (
             <div
               key={step.id}
               className="absolute top-0 h-full"
@@ -82,4 +96,4 @@ export function WorkflowStackedCards() {
       </div>
     </>
   );
-}
+}
