@@ -63,6 +63,7 @@
 .outline {
   color: transparent;
   -webkit-text-stroke: 1.5px #ffffff;
+  text-shadow: 0 0 1px rgba(70, 70, 70, 0.5);
   font-style: italic;
 }
 

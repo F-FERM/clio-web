@@ -41,8 +41,8 @@ export default function GlobalLeadersSection() {
              <span className={styles.outline}>{parts.slice(2, 4).join(" ")}</span>
           </span>
           <span className={styles.line}>
-             <span className={styles.solid}>{parts.slice(4, 7).join(" ")}&nbsp;</span>
-             <span className={styles.outline}>{parts.slice(7, 8).join(" ")}</span>
+             <span className={styles.solid}>{parts.slice(4, 6).join(" ")}&nbsp;</span>
+             <span className={styles.outline}>{parts.slice(6, 8).join(" ")}</span>
           </span>
           {parts.length > 8 && (
             <span className={styles.line}>
@@ -61,10 +61,7 @@ export default function GlobalLeadersSection() {
         </span>
         <span className={styles.line}>
           <span className={styles.solid}>Management &amp;&nbsp;</span>
-          <span className={styles.outline}>Maritime</span>
-        </span>
-        <span className={styles.line}>
-          <span className={styles.solid}>Operations</span>
+          <span className={styles.outline}>Maritime Operations</span>
         </span>
       </h1>
     );

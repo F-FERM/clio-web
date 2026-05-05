@@ -49,7 +49,7 @@ export function ServiceCard({
         {/* Tag Badge - Always visible */}
         <div className="absolute bottom-4 left-4">
           <span
-            className={`${tagColor} inline-block rounded-full px-4 py-2 text-xs font-semibold text-white shadow-md`}
+            className={`${tagColor} inline-block rounded-full px-4 py-2 text-[16px] font-semibold text-white shadow-md`}
           >
             {tag}
           </span>

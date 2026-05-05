@@ -59,7 +59,7 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/10 sm:bg-transparent" />
 
             {/* Title - On Top of Image */}
-            <h1 className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-[-5] md:left-1 text-lg sm:text-3xl md:text-5xl lg:text-[59px] font-bold text-[#464646] z-10 whitespace-normal sm:whitespace-nowrap">
+            <h1 className="absolute top-2 left-2 sm:top-4 sm:left-4 md:top-3 md:left-20 text-lg sm:text-3xl md:text-5xl lg:text-[59px] font-bold text-[#464646] z-10 whitespace-normal sm:whitespace-nowrap">
               {restOfHeading} <span className={styles.outline}>{lastWord}</span>
             </h1>
           </div>
