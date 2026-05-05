@@ -1,11 +1,49 @@
 "use client";
 
 import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { ListWedoChooseClioApi } from "@/app/api/about/wedochooseclio";
 import { whatWeDoContent } from "@/features/what-we-do/whatWeDo.constants";
 import { GetStartedButton } from "../transport-maritime/components/GetStartedButton";
 
 export function WhyChooseClioSection() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["what-we-do-choose-clio"],
+    queryFn: () => ListWedoChooseClioApi({}),
+  });
+
+  if (isLoading) {
+    return (
+      <section className="w-full px-6 py-10 lg:px-34 lg:py-16 animate-pulse">
+        <div className="mx-auto grid w-full max-w-[1240px] gap-8 lg:grid-cols-2 lg:gap-12">
+          <div>
+            <div className="h-10 w-64 bg-gray-200 rounded mb-6" />
+            <div className="h-6 w-full bg-gray-200 rounded mb-4" />
+            <div className="h-6 w-full bg-gray-200 rounded mb-4" />
+            <div className="h-12 w-40 bg-gray-200 rounded mt-6" />
+          </div>
+          <div className="space-y-3 sm:space-y-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-16 bg-gray-200 rounded-[14px]" />
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    console.error("Error fetching why choose clio data:", error);
+  }
+
+  const sectionData = Array.isArray(data) ? data[0] : data;
+
+  const whyTitle = sectionData?.whyTitle || whatWeDoContent.whyTitle;
+  const whyDescription = sectionData?.whyDescription || whatWeDoContent.whyDescription;
+  const cta = sectionData?.cta || whatWeDoContent.cta;
+  const benefits = sectionData?.benefits || whatWeDoContent.benefits;
 
   return (
     <section className="w-full px-6 py-10 lg:px-34 lg:py-16">
@@ -13,21 +51,21 @@ export function WhyChooseClioSection() {
         {/* LEFT CONTENT */}
         <div>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-[-0.03em] text-[#901027]">
-            {whatWeDoContent.whyTitle}
+            {whyTitle}
           </h2>
 
           <p className="mt-4 sm:mt-6 max-w-[520px] text-[15px] sm:text-[16px] lg:text-[18px] leading-relaxed text-[#24272d]">
-            {whatWeDoContent.whyDescription}
+            {whyDescription}
           </p>
 
           <div className="mt-6 sm:mt-12">
-            <GetStartedButton label={whatWeDoContent.cta} />
+            <GetStartedButton label={cta} />
           </div>
         </div>
 
         {/* RIGHT CARDS */}
         <div className="space-y-3 sm:space-y-4">
-          {whatWeDoContent.benefits.map((item, index) => {
+          {benefits.map((item: any, index: number) => {
             const isActive = activeIndex === index;
 
             return (

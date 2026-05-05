@@ -1,16 +1,17 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import About2 from "../../../public/images/about/About2.jpg";
 
 type WhoWeAreHeroProps = {
   title: string;
   description: string;
+  image?: string | StaticImageData;
 };
 
-export function WhoWeAreHero({ title, description }: WhoWeAreHeroProps) {
+export function WhoWeAreHero({ title, description, image }: WhoWeAreHeroProps) {
   return (
     <div className="relative h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] overflow-hidden rounded-[16px]">
       <Image
-        src={About2}
+        src={image || About2}
         alt="Ship at port"
         fill
         priority
