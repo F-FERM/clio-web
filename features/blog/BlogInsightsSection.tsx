@@ -39,9 +39,10 @@ export function BlogInsightsSection() {
 
   const leftTitle = blogData?.leftTitle || latestArticleContent.leftTitle;
   const leftText = blogData?.leftText || latestArticleContent.leftText;
+  const leftImage = blogData?.leftImage || Blog6;
   const rightTitle = blogData?.rightTitle || latestArticleContent.rightTitle;
   const rightText = blogData?.rightText || latestArticleContent.rightText;
-  const bottomImage = blogData?.bottomImage;
+  const rightImage = blogData?.rightImage || Blog7;
 
   return (
     <section className="w-full px-4 pb-12 sm:px-6 sm:pb-16 lg:px-34 lg:pb-20 mt-10 sm:mt-16 lg:mt-20">
@@ -59,7 +60,7 @@ export function BlogInsightsSection() {
 
           <div className="relative h-[220px] sm:h-[260px] md:h-[190px] lg:h-[240px] overflow-hidden rounded-[16px] sm:rounded-[20px]">
             <Image
-              src={Blog6}
+              src={leftImage}
               alt="Expert maritime perspective"
               fill
               className="object-cover object-center"
@@ -72,7 +73,7 @@ export function BlogInsightsSection() {
           {/* On mobile, show image below text for visual variety; on md+ keep image first */}
           <div className="relative h-[220px] sm:h-[260px] md:h-[190px] lg:h-[240px] overflow-hidden rounded-[16px] sm:rounded-[20px] order-2 md:order-1">
             <Image
-              src={bottomImage || Blog7}
+              src={rightImage}
               alt="Maritime innovation at sea"
               fill
               className="object-cover object-center"
