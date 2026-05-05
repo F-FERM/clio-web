@@ -47,17 +47,20 @@ export function OurServiceSection() {
 
       {/* Cards */}
       <div className="mt-8 grid grid-cols-1 gap-6 sm:mt-10 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-5 pt-9 pb-7 lg:px-15 px-3">
-        {cards.map((card: any) => (
-          <ServiceCard
-            key={card._id || card.title}
-            title={card.title}
-            tag={card.tag}
-            image={card.image}
-            imagePosition={card.imagePosition || "center"}
-            tagColor={card.tagColor || "bg-[#8f1131]"}
-            hoverText={card.hoverText}
-          />
-        ))}
+        {cards.map((card: any, index: number) => {
+          const fallbackColors = ["bg-[#79BED7]", "bg-[#10A31A]", "bg-[#86172B]"];
+          return (
+            <ServiceCard
+              key={card._id || card.title}
+              title={card.title}
+              tag={card.tag}
+              image={card.image}
+              imagePosition={card.imagePosition || "center"}
+              tagColor={card.tagColor || fallbackColors[index % fallbackColors.length]}
+              hoverText={card.hoverText}
+            />
+          );
+        })}
       </div>
 
       {/* Description */}

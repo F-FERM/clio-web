@@ -56,6 +56,7 @@ export function WorkflowStackedCards({ steps }: WorkflowStackedCardsProps) {
               title={step.title}
               description={step.description}
               variant={step.variant}
+              
             />
           </div>
         ))}
@@ -96,4 +97,4 @@ export function WorkflowStackedCards({ steps }: WorkflowStackedCardsProps) {
       </div>
     </>
   );
-}
+}

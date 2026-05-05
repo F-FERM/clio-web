@@ -1,3 +1,8 @@
+import Image from "next/image";
+import yellowPattern from "../../../public/images/patterns/yellow-pattern.jpg";
+import maroonPattern from "../../../public/images/patterns/maroonpattern.jpg";
+import grayPattern from "../../../public/images/patterns/graypattern.jpg";
+
 type WorkflowStepCardProps = {
   id: string;
   title: string;
@@ -6,7 +11,7 @@ type WorkflowStepCardProps = {
 };
 
 const cardVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
-  maroon: "bg-[#9d1839]",
+  maroon: "bg-[#901027]",
   blue: "bg-[#E0EFFA]",
   yellow: "bg-[#FAE651]",
 };
@@ -19,8 +24,8 @@ const numVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
 
 const titleVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
   maroon: "text-white",
-  blue: "text-[#9d1839]",
-  yellow: "text-[#9d1839]",
+  blue: "text-[#901027]",
+  yellow: "text-[#901027]",
 };
 
 const descVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
@@ -29,24 +34,11 @@ const descVariantStyles: Record<WorkflowStepCardProps["variant"], string> = {
   yellow: "text-[#374151]",
 };
 
-const TopoSVG = ({ stroke }: { stroke: string }) => (
-  <svg
-    className="absolute inset-0 w-full h-full opacity-[0.18] pointer-events-none"
-    viewBox="0 0 300 300"
-    xmlns="http://www.w3.org/2000/svg"
-    preserveAspectRatio="xMidYMid slice"
-  >
-    <g stroke={stroke} strokeWidth="1.4" fill="none">
-      <path d="M0,180 Q80,130 160,180 T320,180" />
-      <path d="M0,150 Q80,100 160,150 T320,150" />
-      <path d="M0,210 Q80,160 160,210 T320,210" />
-      <path d="M0,120 Q80,70 160,120 T320,120" />
-      <path d="M0,240 Q80,190 160,240 T320,240" />
-      <path d="M0,90 Q80,40 160,90 T320,90" />
-      <path d="M0,270 Q80,220 160,270 T320,270" />
-    </g>
-  </svg>
-);
+const patternImages = {
+  maroon: maroonPattern,
+  blue: grayPattern,
+  yellow: yellowPattern,
+};
 
 export function WorkflowStepCard({
   id,
@@ -62,10 +54,15 @@ export function WorkflowStepCard({
         ${cardVariantStyles[variant]}
       `}
     >
-      <TopoSVG stroke={variant === "maroon" ? "white" : "#1f2937"} />
+      <Image
+        src={patternImages[variant]}
+        alt="Pattern"
+        fill
+        className="absolute inset-0 object-cover opacity-20 mix-blend-multiply pointer-events-none"
+      />
 
       <p
-        className={`relative z-10 text-[24px] sm:text-[30px] md:text-[36px] font-medium leading-none tracking-[-0.02em] ${numVariantStyles[variant]}`}
+        className={`relative z-10 text-[24px]  sm:text-[30px] md:text-[36px] font-medium leading-none tracking-[-0.02em] ${numVariantStyles[variant]}`}
       >
         {id}
       </p>
