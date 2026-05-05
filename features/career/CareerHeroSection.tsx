@@ -1,4 +1,9 @@
-import { WhatWeDoCta } from "@/features/what-we-do/components/WhatWeDoCta";
+"use client";
+
+import React from "react";
+import Image from "next/image";
+import { useQuery } from "@tanstack/react-query";
+import { ListCareerApi } from "@/app/api/career/career";
 import {
   BriefcaseBusiness,
   Globe,
@@ -6,59 +11,62 @@ import {
   ShieldCheck,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 import { GetStartedButton } from "../transport-maritime/components/GetStartedButton";
 
-const careerHighlights = [
-  {
-    icon: Globe,
-    title: "Global Exposure",
-    description: "Work across international maritime operations",
-  },
-  {
-    icon: BriefcaseBusiness,
-    title: "Career Growth",
-    description: "Continuous learning and advancement opportunities",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Industry Leadership",
-    description: "Be part of a high-performance maritime team",
-  },
-  {
-    icon: Users,
-    title: "Collaborative Culture",
-    description: "Work with experienced professionals",
-  },
-  {
-    icon: Rocket,
-    title: "Innovation Driven",
-    description: "Modern tools and smart systems",
-  },
-] as const;
+const icons = [Globe, BriefcaseBusiness, ShieldCheck, Users, Rocket];
 
 export function CareerHeroSection() {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["career-page"],
+    queryFn: () => ListCareerApi({}),
+  });
+
+  if (isLoading) {
+    return (
+      <section className="w-full px-6 sm:pt-32 lg:pt-12 lg:px-20 animate-pulse">
+        <div className="mx-auto grid w-full max-w-[1240px] items-start gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <div className="h-20 w-3/4 bg-gray-200 rounded mb-6" />
+            <div className="h-10 w-full bg-gray-200 rounded mb-4" />
+            <div className="h-12 w-40 bg-gray-200 rounded mt-8" />
+          </div>
+          <div className="h-[400px] bg-gray-200 rounded-[18px]" />
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    console.error("Error fetching career hero:", error);
+  }
+
+  const careerData = Array.isArray(data) ? data[0] : data;
+
+  const heading = careerData?.heading || "Build Your Future in Maritime Excellence";
+  const description = careerData?.description || "Join a team that's redefining global ship management. At Clio, we combine innovation, expertise, and opportunity to help you grow in a dynamic maritime environment.";
+  const cta = careerData?.cta || "Get Started";
+  const heroImage = careerData?.heroImage || "/images/career/career.png";
+  const whyItems = careerData?.whyItems || [];
+
   return (
-    <section className="w-full px-6  sm:pt-32 lg:pt-12 lg:px-20">
+    <section className="w-full px-6 sm:pt-32 lg:pt-12 lg:px-20">
       <div className="mx-auto grid w-full max-w-[1240px] items-start gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <div className="relative z-20 pt-1">
           <h1 className="max-w-[950px] text-4xl sm:text-5xl lg:text-[64px] leading-[1.2] sm:leading-[1.28] font-bold tracking-[-0.03em] text-[#45474d]">
-            Build Your Future in Maritime Excellence
+            {heading}
           </h1>
           <p className="mt-4 sm:mt-6 max-w-[390px] text-xs sm:text-[14px] leading-normal text-[#3b3f45]">
-            Join a team that&apos;s redefining global ship management. At Clio,
-            we combine innovation, expertise, and opportunity to help you grow
-            in a dynamic maritime environment.
+            {description}
           </p>
           <div className="mt-6 sm:mt-7">
-            <GetStartedButton label="Get Started" />
+            <GetStartedButton label={cta} />
           </div>
         </div>
 
         <div className="relative z-10 min-h-[350px] sm:min-h-[395px] lg:ml-6 mt-12 sm:mt-16 lg:mt-0">
           <div className="absolute inset-0 overflow-hidden rounded-[18px]">
             <Image
-              src="/images/career/career.png"
+              src={heroImage}
               alt="Maritime careers"
               fill
               priority
@@ -75,10 +83,10 @@ export function CareerHeroSection() {
             </p>
 
             <div className="mt-3 grid grid-cols-2 gap-3 sm:block sm:space-y-2.5">
-              {careerHighlights.map((item) => {
-                const Icon = item.icon;
+              {whyItems.map((item: any, index: number) => {
+                const Icon = icons[index % icons.length];
                 return (
-                  <div key={item.title} className="flex items-start gap-3">
+                  <div key={item._id || index} className="flex items-start gap-3">
                     <Icon className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 shrink-0 text-white/90" />
                     <div>
                       <p className="text-[10px] sm:text-[15px] leading-none font-medium text-white">
