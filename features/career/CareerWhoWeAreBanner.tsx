@@ -1,12 +1,11 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import { useQuery } from "@tanstack/react-query";
 import { ListCareerApi } from "@/app/api/career/career";
 import { OverlayInfoCard } from "@/features/transport-maritime/components/OverlayInfoCard";
+import { useQuery } from "@tanstack/react-query";
+import Image from "next/image";
+import RightImageFallback from "../../public/images/career/who.jpg";
 import MainImage from "../../public/images/career/Carrer1.jpg";
-import RightImageFallback from "../../public/images/career/Career2.jpg";
 import { careerContent } from "./career.constants";
 
 export function CareerWhoWeAreBanner() {
@@ -32,8 +31,10 @@ export function CareerWhoWeAreBanner() {
   const careerData = Array.isArray(data) ? data[0] : data;
 
   const whoTitle = careerData?.whoTitle || careerContent.cardTitle;
-  const whoDescription = careerData?.whoDescription || careerContent.cardDescription;
+  const whoDescription =
+    careerData?.whoDescription || careerContent.cardDescription;
   const whoImage = careerData?.whoImage || RightImageFallback;
+  console.log(whoImage, "who");
 
   return (
     <section className="w-full px-6 py-12 lg:px-20 lg:py-16">
@@ -68,10 +69,7 @@ export function CareerWhoWeAreBanner() {
 
             {/* OVERLAY CARD */}
             <div className="absolute inset-0 flex items-center justify-start p-8 md:p-10 lg:p-12">
-              <OverlayInfoCard
-                title={whoTitle}
-                description={whoDescription}
-              />
+              <OverlayInfoCard title={whoTitle} description={whoDescription} />
             </div>
           </div>
         </div>

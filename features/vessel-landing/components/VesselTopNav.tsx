@@ -41,7 +41,15 @@ export function VesselTopNav({
         {/* <p className="text-3xl sm:text-5xl font-bold tracking-tight text-[#101114]">
           {brand}
         </p> */}
-        <Image src={logo} alt="clio logo" width={200} height={200} />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="clio logo"
+            width={200}
+            height={200}
+            className="cursor-pointer hover:opacity-80 transition-opacity"
+          />
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden items-center gap-6 xl:flex xl:gap-[40px]">

@@ -51,7 +51,7 @@ export function BlogLatestArticleSection() {
               className="group relative h-[370px] overflow-hidden rounded-[14px] cursor-pointer"
             >
               <Image
-                src={card.image || "/images/blog/Blog2.jpg"}
+                src={card.leftTitle || "/images/blog/Blog2.jpg"}
                 alt={card.title}
                 fill
                 className="object-cover object-center"
@@ -110,7 +110,10 @@ export function BlogLatestArticleSection() {
                 </p>
                 {card.tags && card.tags.length > 0 && (
                   <p className="mt-1 text-[14px] font-medium text-white">
-                    Tags: {Array.isArray(card.tags) ? card.tags.join(", ") : card.tags}
+                    Tags:{" "}
+                    {Array.isArray(card.tags)
+                      ? card.tags.join(", ")
+                      : card.tags}
                   </p>
                 )}
               </div>
