@@ -54,7 +54,11 @@ const patternImages = {
   yellow: yellowPattern,
   maroon: maroonPattern,
 };
-
+const shadowVariantStyles: Record<FeatureInfoCardProps["variant"], string> = {
+  gray: "hover:shadow-[0_0_30px_4px_rgba(0,0,0,0.12)]",
+  yellow: "hover:shadow-[0_0_30px_4px_rgba(250,230,81,0.6)]",
+  maroon: "hover:shadow-[0_0_30px_4px_rgba(144,16,39,0.5)]",
+};
 export function FeatureInfoCard({
   title,
   description,
@@ -63,7 +67,7 @@ export function FeatureInfoCard({
 }: FeatureInfoCardProps) {
   return (
     <article
-      className={`relative overflow-hidden rounded-[22px] p-5 sm:p-6 min-h-[200px] sm:min-h-[230px] transition-transform duration-300 ease-out hover:-translate-y-2 ${cardVariantStyles[variant]}`}
+      className={`relative overflow-hidden rounded-[22px] p-5 sm:p-6  min-h-[200px] sm:min-h-[230px] transition-transform duration-300 ease-out hover:-translate-y-2 ${cardVariantStyles[variant]} ${shadowVariantStyles[variant]}`}
     >
       <Image
         src={patternImages[variant]}

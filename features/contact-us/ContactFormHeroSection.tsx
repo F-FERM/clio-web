@@ -215,10 +215,10 @@ export function ContactFormHeroSection() {
               <button
                 type="submit"
                 disabled={mutation.isPending}
-                className="mt-3 inline-flex items-center gap-2 rounded-full bg-[#9a1131] px-5 py-2 text-[12px] font-semibold text-white disabled:opacity-50"
+                className="mt-3 inline-flex items-center cursor-pointer gap-2 rounded-full bg-[#9a1131] px-5 py-2 text-[14px] font-semibold text-white disabled:opacity-50"
               >
                 <span>{mutation.isPending ? "Sending..." : buttonText}</span>
-                {!mutation.isPending && <span className="text-[13px]">↗</span>}
+                {!mutation.isPending && <span className="text-[14px]">↗</span>}
               </button>
             </form>
           </div>

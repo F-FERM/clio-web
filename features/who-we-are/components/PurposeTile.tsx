@@ -19,7 +19,10 @@ const patternImages = {
   blue: grayPattern,
   yellow: yellowPattern,
 };
-
+const shadowVariantStyles: Record<PurposeTileProps["variant"], string> = {
+  blue: "hover:shadow-[0_0_30px_4px_rgba(0,0,0,0.12)]",
+  yellow: "hover:shadow-[0_0_30px_4px_rgba(250,230,81,0.6)]",
+};
 export function PurposeTile({
   title,
   description,
@@ -28,7 +31,7 @@ export function PurposeTile({
 }: PurposeTileProps) {
   return (
     <article
-      className={`relative overflow-hidden rounded-[20px] p-5 sm:p-6 min-h-[200px] transition-transform duration-300 ease-out hover:-translate-y-2 ${cardVariantStyles[variant]}`}
+      className={`relative overflow-hidden rounded-[20px] p-5 sm:p-6 min-h-[200px] transition-transform duration-300 ease-out hover:-translate-y-2 ${cardVariantStyles[variant]} ${shadowVariantStyles[variant]}`}
     >
       {/* Pattern Background */}
       <Image
@@ -48,7 +51,6 @@ export function PurposeTile({
         {/* ✅ Description */}
         {description && (
           <p className="text-[14px] sm:text-[16px] text-[#464646] text-center max-w-[90%] mx-auto leading-relaxed">
-            
             {description}
           </p>
         )}
@@ -71,4 +73,3 @@ export function PurposeTile({
     </article>
   );
 }
-  

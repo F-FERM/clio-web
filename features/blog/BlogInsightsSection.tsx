@@ -53,7 +53,7 @@ export function BlogInsightsSection() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#901027] max-w-full md:max-w-[420px]">
               {leftTitle}
             </h2>
-            <p className="mt-4 sm:mt-6 text-sm leading-[1.45] text-[#3f434b] max-w-full md:max-w-[430px]">
+            <p className="mt-4 sm:mt-6 text-[16px] leading-[1.45] text-[#3f434b] max-w-full md:max-w-[430px]">
               {leftText}
             </p>
           </div>
@@ -84,7 +84,7 @@ export function BlogInsightsSection() {
             <h2 className="text-2xl sm:text-3xl lg:text-4xl leading-[1.70] font-semibold tracking-[-0.03em] text-[#901027] max-w-full md:max-w-[460px]">
               {rightTitle}
             </h2>
-            <p className="mt-4 sm:mt-6 text-sm leading-[1.45] text-[#3f434b]">
+            <p className="mt-4 sm:mt-6 text-[16px] leading-[1.45] text-[#3f434b]">
               {rightText}
             </p>
           </div>

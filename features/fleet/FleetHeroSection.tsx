@@ -38,6 +38,10 @@ export function FleetHeroSection() {
     { label: "Fleet Uptime", value: "99.7%" },
   ];
 
+  const handleScroll = () => {
+    document.getElementById("fleet-showcase")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="w-full">
       <div className="relative h-[500px] sm:h-[580px] overflow-hidden rounded-[24px]">
@@ -59,7 +63,8 @@ export function FleetHeroSection() {
           </p>
           <button
             type="button"
-            className="mt-6 sm:mt-8 rounded-[12px] bg-[#f1df3f] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-[15px] font-bold text-[#1d2735] transition-all hover:scale-105 hover:bg-[#f5e76d] active:scale-95 hidden sm:block"
+            onClick={handleScroll}
+            className="mt-6 sm:mt-8 rounded-[12px] bg-[#f1df3f] px-6 py-3 sm:px-8 sm:py-4 text-sm sm:text-[15px] font-bold text-[#1d2735] transition-all hover:scale-105 hover:bg-[#f5e76d] active:scale-95 hidden sm:block cursor-pointer"
           >
             {cta}
           </button>
@@ -97,7 +102,8 @@ export function FleetHeroSection() {
         </p>
         <button
           type="button"
-          className="mt-6 w-full rounded-[12px] bg-[#f1df3f] py-4 text-[15px] font-bold text-[#1d2735] active:scale-95"
+          onClick={handleScroll}
+          className="mt-6 w-full rounded-[12px] bg-[#f1df3f] py-4 text-[15px] font-bold text-[#1d2735] active:scale-95 cursor-pointer"
         >
           {cta}
         </button>

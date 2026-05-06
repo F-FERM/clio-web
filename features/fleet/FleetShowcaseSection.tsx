@@ -40,8 +40,10 @@ export function FleetShowcaseSection() {
   const description = fleetData?.description || "From oil tankers to support vessels, every ship in the Clio fleet is built to the highest maritime standards, delivering performance across all ocean conditions.";
   const cards = fleetData?.cards || ourFleetContent.cards || [];
 
+  const tagColors = ["#B16E03", "#86172B", "#7A6C00", "#236A28"];
+
   return (
-    <section className="w-full px-6 py-9 lg:px-20 lg:py-20">
+    <section id="fleet-showcase" className="w-full px-6 py-9 lg:px-20 lg:py-20">
       <div className="mx-auto w-full max-w-[1400px]">
         <div className="mb-16 text-center">
           <h2 className="text-5xl lg:text-6xl leading-[1.1] font-bold tracking-[-0.03em] text-[#901027]">
@@ -60,8 +62,7 @@ export function FleetShowcaseSection() {
                 tag={card.tag}
                 image={card.image}
                 hoverText={card.hoverText}
-                // Maintaining potential design defaults for missing API props
-                tagColor={card.tagColor || (index % 2 === 0 ? "blue" : "red")}
+                tagColor={card.tagColor || tagColors[index % tagColors.length]}
               />
             </div>
           ))}
