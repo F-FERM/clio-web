@@ -44,7 +44,7 @@ export const ListContactApi = async (data: {
 
 export const CreateContactApi = async (data: ContactFormData) => {
   try {
-    const response = await axiosInstance.post("/contact/section", data);
+    const response = await axiosInstance.post("/contact", data);
     return response.data;
   } catch (error) {
     if (error instanceof AxiosError) {
