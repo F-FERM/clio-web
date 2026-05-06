@@ -11,6 +11,7 @@ export interface ListCareerResponse {
   createdAt: string;
   updatedAt: string;
   __v: number;
+  whoImage2: string;
   jobs: Job[];
 }
 

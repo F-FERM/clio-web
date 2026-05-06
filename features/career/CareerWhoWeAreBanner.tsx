@@ -34,15 +34,16 @@ export function CareerWhoWeAreBanner() {
   const whoDescription =
     careerData?.whoDescription || careerContent.cardDescription;
   const whoImage = careerData?.whoImage || RightImageFallback;
+  const whoImage2 = careerData?.whoImage2 || RightImageFallback;
   console.log(whoImage, "who");
 
   return (
     <section className="w-full px-6 py-12 lg:px-20 lg:py-16">
       <div className="mx-auto w-full max-w-[1240px]">
-        <div className="group relative h-[300px] md:h-[350px] lg:h-[380px] w-full overflow-hidden rounded-[24px]">
+        <div className="group relative mt-8 sm:mt-10 h-[280px] xs:h-[320px] sm:h-[280px] md:h-[340px] lg:h-[400px] xl:h-[440px] w-full overflow-hidden rounded-[14px] sm:rounded-[18px] md:rounded-[22px]">
           {/* MAIN IMAGE */}
           <Image
-            src={MainImage}
+            src={whoImage}
             alt="Main background"
             fill
             priority
@@ -53,22 +54,21 @@ export function CareerWhoWeAreBanner() {
           <div
             className="
               absolute right-0 top-0 h-full
-              w-[50%] md:w-[45%] lg:w-[40%]
+              w-[48%] sm:w-[42%] md:w-[38%] lg:w-[32%]
               transition-all duration-500 ease-out
-              group-hover:w-[70%] md:group-hover:w-[60%] lg:group-hover:w-[55%]
-              rounded-l-[24px] overflow-hidden
-              bg-white/95 backdrop-blur-sm
+              group-hover:w-[62%] sm:group-hover:w-[55%] md:group-hover:w-[50%] lg:group-hover:w-[44%]
+              rounded-l-[14px] sm:rounded-l-[18px] md:rounded-l-[22px] overflow-hidden
             "
           >
             <Image
-              src={whoImage}
+              src={whoImage2}
               alt="Who we are"
               fill
               className="object-cover object-right"
             />
 
             {/* OVERLAY CARD */}
-            <div className="absolute inset-0 flex items-center justify-start p-8 md:p-10 lg:p-12">
+            <div className="absolute inset-0 flex items-start pt-3 sm:pt-4 md:pt-5 justify-start pl-2 sm:pl-3 md:pl-4 lg:pl-5 pr-4">
               <OverlayInfoCard title={whoTitle} description={whoDescription} />
             </div>
           </div>
