@@ -6,7 +6,8 @@ import { useQuery } from "@tanstack/react-query";
 import HeaderMainShip from "../../public/images/home/HeroShip.png";
 import { VesselOperationsCard } from "./components/VesselOperationsCard";
 import { VesselInfoPill } from "./components/VesselInfoPill";
-import { ListVesselLandingApi } from "@/app/api/home/page";
+import { ListVesselLandingApi } from "@/app/api/home/vessellanding";
+
 
 export function VesselLandingSection() {
   const { data, isLoading, error } = useQuery({
