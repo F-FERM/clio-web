@@ -72,7 +72,7 @@ console.log(sideImage,'side');
                 title={card.title}
                 description={card.description}
                 tags={card.tags}
-                variant={index % 2 === 0 ? "lightBlue" : "yellow"}
+                variant={index % 2 === 0 ? "gray" : "yellow"}
               />
             ))}
           </div>

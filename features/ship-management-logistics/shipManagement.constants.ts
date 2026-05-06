@@ -11,7 +11,7 @@ export const shipManagementContent = {
       description:
         "Ensure smooth vessel operations with optimized performance, safety compliance, and reliable fleet management.",
       tags: ["Safety", "Efficiency"],
-      variant: "lightBlue",
+      variant: "gray",
     },
     {
       title: "Global Visibility",

@@ -106,15 +106,14 @@ export function ContactFormHeroSection() {
                 <h2 className="text-[54px] leading-[1.02] font-bold tracking-[-0.03em] text-[#9a1131]">
                   {heading}
                 </h2>
-                <p className="mt-2 text-[12px] leading-normal text-white/90">
+                <p className="mt-3 text-[14px] leading-normal text-white/90 ">
                   {description}
                 </p>
               </div>
 
               <div className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {contactInfo.map((card: any) => {
-                  const Icon =
-                    (iconMap as any)[card.title] || Mail;
+                  const Icon = (iconMap as any)[card.title] || Mail;
                   return (
                     <article
                       key={card._id || card.title}
@@ -144,7 +143,7 @@ export function ContactFormHeroSection() {
               </h3>
               <div className="mt-3 space-y-2">
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">
+                  <span className="text-[15px] font-medium text-white">
                     Name
                   </span>
                   <input
@@ -158,7 +157,7 @@ export function ContactFormHeroSection() {
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">
+                  <span className="text-[15px]font-medium text-white">
                     Company Name
                   </span>
                   <input
@@ -172,7 +171,7 @@ export function ContactFormHeroSection() {
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">
+                  <span className="text-[15px] font-medium text-white">
                     Email
                   </span>
                   <input
@@ -186,7 +185,7 @@ export function ContactFormHeroSection() {
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">
+                  <span className="text-[15px] font-medium text-white">
                     Service Required
                   </span>
                   <input
@@ -200,7 +199,7 @@ export function ContactFormHeroSection() {
                   />
                 </label>
                 <label className="block">
-                  <span className="text-[12px] font-medium text-white">
+                  <span className="text-[15px] font-medium text-white">
                     Message
                   </span>
                   <textarea

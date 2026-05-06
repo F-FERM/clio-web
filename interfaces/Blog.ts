@@ -30,3 +30,18 @@ export interface Card {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface ListBlogSection {
+  _id: string;
+  title: string;
+  description: string;
+  content: string;
+  image: string;
+  tag: string;
+  tags: string[];
+  date: string;
+  isPublished: boolean;
+  __v: number;
+  createdAt: string;
+  updatedAt: string;
+}
