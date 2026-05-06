@@ -56,12 +56,14 @@ const NetworkPage = () => {
           <div className="mt-6 grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
             <PurposeTile
               title={blueFeature.title}
-              description={blueFeature.points}
+              description={blueFeature.description}
+              points={blueFeature.points}
               variant="blue"
             />
             <PurposeTile
               title={yellowFeature.title}
-              description={yellowFeature.points}
+           description={blueFeature.description}
+              points={blueFeature.points}
               variant="yellow"
             />
           </div>

@@ -66,14 +66,14 @@ export function FooterDarkSection() {
               </p>
             </div>
             <p className="max-w-[620px] text-xl sm:text-2xl leading-[1.12] font-semibold tracking-[-0.02em] text-white">
-              {ctaText}
+              Need Reliable Ship Management Solutions?
             </p>
             <Link href={ctaLink}>
               <button
                 type="button"
                 className="h-[48px] w-full lg:w-auto rounded-xl bg-[#f1df3f] px-12 text-[16px] font-semibold text-[#181a1f] cursor-pointer hover:bg-[#f3e45c] transition-colors"
               >
-                Get Started
+               Contact Us
               </button>
             </Link>
           </div>

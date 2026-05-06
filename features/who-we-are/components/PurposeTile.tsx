@@ -1,6 +1,7 @@
 type PurposeTileProps = {
-  title: string;
-  description: string | string[];
+   title: string;
+  description?: string;
+  points?: string[];
   variant: "blue" | "yellow";
 };
 
@@ -109,52 +110,51 @@ function YellowSvgBackground() {
   );
 }
 
-export function PurposeTile({ title, description, variant }: PurposeTileProps) {
+export function PurposeTile({ title, description, points, variant }: PurposeTileProps) {
   const SvgBackground =
     variant === "blue" ? LightBlueSvgBackground : YellowSvgBackground;
 
   return (
-    <article
-      className={`relative overflow-hidden rounded-[20px] p-5 sm:p-6 min-h-[180px] sm:min-h-[200px]
+   <article
+      className={`relative overflow-hidden rounded-[20px] p-5 sm:p-6 min-h-[200px]
       ${variant === "blue" ? "bg-[#E0EFFA]" : "bg-[#FAE651]"}
       transition-transform duration-300 ease-out hover:-translate-y-2`}
     >
-      {/* SVG Background */}
+      {/* Background */}
       <div className="pointer-events-none absolute inset-0 opacity-35">
         <SvgBackground />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col py-5">
-        <h3 className="mb-2 text-[16px] sm:text-[20px] font-semibold text-[#901027] text-center ">
+      <div className="relative z-10 flex flex-col py-5">
+        {/* Title */}
+        <h3 className="mb-3 text-[16px] sm:text-[20px] font-semibold text-[#901027] text-center">
           {title}
         </h3>
 
-        {typeof description === "string" && (
-          <p className="text-[14px] sm:text-[16px] text-[#464646] font-normal leading-relaxed max-w-[90%]">
+        {/* ✅ Description */}
+        {description && (
+          <p className="text-[14px] sm:text-[16px] text-[#464646] text-center max-w-[90%] mx-auto leading-relaxed">
             {description}
           </p>
         )}
 
-        {Array.isArray(description) && (
-          <>
-            <p className="text-[14px] sm:text-[15px] text-[#464646] leading-relaxed mx-auto">
-              {description[0]}
-            </p>
-            <ul className="mt-3 space-y-2">
-              {description.slice(1).map((point) => (
-                <li
-                  key={point}
-                  className="flex items-start gap-2 text-sm text-[#464646] mt-3"
-                >
-                  <span className="mt-[6px] h-2 w-2 rounded-full bg-black shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          </>
+        {/* ✅ Points (ALL items shown) */}
+        {points && points.length > 0 && (
+          <ul className="mt-4 space-y-2 max-w-[90%] mx-auto">
+            {points.map((point, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-2 text-sm text-[#464646]"
+              >
+                <span className="mt-[6px] h-2 w-2 rounded-full bg-black shrink-0" />
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
         )}
       </div>
     </article>
   );
 }
+  
