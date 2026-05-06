@@ -73,6 +73,17 @@
     font-size: 20px;
   }
 
+  .solid {
+    color: #000000;
+  }
+
+  .outline {
+    color: #000000;
+    -webkit-text-stroke: 0;
+    text-shadow: none;
+    font-style: normal;
+  }
+
   .heroImg {
     width: 75%;
     height: 75%;

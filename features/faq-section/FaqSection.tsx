@@ -15,13 +15,16 @@ export function FaqSection() {
 
   if (isLoading) {
     return (
-      <section className="mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-8 lg:px-28 py-8 sm:py-10 md:py-14 lg:py-20 animate-pulse">
-        <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
+      <section className="mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-8 lg:px-28 py-8 sm:py-10 md:py-14 lg:py-20 animate-pulse overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
+          {/* Left skeleton */}
           <div className="flex flex-col gap-4">
             <div className="h-12 w-full max-w-[380px] bg-gray-200 rounded mb-4" />
             <div className="h-20 w-full max-w-[420px] bg-gray-200 rounded mb-16" />
             <div className="h-12 w-48 bg-gray-200 rounded-full" />
           </div>
+
+          {/* Right skeleton */}
           <div className="space-y-6">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="h-16 w-full bg-gray-200 rounded" />
@@ -44,16 +47,18 @@ export function FaqSection() {
   const items = faqData?.items || faqSectionContent.items;
 
   return (
-    <section className="mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-8 lg:px-28 py-8 sm:py-10 md:py-14 lg:py-20">
-      <div className="grid gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
+    <section className="mx-auto w-full max-w-[1480px] px-3 sm:px-4 md:px-8 lg:px-28 py-8 sm:py-10 md:py-14 lg:py-20 overflow-hidden">
+      <div className="grid grid-cols-1 gap-6 sm:gap-8 md:gap-10 md:grid-cols-[1fr_1.6fr]">
         {/* Left column */}
         <div className="flex flex-col gap-4 sm:gap-6 md:gap-0">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-full sm:max-w-[380px] mb-2 sm:mb-4 leading-[1.70]">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-[-0.02em] text-[#8f1131] max-w-full sm:max-w-[380px] mb-2 sm:mb-4 leading-tight break-words">
             {title}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg leading-[1.45] text-[#171a20] max-w-full sm:max-w-[420px]">
+
+          <p className="text-sm sm:text-base md:text-lg leading-[1.45] text-[#171a20] max-w-full sm:max-w-[420px] break-words">
             {description}
           </p>
+
           <div className="mt-4 sm:mt-6 md:mt-16">
             <Link href="/contact-us">
               <FaqContactButton label={cta} />
@@ -62,7 +67,7 @@ export function FaqSection() {
         </div>
 
         {/* Right column */}
-        <div>
+        <div className="space-y-7">
           {items.map((item: any) => (
             <FaqRow
               key={typeof item === "string" ? item : item._id || item.question}

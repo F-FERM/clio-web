@@ -34,10 +34,13 @@ export function TransportMaritimeSection() {
   const transportData = Array.isArray(data) ? data[0] : data;
 
   const heading = transportData?.heading || transportMaritimeContent.heading;
-  const description = transportData?.description || transportMaritimeContent.description;
+  const description =
+    transportData?.description || transportMaritimeContent.description;
   const cta = transportData?.cta || transportMaritimeContent.cta;
-  const cardTitle = transportData?.cardTitle || transportMaritimeContent.cardTitle;
-  const cardDescription = transportData?.cardDescription || transportMaritimeContent.cardDescription;
+  const cardTitle =
+    transportData?.cardTitle || transportMaritimeContent.cardTitle;
+  const cardDescription =
+    transportData?.cardDescription || transportMaritimeContent.cardDescription;
   const leftImage = transportData?.leftImage;
   const rightImage = transportData?.rightImage;
 
@@ -49,7 +52,7 @@ export function TransportMaritimeSection() {
           {heading}
         </h1>
 
-        <p className="mx-auto mt-4 sm:mt-5 max-w-[760px] text-sm sm:text-base text-[#3f3f46]">
+        <p className="mx-auto mt-4 sm:mt-5 max-w-[760px] text-[18px] sm:text-[20px] ">
           {description}
         </p>
 

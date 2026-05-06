@@ -73,18 +73,18 @@ export function WhyChooseClioSection() {
                 key={index}
                 onClick={() => setActiveIndex(isActive ? null : index)}
                 className={`group relative cursor-pointer overflow-hidden rounded-[14px] border border-[#c8ced6] px-4 py-4 sm:px-5 transition-all duration-300 lg:hover:bg-white lg:hover:shadow-md ${
-                  isActive ? "bg-white shadow-md" : ""
+                  isActive ? "max-lg:bg-white max-lg:shadow-md" : ""
                 }`}
               >
                 {/* Top Row */}
                 <div className="flex items-center gap-3">
                   {/* Icon */}
                   <div
-                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#901027] text-[#901027] text-sm font-bold transition-opacity duration-300 ${
+                    className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-[#901027] text-[#901027] text-sm font-bold transition-all duration-300 ${
                       isActive
-                        ? "opacity-100"
-                        : "opacity-0 lg:group-hover:opacity-100"
-                    }`}
+                        ? "max-lg:opacity-100"
+                        : "opacity-0"
+                    } lg:group-hover:opacity-100`}
                   >
                     ✓
                   </div>
@@ -99,9 +99,9 @@ export function WhyChooseClioSection() {
                 <div
                   className={`overflow-hidden transition-all duration-300 ${
                     isActive
-                      ? "max-h-[200px] opacity-100 mt-2"
-                      : "max-h-0 opacity-0 mt-0 lg:group-hover:max-h-[200px] lg:group-hover:opacity-100 lg:group-hover:mt-2"
-                  }`}
+                      ? "max-lg:max-h-[200px] max-lg:opacity-100 max-lg:mt-2"
+                      : "max-h-0 opacity-0 mt-0"
+                  } lg:group-hover:max-h-[200px] lg:group-hover:opacity-100 lg:group-hover:mt-2`}
                 >
                   <p className="pl-9 text-[13px] sm:text-[14px] text-[#24272d]">
                     {item.description}

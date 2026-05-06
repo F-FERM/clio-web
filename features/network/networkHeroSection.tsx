@@ -33,11 +33,14 @@ export default function HeroSection() {
   const mainImage = networkData?.mainImage || "/images/network/Union.png";
   const overlay = networkData?.overlay || {
     title: "Our Global Presence",
-    description: "From major ports to strategic maritime hubs, our network ensures uninterrupted operations and reliable support across international waters.",
+    description:
+      "From major ports to strategic maritime hubs, our network ensures uninterrupted operations and reliable support across international waters.",
     points: ["Middle East", "Asia-Pacific", "Europe", "Americas"],
-    image: "/images/network/Rectangle.png"
+    image: "/images/network/Rectangle.png",
   };
-  const sideText = networkData?.sideText || "Clio Ship Management operates across key global shipping routes, delivering seamless vessel management, logistics coordination, and technical support wherever your fleet operates.";
+  const sideText =
+    networkData?.sideText ||
+    "Clio Ship Management operates across key global shipping routes, delivering seamless vessel management, logistics coordination, and technical support wherever your fleet operates.";
 
   // Split heading for outline effect if possible
   const headingParts = headingText.split(" ");
@@ -74,14 +77,14 @@ export default function HeroSection() {
             <h3 className="text-[9px] sm:text-xs md:text-sm font-extrabold uppercase tracking-widest mb-1.5 sm:mb-2 md:mb-3">
               {overlay.title}
             </h3>
-            <p className="text-[8px] sm:text-[10px] md:text-xs text-white/90 leading-relaxed mb-2 sm:mb-3 md:mb-4 max-w-full md:max-w-[280px]">
+            <p className="text-[8px] sm:text-[10px] md:text-[14px] text-white/90 leading-relaxed mb-2 sm:mb-3 md:mb-4 max-w-full md:max-w-[280px]">
               {overlay.description}
             </p>
 
             <div className="grid grid-cols-2 gap-x-2 sm:gap-x-3 gap-y-1 sm:gap-y-1.5 text-[8px] sm:text-[10px] md:text-xs font-medium text-white/90">
               {overlay.points?.map((r: string) => (
                 <span key={r} className="flex items-center gap-1 sm:gap-1.5">
-                  <span className="text-xs sm:text-sm leading-none text-white/60">
+                  <span className="text-[13px] sm:text-sm leading-none text-white/60">
                     •
                   </span>
                   {r}
@@ -108,7 +111,7 @@ export default function HeroSection() {
 
           {/* RIGHT BOTTOM CARD */}
           <div className="relative sm:absolute mt-2 sm:mt-0 sm:top-78 sm:bottom-6 sm:left-186 w-full sm:w-[406px] p-2 rounded-lg sm:rounded-2xl md:rounded-none shadow-md sm:shadow-md md:shadow-none bg-white/85 sm:bg-white/80 md:bg-transparent right-0 sm:right-0 md:right-20">
-            <p className="text-xs sm:text-sm text-gray-800 md:text-gray-600">
+            <p className="text-xs sm:text-sm text-gray-800 md:text-gray-600 leading-[1.70]">
               {sideText}
             </p>
           </div>

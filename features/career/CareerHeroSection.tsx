@@ -42,8 +42,11 @@ export function CareerHeroSection() {
 
   const careerData = Array.isArray(data) ? data[0] : data;
 
-  const heading = careerData?.heading || "Build Your Future in Maritime Excellence";
-  const description = careerData?.description || "Join a team that's redefining global ship management. At Clio, we combine innovation, expertise, and opportunity to help you grow in a dynamic maritime environment.";
+  const heading =
+    careerData?.heading || "Build Your Future in Maritime Excellence";
+  const description =
+    careerData?.description ||
+    "Join a team that's redefining global ship management. At Clio, we combine innovation, expertise, and opportunity to help you grow in a dynamic maritime environment.";
   const cta = careerData?.cta || "Get Started";
   const heroImage = careerData?.heroImage || "/images/career/career.png";
   const whyItems = careerData?.whyItems || [];
@@ -55,7 +58,7 @@ export function CareerHeroSection() {
           <h1 className="max-w-[950px] text-4xl sm:text-5xl lg:text-[64px] leading-[1.2] sm:leading-[1.28] font-bold tracking-[-0.03em] text-[#45474d]">
             {heading}
           </h1>
-          <p className="mt-4 sm:mt-6 max-w-[390px] text-xs sm:text-[14px] leading-normal text-[#3b3f45]">
+          <p className="mt-4 sm:mt-6 max-w-[390px] text-xs sm:text-[17px] leading-normal text-[#3b3f45]">
             {description}
           </p>
           <div className="mt-6 sm:mt-7">
@@ -86,7 +89,10 @@ export function CareerHeroSection() {
               {whyItems.map((item: any, index: number) => {
                 const Icon = icons[index % icons.length];
                 return (
-                  <div key={item._id || index} className="flex items-start gap-3">
+                  <div
+                    key={item._id || index}
+                    className="flex items-start gap-3"
+                  >
                     <Icon className="mt-0.5 h-3 w-3 sm:h-4 sm:w-4 shrink-0 text-white/90" />
                     <div>
                       <p className="text-[10px] sm:text-[15px] leading-none font-medium text-white">

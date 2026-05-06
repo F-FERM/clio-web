@@ -40,11 +40,14 @@ const NetworkPage = () => {
   // Map features to blue and yellow tiles
   const blueFeature = features.find((f: any) => f.variant === "blue") || {
     title: networkContent.missionTitle,
-    points: [networkContent.missionDescription, ...networkContent.missionPoints]
+    points: [
+      networkContent.missionDescription,
+      ...networkContent.missionPoints,
+    ],
   };
   const yellowFeature = features.find((f: any) => f.variant === "yellow") || {
     title: networkContent.visionTitle,
-    points: [networkContent.visionDescription, ...networkContent.visionPoints]
+    points: [networkContent.visionDescription, ...networkContent.visionPoints],
   };
 
   return (
@@ -62,8 +65,8 @@ const NetworkPage = () => {
             />
             <PurposeTile
               title={yellowFeature.title}
-           description={blueFeature.description}
-              points={blueFeature.points}
+              description={yellowFeature.description}
+              points={yellowFeature.points}
               variant="yellow"
             />
           </div>
