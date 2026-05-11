@@ -3,7 +3,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { ListCareerApi } from "@/app/api/career/career";
-import { GetStartedButton } from "../transport-maritime/components/GetStartedButton";
+import { ApplyNow } from "./ApplyNow";
 
 export function OpenPositionsSection() {
   const { data, isLoading, error } = useQuery({
@@ -54,7 +54,7 @@ export function OpenPositionsSection() {
                   {position.description}
                 </p>
                 <div className="mt-6">
-                  <GetStartedButton label="Apply Now" />
+                  <ApplyNow jobTitle={position.title} jobId={position._id} />
                 </div>
               </article>
             ))

@@ -32,3 +32,9 @@ interface WhyItem {
   description: string;
   _id: string;
 }
+export interface JobApplicationData {
+  name: string;
+  email: string;
+  cvUrl: string;
+  jobId: string;
+}

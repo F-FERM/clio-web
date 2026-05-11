@@ -1,5 +1,4 @@
-
-import { ListCareerResponse } from "@/interfaces/Career";
+import { ListCareerResponse, JobApplicationData } from "@/interfaces/Career";
 import { ListFaqSection } from "@/interfaces/Home";
 import axiosInstance from "@/service/axios";
 import { AxiosError } from "axios";
@@ -35,6 +34,40 @@ export const ListCareerApi = async (data: {
       (normalizedError as any).statusCode = apiError?.statusCode || error.response?.status;
       (normalizedError as any).raw = apiError;
 
+      throw normalizedError;
+    }
+    throw error;
+  }
+};
+
+export const UploadFileApi = async (formData: FormData) => {
+  try {
+    const response = await axiosInstance.post("/upload", formData, {
+      headers: { "Content-Type": "multipart/form-data" },
+    });
+    return response.data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      const apiError = error.response?.data;
+      const errorMessage = apiError?.error || apiError?.message || error.message || "File upload failed";
+      const normalizedError = new Error(errorMessage);
+      (normalizedError as any).statusCode = apiError?.statusCode || error.response?.status;
+      throw normalizedError;
+    }
+    throw error;
+  }
+};
+
+export const SubmitJobApplicationApi = async (data: JobApplicationData) => {
+  try {
+    const response = await axiosInstance.post("/job-applications", data);
+    return response.data;
+  } catch (error) {
+    if (error instanceof AxiosError) {
+      const apiError = error.response?.data;
+      const errorMessage = apiError?.error || apiError?.message || error.message || "Application submission failed";
+      const normalizedError = new Error(errorMessage);
+      (normalizedError as any).statusCode = apiError?.statusCode || error.response?.status;
       throw normalizedError;
     }
     throw error;
