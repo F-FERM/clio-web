@@ -1,6 +1,6 @@
 
 import { ListVesselLanding } from "@/interfaces/Home";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListVesselLandingApi = async (data: {

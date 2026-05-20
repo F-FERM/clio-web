@@ -2,7 +2,7 @@
 import { ListCareerResponse } from "@/interfaces/Career";
 import { ListContactResponse, ContactFormData } from "@/interfaces/Contact";
 import { ListFaqSection } from "@/interfaces/Home";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListContactApi = async (data: {

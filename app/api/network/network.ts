@@ -1,6 +1,6 @@
 
 import { ListGlobalNetworkResponse } from "@/interfaces/Network";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListGlobalNetworkApi = async (data: {

@@ -1,5 +1,5 @@
+import { LocalStorage } from "@/utility/LocalStorage";
 import axios from "axios";
-import { LocalStorage } from "../utility/LocalStorage";
 
 let isRefreshing = false;
 let failedQueue: any[] = [];

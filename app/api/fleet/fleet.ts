@@ -2,7 +2,7 @@
 import { ListCareerResponse } from "@/interfaces/Career";
 import { ListFleetResponse } from "@/interfaces/Fleet";
 import { ListFaqSection } from "@/interfaces/Home";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListFleetApi = async (data: {

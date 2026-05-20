@@ -1,5 +1,5 @@
 import { LisBlogResponse, Card, ListBlogSection } from "@/interfaces/Blog";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListBlogApi = async (data: {

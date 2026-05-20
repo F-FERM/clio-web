@@ -1,6 +1,6 @@
 
 import { ListFaqSection } from "@/interfaces/Home";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListFaqsectionApi = async (data: {
@@ -11,7 +11,7 @@ export const ListFaqsectionApi = async (data: {
   const { search, page, limit } = data;
   try {
     const params = new URLSearchParams();
-    if (search) {
+    if (search) { 
       params.append("search", search);
     }
     if (page) {

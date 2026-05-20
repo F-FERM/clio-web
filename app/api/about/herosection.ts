@@ -1,5 +1,5 @@
 import { ListAboutHeroSection } from "@/interfaces/About";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListAboutHeroSectionApi = async (data: {

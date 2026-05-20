@@ -33,22 +33,7 @@ export default function RootLayout({
         className={`${poppins.className} bg-[#F6FBFF] text-black min-h-screen flex flex-col`}
       >
         <Providers>
-          <VesselTopNav
-            brand="CLIO"
-            navItems={[
-              { label: "Home", href: "/" },
-              { label: "About", href: "/about" },
-              { label: "Blog", href: "/blog" },
-              { label: "Global Network", href: "/global-network" },
-              { label: "Career", href: "/career" },
-              { label: "Safety Compliance", href: "/safety-compliance" },
-              { label: "Fleet", href: "/fleet" },
-            ]}
-            contactLabel="Contact Us"
-            contactHref="/contact-us"
-          />
           <main className="w-full flex-1">{children}</main>
-          <FooterDarkSection />
         </Providers>
       </body>
     </html>

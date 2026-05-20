@@ -1,5 +1,5 @@
 import { ListSafetyResponse } from "@/interfaces/Safety";
-import axiosInstance from "@/service/axios";
+import axiosInstance from "@/service/web/axios";
 import { AxiosError } from "axios";
 
 export const ListSafetyApi = async (data: {
