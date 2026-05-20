@@ -11,7 +11,7 @@ import {
   ExternalLink,
   User,
 } from "lucide-react";
-import { deleteJobApplication, getAllJobApplications, JobApplication } from "@/app/api/admin/job-applications/page";
+import { deleteJobApplication, getAllJobApplications, JobApplication } from "@/app/api/admin/job-applications/jobApplications";
 
 
 
