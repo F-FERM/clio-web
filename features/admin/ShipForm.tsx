@@ -49,9 +49,22 @@ export default function ShipForm({ initialData, onSubmit }: Props) {
     }));
   };
 
-  const submit = async (e: any) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await onSubmit(form);
+    
+    const { _id, createdAt, updatedAt, __v, cards, ...rest } = form as any;
+    
+    const cleanCards = cards?.map((card: any) => {
+      const { _id, ...cleanCard } = card;
+      return cleanCard;
+    });
+
+    const payload = {
+      ...rest,
+      cards: cleanCards,
+    };
+
+    await onSubmit(payload);
   };
 
   return (

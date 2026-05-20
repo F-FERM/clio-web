@@ -103,9 +103,6 @@ export default function ContactListPage() {
                   Date
                 </th>
 
-                <th className="p-4 text-center text-sm font-semibold text-gray-700">
-                  Actions
-                </th>
 
               </tr>
             </thead>
@@ -158,20 +155,7 @@ export default function ContactListPage() {
                       {new Date(item.createdAt).toLocaleDateString()}
                     </td>
 
-                    {/* ACTIONS */}
-                    <td className="p-4">
-                      <div className="flex items-center justify-center gap-2">
-
-                        <button
-                          onClick={() => handleDelete(item._id)}
-                          className="p-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-                          title="Delete"
-                        >
-                          <Trash2 size={18} />
-                        </button>
-
-                      </div>
-                    </td>
+                
 
                   </tr>
                 ))

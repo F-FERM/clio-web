@@ -26,9 +26,10 @@ export default function TransportForm({ initialData, onSubmit }: Props) {
     setForm((prev) => ({ ...prev, [key]: value }));
   };
 
-  const submit = async (e: any) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
-    await onSubmit(form);
+    const { _id, createdAt, updatedAt, __v, ...payload } = form as any;
+    await onSubmit(payload);
   };
 
   return (

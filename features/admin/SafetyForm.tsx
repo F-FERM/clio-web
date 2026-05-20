@@ -54,13 +54,16 @@ export default function SafetyForm({ initialData, onSubmit }: Props) {
     handleChange(arrayKey, updatedArray);
   };
 
-  const submit = async (e: any) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const { _id, createdAt, updatedAt, __v, ...restForm } = form as any;
+    
     const payload = {
-      ...form,
-      complianceItems: form.complianceItems?.map(({ _id, ...rest }) => rest),
-      principles: form.principles?.map(({ _id, ...rest }) => rest),
-      pillarCards: form.pillarCards?.map(({ _id, ...rest }) => rest),
+      ...restForm,
+      complianceItems: restForm.complianceItems?.map(({ _id, ...rest }: any) => rest),
+      principles: restForm.principles?.map(({ _id, ...rest }: any) => rest),
+      pillarCards: restForm.pillarCards?.map(({ _id, ...rest }: any) => rest),
     };
     await onSubmit(payload);
   };

@@ -24,7 +24,8 @@ export const createTransportMaritime = async (data: Partial<ListTransportMaritim
 
 export const updateTransportMaritime = async (data: Partial<ListTransportMaritime> & { _id: string }) => {
   try {
-    const res = await axiosInstance.patch(BASE, data);
+    const { _id, ...payload } = data as any;
+    const res = await axiosInstance.patch(BASE, payload);
     return res.data;
   } catch (error) {
     throw (error as AxiosError).response?.data;

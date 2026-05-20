@@ -37,12 +37,14 @@ export default function AboutHeroForm({ initialData, onSubmit }: Props) {
     }));
   };
 
-  const submit = async (e: any) => {
+  const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const { _id, createdAt, updatedAt, __v, ...rest } = form as any;
     
     // Ensure _id is removed from nested objects
     const payload = {
-      ...form,
+      ...rest,
       whoWeAre: form.whoWeAre ? { title: form.whoWeAre.title, description: form.whoWeAre.description } : undefined,
       mission: form.mission ? { title: form.mission.title, description: form.mission.description } : undefined,
       vision: form.vision ? { title: form.vision.title, description: form.vision.description } : undefined,
