@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   Home,
   Image,
@@ -13,6 +13,8 @@ import {
   ChevronDown,
   ShieldCheck,
   Anchor,
+  ChevronUp,
+  LogOut,
 } from "lucide-react";
 import { useState } from "react";
 import "./globals.css";
@@ -110,10 +112,23 @@ const sidebarItems = [
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const router = useRouter();
   const [openMenu, setOpenMenu] = useState<string | null>("Home");
 
   const toggleMenu = (label: string) => {
     setOpenMenu(openMenu === label ? null : label);
+  };
+
+  const handleLogout = () => {
+    // Clear local storage
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("user");
+    
+    // Clear cookie
+    document.cookie = "access_token=; path=/; max-age=0";
+    
+    // Redirect to login
+    router.push("/login");
   };
 
   return (
@@ -141,7 +156,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     <Icon size={20} />
                     <span className="text-sm font-medium">{item.label}</span>
                   </div>
-                  <ChevronDown
+                  <ChevronUp
                     size={16}
                     className={`transition-transform ${
                       isOpen ? "rotate-180" : ""
@@ -181,8 +196,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           })}
         </nav>
       </aside>
-      <main className="flex-1 bg-[#F6F8FA] p-8 overflow-auto">
-        {children}
+      <main className="flex-1 bg-[#F6F8FA] flex flex-col h-screen overflow-hidden">
+        <header className="bg-white border-b px-8 py-4 flex justify-end items-center shrink-0">
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-red-600 bg-red-50 rounded-lg hover:bg-red-100 transition-colors"
+          >
+            <LogOut size={18} />
+            Logout
+          </button>
+        </header>
+        <div className="flex-1 p-8 overflow-auto">
+          {children}
+        </div>
       </main>
     </div>
   );
