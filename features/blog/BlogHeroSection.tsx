@@ -32,7 +32,7 @@ export default function MaritimeHero() {
 
   const heroTitle = blogData?.heroTitle || "Maritime Knowledge. Industry Trends. Expert Insights.";
   const heroSubtitle = blogData?.heroSubtitle || "Stay updated with the latest in ship management, global logistics, and maritime innovation—curated by Clio experts.";
-  const heroImage = blogData?.heroImage || "/images/blog/Rectangle.png";
+  const heroImage = blogData?.heroImage || "/images/blog/Rectangle1.png";
 
   return (
     <section className="w-full px-4 sm:px-6 pb-10 sm:pb-12 lg:px-20 lg:py-14">

@@ -33,7 +33,7 @@ export function SafetyComplianceHeroSection() {
 
   const heading = safetyData?.heading || "Championing Safety in Maritime Operations";
   const description = safetyData?.description || "At Clio Ship Management & Operation, safety is at the core of everything we do, guiding every decision across our maritime operations. We are committed to protecting life at sea, safeguarding vessels, and preserving the environment through strict safety protocols, advanced systems, and continuous monitoring - ensuring reliable, secure, and compliant operations at all times.";
-  const heroImage = safetyData?.heroImage || "/images/safety/Subtract.png";
+  const heroImage = safetyData?.heroImage || "/images/safety/Subtract1.png";
   const overlayTitle = safetyData?.overlayTitle || "Global Compliance & Certifications";
   const overlayDescription = safetyData?.overlayDescription || "We strictly follow international maritime regulations and best practices to ensure all vessels operate safely and responsibly.";
   const complianceItems = safetyData?.complianceItems || [

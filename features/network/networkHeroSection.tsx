@@ -30,7 +30,7 @@ export default function HeroSection() {
   const networkData = Array.isArray(data) ? data[0] : data;
 
   const headingText = networkData?.heading || "Global Maritime Network";
-  const mainImage = networkData?.mainImage || "/images/network/Union.png";
+  const mainImage = networkData?.mainImage || "/images/network/Union1.png";
   const overlay = networkData?.overlay || {
     title: "Our Global Presence",
     description:
