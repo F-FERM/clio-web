@@ -36,6 +36,8 @@ export function FooterDarkSection() {
     { label: "Terms & Conditions", url: footerData?.terms || "/terms" },
   ];
 
+  const logoSrc = "/images/footer/logo.png";
+
   return (
     <section className="w-full flex justify-center mt-10">
       <div className="w-full relative overflow-hidden bg-[#49494b] px-6 sm:px-10 lg:px-14 py-10 sm:py-12">
@@ -58,9 +60,15 @@ export function FooterDarkSection() {
           {/* CTA row */}
           <div className="mt-10 sm:mt-14 flex flex-col gap-5 lg:grid lg:grid-cols-[1.2fr_1fr_auto] lg:items-center lg:gap-8">
             <div>
-              <p className="text-[36px] sm:text-[48px] leading-none font-bold tracking-[-0.03em] text-white">
-                {brand}
-              </p>
+              {/* Brand Logo instead of text */}
+              <div className="relative h-[50px] w-[180px] sm:h-[60px] sm:w-[220px] lg:h-[70px] lg:w-[250px]">
+                <Image
+                  src={logoSrc}
+                  alt={brand}
+                  fill
+                  className="object-contain object-left"
+                />
+              </div>
               <p className="mt-3 text-sm text-white/85">
                 {copyright}
               </p>
