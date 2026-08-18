@@ -5,6 +5,8 @@ import About3 from "../../../public/images/about/About3.jpg";
 import About4 from "../../../public/images/about/About4.jpg";
 import About5 from "../../../public/images/about/About5.jpg";
 import About6 from "../../../public/images/about/About6.jpg";
+import About7 from "../../../public/images/about/About7.jpg";
+import About8 from "../../../public/images/about/About8.png";
 
 type CardItem = {
   title: string;
@@ -27,12 +29,12 @@ const galleryImages = [
     imageClass: "object-cover object-center",
   },
   {
-    src: About6,
+    src: About7,
     alt: "Port operations at sunset",
     imageClass: "object-cover object-center",
   },
   {
-    src: About5,
+    src: About8,
     alt: "Vessel on water",
     imageClass: "object-cover object-right",
   },
