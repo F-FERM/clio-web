@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import { ListFooterApi } from "@/app/api/footer/footer";
 import { FooterColumn } from "@/features/footer-dark/components/FooterColumn";
@@ -22,37 +23,102 @@ export function FooterDarkSection() {
 
   const brand = footerData?.brand || footerDarkContent.brand;
   const copyright = footerData?.copyright || footerDarkContent.copyright;
-  const sections = footerData?.sections || footerDarkContent.columns.map(col => ({
-    title: col.title,
-    links: col.items.map(item => ({ label: item.label, url: item.href }))
-  }));
+  const sections =
+    footerData?.sections ||
+    footerDarkContent.columns.map((col) => ({
+      title: col.title,
+      links: col.items.map((item) => ({ label: item.label, url: item.href })),
+    }));
   const address = footerData?.officeAddress || footerDarkContent.address;
   const email = footerData?.email || footerDarkContent.email;
   const phone = footerData?.phone || footerDarkContent.phone;
   const ctaText = footerData?.ctaText || footerDarkContent.cta;
   const ctaLink = footerData?.ctaLink || "/contact-us";
   const policies = [
-    { label: "Privacy Policy", url: footerData?.privacyPolicy || "/privacy-policy" },
+    {
+      label: "Privacy Policy",
+      url: footerData?.privacyPolicy || "/privacy-policy",
+    },
     { label: "Terms & Conditions", url: footerData?.terms || "/terms" },
   ];
 
   const logoSrc = "/images/footer/logo.png";
+  const watermarkSrc = "/images/footer/watermark-logo.png";
 
   return (
     <section className="w-full flex justify-center mt-10">
-      <div className="w-full relative overflow-hidden bg-[#49494b] px-6 sm:px-10 lg:px-14 py-10 sm:py-12">
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center text-[420px] font-bold tracking-[-0.03em] text-white/[0.04]">
-          {brand.toLowerCase()}
+      <div
+        className="
+          relative
+          w-full
+          overflow-hidden
+          bg-[#49494b]
+          px-6
+          sm:px-10
+          lg:px-14
+          py-10
+          sm:py-12
+        "
+      >
+        <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center">
+          <img
+            src={watermarkSrc}
+            alt=""
+            aria-hidden="true"
+            className="
+    block
+    w-[750px]
+    h-auto
+    max-w-none
+    object-contain
+    opacity-100
+
+    absolute
+    right-[28%]
+    bottom-[-250px]
+
+    /* SM - exact center */
+    sm:w-[850px]
+    sm:left-1/2
+    sm:right-auto
+    sm:-translate-x-1/2
+    sm:bottom-[-250px]
+
+    /* MD - exact center */
+    md:w-[850px]
+    md:left-1/2
+    md:right-auto
+    md:-translate-x-1/2
+    md:bottom-[-250px]
+
+    /* LG - keep your existing alignment */
+    lg:w-[950px]
+    lg:left-auto
+    lg:right-[28%]
+    lg:translate-x-0
+    lg:bottom-[150px]
+  "
+          />
         </div>
 
         <div className="relative z-10">
-          {/* Nav columns */}
-          <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:grid-cols-4">
+          <div
+            className="
+              grid
+              grid-cols-2
+              gap-6
+              sm:gap-8
+              lg:grid-cols-4
+            "
+          >
             {sections.map((section: any, idx: number) => (
               <FooterColumn
                 key={section._id || idx}
                 title={section.title}
-                items={section.links.map((link: any) => ({ label: link.label, href: link.url }))}
+                items={section.links.map((link: any) => ({
+                  label: link.label,
+                  href: link.url,
+                }))}
               />
             ))}
           </div>
@@ -60,18 +126,28 @@ export function FooterDarkSection() {
           {/* CTA row */}
           <div className="mt-10 sm:mt-14 flex flex-col gap-5 lg:grid lg:grid-cols-[1.2fr_1fr_auto] lg:items-center lg:gap-8">
             <div>
-              {/* Brand Logo instead of text */}
-              <div className="relative h-[50px] w-[180px] sm:h-[60px] sm:w-[220px] lg:h-[70px] lg:w-[250px]">
+              <div
+                className="
+                  relative
+                  h-[50px]
+                  w-[180px]
+
+                  sm:h-[60px]
+                  sm:w-[220px]
+
+                  lg:h-[70px]
+                  lg:w-[250px]
+                "
+              >
                 <Image
                   src={logoSrc}
                   alt={brand}
                   fill
+                  sizes="250px"
                   className="object-contain object-left"
                 />
               </div>
-              <p className="mt-3 text-sm text-white/85">
-                {copyright}
-              </p>
+              <p className="mt-3 text-sm text-white/85">{copyright}</p>
             </div>
             <p className="max-w-[620px] text-xl sm:text-2xl leading-[1.12] font-semibold tracking-[-0.02em] text-white">
               Need Reliable Ship Management Solutions?
@@ -81,7 +157,7 @@ export function FooterDarkSection() {
                 type="button"
                 className="h-[48px] w-full lg:w-auto rounded-xl bg-[#f1df3f] px-12 text-[16px] font-semibold text-[#181a1f] cursor-pointer hover:bg-[#f3e45c] transition-colors"
               >
-               Contact Us
+                Contact Us
               </button>
             </Link>
           </div>
@@ -100,7 +176,10 @@ export function FooterDarkSection() {
               </div>
               <div>
                 {policies.map((policy, idx) => (
-                  <p key={idx} className="cursor-pointer hover:text-white transition-colors">
+                  <p
+                    key={idx}
+                    className="cursor-pointer hover:text-white transition-colors"
+                  >
                     <Link href={policy.url}>{policy.label}</Link>
                   </p>
                 ))}
