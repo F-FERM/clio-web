@@ -30,7 +30,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
         <head>
-        <link rel="icon" href="/images/logo/cliologo.png" type="image/png" />
+        <link rel="icon" href="/images/logo/favicon.png" type="image/png" />
       </head>
       <body
         className={`${poppins.className} bg-[#F6FBFF] text-black min-h-screen flex flex-col`}
