@@ -19,36 +19,38 @@ export function WorkflowStackedCards({ steps }: WorkflowStackedCardsProps) {
   const [hovered, setHovered] = useState<number | null>(null);
 
   const displaySteps =
-    steps && steps.length > 0 ? steps : (workflowEfficiencyContent.steps as Step[]);
+    steps && steps.length > 0
+      ? steps
+      : (workflowEfficiencyContent.steps as Step[]);
 
-  const CARD_WIDTH_DEFAULT = 360;
-  const CARD_WIDTH_EXPANDED = 440;
+  const CARD_WIDTH = 390;
   const CARD_OVERLAP = 85;
+  const CARD_HEIGHT = 300;
+  const SLIDE_LEFT = 75;
+
   const CARD_COUNT = displaySteps.length;
 
-  const totalWidth =
-    CARD_COUNT * (CARD_WIDTH_DEFAULT - CARD_OVERLAP) + CARD_OVERLAP;
-  const totalWidthExpanded =
-    totalWidth + (CARD_WIDTH_EXPANDED - CARD_WIDTH_DEFAULT);
+  const totalWidth = CARD_COUNT * (CARD_WIDTH - CARD_OVERLAP) + CARD_OVERLAP;
 
   const getLeft = (index: number): number => {
-    const defaultPos = index * (CARD_WIDTH_DEFAULT - CARD_OVERLAP);
-    if (hovered === null || index <= hovered) return defaultPos;
-    return defaultPos + (CARD_WIDTH_EXPANDED - CARD_WIDTH_DEFAULT);
+    return index * (CARD_WIDTH - CARD_OVERLAP);
   };
 
-  const getWidth = (index: number): number =>
-    hovered === index ? CARD_WIDTH_EXPANDED : CARD_WIDTH_DEFAULT;
+  const getTransform = (index: number): string => {
+    if ((index === 0 || index === 1) && hovered === index) {
+      return `translateX(-${SLIDE_LEFT}px)`;
+    }
+
+    return "translateX(0)";
+  };
 
   const getZIndex = (index: number): number => {
-    if (hovered === index) return 10;
-    return CARD_COUNT - index;
+    return index + 1;
   };
 
   return (
     <>
-      {/* ── Mobile: vertical stack ── */}
-      <div className="flex md:hidden flex-col gap-4 w-full">
+      <div className="flex md:hidden w-full flex-col gap-4">
         {displaySteps.map((step) => (
           <div key={step.id} className="w-full">
             <WorkflowStepCard
@@ -56,43 +58,57 @@ export function WorkflowStackedCards({ steps }: WorkflowStackedCardsProps) {
               title={step.title}
               description={step.description}
               variant={step.variant}
-              
             />
           </div>
         ))}
       </div>
-
-      {/* ── Desktop: horizontal overlap ── */}
-      <div className="hidden md:flex justify-center w-full">
+      <div className="hidden md:flex w-full justify-center overflow-visible">
         <div
-          className="relative h-[300px]"
+          className="relative"
           style={{
-            width: hovered !== null ? totalWidthExpanded : totalWidth,
-            transition: "width 0.4s cubic-bezier(0.4,0,0.2,1)",
+            width: totalWidth,
+            height: CARD_HEIGHT,
           }}
         >
-          {displaySteps.map((step, index) => (
-            <div
-              key={step.id}
-              className="absolute top-0 h-full"
-              style={{
-                left: getLeft(index),
-                width: getWidth(index),
-                zIndex: getZIndex(index),
-                transition:
-                  "left 0.4s cubic-bezier(0.4,0,0.2,1), width 0.4s cubic-bezier(0.4,0,0.2,1)",
-              }}
-              onMouseEnter={() => setHovered(index)}
-              onMouseLeave={() => setHovered(null)}
-            >
-              <WorkflowStepCard
-                id={step.id}
-                title={step.title}
-                description={step.description}
-                variant={step.variant}
-              />
-            </div>
-          ))}
+          {displaySteps.map((step, index) => {
+            const isAnimatedCard = index === 0 || index === 1;
+
+            return (
+              <div
+                key={step.id}
+                className="absolute top-0 h-full"
+                style={{
+                  left: getLeft(index),
+                  width: CARD_WIDTH,
+                  height: CARD_HEIGHT,
+                  zIndex: getZIndex(index),
+                  transform: getTransform(index),
+                  transition: isAnimatedCard
+                    ? "transform 350ms cubic-bezier(0.4, 0, 0.2, 1)"
+                    : "none",
+
+                  willChange: isAnimatedCard ? "transform" : "auto",
+                }}
+                onMouseEnter={() => {
+                  if (isAnimatedCard) {
+                    setHovered(index);
+                  }
+                }}
+                onMouseLeave={() => {
+                  if (isAnimatedCard) {
+                    setHovered(null);
+                  }
+                }}
+              >
+                <WorkflowStepCard
+                  id={step.id}
+                  title={step.title}
+                  description={step.description}
+                  variant={step.variant}
+                />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
