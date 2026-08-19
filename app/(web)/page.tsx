@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <main className="w-full lg:p-4 p-2 ">
       <VesselLandingSection /> <OurServiceSection />
-      <ShipManagementLogisticsSection /> <TransportMaritimeSection />
+      <ShipManagementLogisticsSection /> 
+      <TransportMaritimeSection />
       <WorkflowEfficiencySection />
       <FaqSection />
     </main>

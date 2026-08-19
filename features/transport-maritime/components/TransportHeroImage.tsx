@@ -1,6 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import { OverlayInfoCard } from "@/features/transport-maritime/components/OverlayInfoCard";
-import Transport from "../../../public/images/fleet/transport.png";
+import Transport from "../../../public/images/home/transportship.png";
 import RightImage from "../../../public/images/fleet/RightImage.jpg";
 
 type TransportHeroImageProps = {
