@@ -24,12 +24,13 @@ export function ServiceCard({
   tagColor = "bg-[#8f1131]",
   hoverText,
 }: ServiceCardProps) {
+  const imageAlt ="Top Vessel Management Services in UAE"
   return (
     <article className="w-full ">
       <div className="group relative h-[280px] w-full overflow-hidden rounded-[24px] shadow-lg transition-all duration-300 hover:shadow-xl">
         <Image
           src={image}
-          alt={title}
+          alt={imageAlt}
           fill
           className={`object-cover transition-transform duration-500 group-hover:scale-110 ${imagePositionClasses[imagePosition]}`}
         />
