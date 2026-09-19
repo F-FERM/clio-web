@@ -41,6 +41,7 @@ const galleryImages = [
 ] as const;
 
 export function WhatWeDoGallery({ cards }: WhatWeDoGalleryProps) {
+  const imageAlt ="Leading Maritime Company in Dubai"
   return (
     <>
       {/* Mobile Layout (NO hover) */}
@@ -54,7 +55,7 @@ export function WhatWeDoGallery({ cards }: WhatWeDoGalleryProps) {
             >
               <Image
                 src={image.src}
-                alt={image.alt}
+                alt={imageAlt}
                 fill
                 className="object-cover"
               />
@@ -93,7 +94,7 @@ export function WhatWeDoGallery({ cards }: WhatWeDoGalleryProps) {
             >
               <Image
                 src={image.src}
-                alt={image.alt}
+                alt={imageAlt}
                 fill
                 className={`${image.imageClass} transition-transform duration-500 group-hover/card:scale-105`}
               />
