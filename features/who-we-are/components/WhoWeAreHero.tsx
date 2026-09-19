@@ -8,11 +8,12 @@ type WhoWeAreHeroProps = {
 };
 
 export function WhoWeAreHero({ title, description, image }: WhoWeAreHeroProps) {
+  const imageAlt="Leading Maritime Company in Dubai"
   return (
     <div className="relative h-[220px] sm:h-[260px] md:h-[300px] lg:h-[340px] overflow-hidden rounded-[16px]">
       <Image
         src={image || About2}
-        alt="Ship at port"
+        alt={imageAlt}
         fill
         priority
         className="object-cover object-center"
