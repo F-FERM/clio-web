@@ -46,6 +46,7 @@ export function WorkflowStepCard({
   description,
   variant,
 }: WorkflowStepCardProps) {
+  const imageAlt ="Top Vessel Management Services in UAE"
   return (
     <article
       className={`
@@ -56,7 +57,7 @@ export function WorkflowStepCard({
     >
       <Image
         src={patternImages[variant]}
-        alt="Pattern"
+        alt={imageAlt}
         fill
         className="absolute inset-0 object-cover opacity-20 mix-blend-multiply pointer-events-none"
       />
