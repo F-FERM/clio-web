@@ -12,13 +12,13 @@ export function SmartFleetPanel({
   description,
   image,
 }: SmartFleetPanelProps) {
-  
+  const imageAlt ="Top Vessel Management Services in UAE"
   return (
     <div className="relative h-full min-h-[300px] sm:min-h-[380px] w-full overflow-hidden rounded-xl">
       {/* Background Image */}
       <Image
         src={image || Fleet}
-        alt="Top view of docked ship logistics"
+        alt={imageAlt}
         fill
         priority
         className="object-cover object-center lg:object-right"
