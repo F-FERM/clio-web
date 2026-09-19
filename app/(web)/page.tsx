@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.clio-maritime.com/"),
 
   alternates: {
-    canonical: "/",
+    canonical: "https://www.clio-maritime.com/",
   },
 
   openGraph: {
