@@ -27,6 +27,8 @@ export const metadata: Metadata = {
     "maritime logistics UAE",
   ],
 
+  metadataBase: new URL("https://www.clio-maritime.com/"),
+
   alternates: {
     canonical: "/",
   },
