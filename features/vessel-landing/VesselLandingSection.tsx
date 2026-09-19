@@ -54,13 +54,15 @@ export function VesselLandingSection() {
   const backgroundImage =
     vesselData?.backgroundImage || HeaderMainShip;
 
+    const imageAlt ="Top Vessel Management Services in UAE"
+
   return (
     <section className="w-full">
       <div className="relative h-[760px] sm:h-[640px] md:h-[760px] lg:h-[820px] overflow-hidden rounded-xl sm:rounded-2xl lg:rounded-3xl">
         {/* Background Image */}
         <Image
           src={backgroundImage}
-          alt="Vessel"
+          alt={imageAlt}
           fill
           priority
           className="object-cover"
