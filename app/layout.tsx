@@ -74,8 +74,8 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "CLIO Ship Management & Operation",
-            url: "https://clio-maritime.com/",
-            logo: "https://clio-maritime.com/_next/static/media/cliologo.0_gndt.o_cw9u.png",
+            url: "https://www.clio-maritime.com/",
+            logo: "https://www.clio-maritime.com/_next/static/media/cliologo.0_gndt.o_cw9u.png",
             alternateName: "CLIO",
             sameAs: ["https://www.instagram.com/clio.ship.management/?__pwa=1"],
             contactPoint: [

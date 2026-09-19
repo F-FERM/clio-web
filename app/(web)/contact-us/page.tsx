@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Top Vessel Management Services in UAE and best ship management service in Dubai, delivering reliable, efficient, and professional maritime solutions.",
   alternates: {
-    canonical: "https://clio-maritime.com/contact-us",
+    canonical: "https://www.clio-maritime.com/contact-us",
   },
 };
 
@@ -24,8 +24,8 @@ const page = () => {
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "CLIO Ship Management & Operation",
-          url: "https://clio-maritime.com/contact-us",
-          logo: "https://clio-maritime.com/_next/static/media/cliologo.0_gndt.o_cw9u.png",
+          url: "https://www.clio-maritime.com/contact-us",
+          logo: "https://www.clio-maritime.com/_next/static/media/cliologo.0_gndt.o_cw9u.png",
           alternateName: "CLIO",
           sameAs: ["https://www.instagram.com/clio.ship.management/?__pwa=1"],
           contactPoint: [

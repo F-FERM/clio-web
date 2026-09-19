@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Trusted maritime transport and logistics solutions in UAE, offering reliable vessel support, cargo handling, port services, and efficient marine logistics.",
   alternates: {
-    canonical: "https://clio-maritime.com/blog",
+    canonical: "https://www.clio-maritime.com/blog",
   },
 };
 

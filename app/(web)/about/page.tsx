@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "CLIO Maritime is a leading maritime company in Dubai, offering reliable vessel management, ship management, crew, technical and marine services.",
 
   alternates: {
-    canonical: "https://clio-maritime.com/about",
+    canonical: "https://www.clio-maritime.com/about",
   },
 
   openGraph: {
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "CLIO Maritime is a leading maritime company in Dubai, offering reliable vessel management, ship management, crew, technical and marine services.",
 
-    url: "https://clio-maritime.com/about",
+    url: "https://www.clio-maritime.com/about",
 
     siteName: "CLIO Maritime",
 
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "https://clio-maritime.com/og-image.jpg",
+        url: "https://www.clio-maritime.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "CLIO Maritime - Leading Maritime Company in Dubai",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description:
       "CLIO Maritime is a leading maritime company in Dubai, offering reliable vessel management, ship management, crew, technical and marine services.",
 
-    images: ["https://clio-maritime.com/og-image.jpg"],
+    images: ["https://www.clio-maritime.com/og-image.jpg"],
   },
 
   robots: {
@@ -73,9 +73,9 @@ const page = () => {
 
     alternateName: "CLIO",
 
-    url: "https://clio-maritime.com/about",
+    url: "https://www.clio-maritime.com/about",
 
-    logo: "https://clio-maritime.com/images/clio-logo.png",
+    logo: "https://www.clio-maritime.com/images/clio-logo.png",
 
     sameAs: ["https://www.instagram.com/clio.ship.management/"],
 

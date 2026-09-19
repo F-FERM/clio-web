@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description:
     "Clio is the best ship safety management in Dubai, providing vessel safety,compliance,risk management,and reliable maritime solutions for safer operations",
   alternates: {
-    canonical: "https://clio-maritime.com/fleet",
+    canonical: "https://www.clio-maritime.com/fleet",
   },
 };
 
