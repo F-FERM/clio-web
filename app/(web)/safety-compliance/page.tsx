@@ -2,6 +2,17 @@ import { CoreSafetyPillarsSection } from "@/features/safety-compilence/CoreSafet
 import { SafetyComplianceHeroSection } from "@/features/safety-compilence/SafetyComplianceHeroSection";
 import { SafetyPrinciplesSection } from "@/features/safety-compilence/SafetyPrinciplesSection";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Best Ship Safety Management in Dubai | CLIO Maritime",
+  description:
+    "Best Ship Safety Management in Dubai,offering reliable safety systems,vessel compliance,risk management,and professional maritime solutions for shipowners",
+  alternates: {
+    canonical: "https://clio-maritime.com/safety-compliance",
+  },
+};
+
 const page = () => {
   return (
     <div className="mt-32">
