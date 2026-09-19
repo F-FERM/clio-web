@@ -15,7 +15,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.clio-maritime.com"),
+  metadataBase: new URL("https://www.clio-maritime.com/"),
   verification: {
     google: "PWUGDWRgBlM_0wLjH8R1oFiM11uXHRwtIZHf_PxHHBM",
   },
