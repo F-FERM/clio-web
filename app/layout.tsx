@@ -15,8 +15,30 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.clio-maritime.com"),
   verification: {
     google: "PWUGDWRgBlM_0wLjH8R1oFiM11uXHRwtIZHf_PxHHBM",
+  },
+  openGraph: {
+    title: "Top Vessel Management Services in UAE | CLIO Maritime",
+    description:
+      "CLIO Maritime provides reliable vessel management, technical management, crew management, and maritime logistics services in Dubai, UAE.",
+    url: "https://www.clio-maritime.com/",
+    siteName: "CLIO Maritime",
+    type: "website",
+    locale: "en_AE",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Top Vessel Management Services in UAE - CLIO Maritime",
+      },
+    ],
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
