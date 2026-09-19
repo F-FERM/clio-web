@@ -16,12 +16,13 @@ export function TransportHeroImage({
   mainImage,
   sideImage,
 }: TransportHeroImageProps) {
+  const imageAlt ="Top Vessel Management Services in UAE"
   return (
     <div className="group relative mt-8 sm:mt-10 h-[280px] xs:h-[320px] sm:h-[280px] md:h-[340px] lg:h-[400px] xl:h-[440px] w-full overflow-hidden rounded-[14px] sm:rounded-[18px] md:rounded-[22px]">
       {/* MAIN IMAGE */}
       <Image
         src={mainImage || Transport}
-        alt="Main background"
+        alt={imageAlt}
         fill
         priority
         className="object-cover object-center"
@@ -39,7 +40,7 @@ export function TransportHeroImage({
       >
         <Image
           src={sideImage || RightImage}
-          alt="Side image"
+          alt={imageAlt}
           fill
           className="object-cover object-right"
         />
