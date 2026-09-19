@@ -65,13 +65,14 @@ export function FeatureInfoCard({
   tags,
   variant,
 }: FeatureInfoCardProps) {
+  const imageAlt ="Top Vessel Management Services in UAE"
   return (
     <article
       className={`relative overflow-hidden rounded-[22px] p-5 sm:p-6  min-h-[200px] sm:min-h-[230px] transition-transform duration-300 ease-out hover:-translate-y-2 ${cardVariantStyles[variant]} ${shadowVariantStyles[variant]}`}
     >
       <Image
         src={patternImages[variant]}
-        alt="Pattern"
+        alt={imageAlt}
         fill
         className="absolute inset-0 object-cover opacity-20 mix-blend-multiply pointer-events-none"
       />
