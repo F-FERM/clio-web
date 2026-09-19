@@ -42,12 +42,9 @@ export default function GlobalLeadersSection() {
     heroData?.heading ||
     "Global Leaders in Ship Management & Maritime Operations";
 
-  const heroImage =
-    heroData?.heroImage || "/images/about/About1.png";
+  const heroImage = heroData?.heroImage || "/images/about/About1.png";
 
-  const description =
-    heroData?.description ||
-    globalLeadersContent.description;
+  const description = heroData?.description || globalLeadersContent.description;
 
   const renderHeading = () => {
     if (heroData?.heading) {
@@ -114,18 +111,17 @@ export default function GlobalLeadersSection() {
       </h1>
     );
   };
+  const imageAlt = "Leading Maritime Company in Dubai";
 
   return (
     <>
-      <section
-        className={`${styles.hero} px-4 sm:px-6 md:px-8 lg:px-0`}
-      >
+      <section className={`${styles.hero} px-4 sm:px-6 md:px-8 lg:px-0`}>
         <div
           className={`${styles.heroImg} rounded-[18px] md:rounded-[24px] overflow-hidden`}
         >
           <Image
             src={heroImage}
-            alt="Ship at sea"
+            alt={imageAlt}
             fill
             style={{ objectFit: "cover" }}
             priority
