@@ -1,6 +1,16 @@
 import { FleetCapabilitiesSection } from "@/features/fleet/FleetCapabilitiesSection";
 import { FleetHeroSection } from "@/features/fleet/FleetHeroSection";
 import { FleetShowcaseSection } from "@/features/fleet/FleetShowcaseSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Clio Is the Best Ship Safety Management in Dubai | UAE",
+  description:
+    "Clio is the best ship safety management in Dubai, providing vessel safety,compliance,risk management,and reliable maritime solutions for safer operations",
+  alternates: {
+    canonical: "https://clio-maritime.com/fleet",
+  },
+};
 
 const page = () => {
   return (
