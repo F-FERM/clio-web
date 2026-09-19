@@ -27,8 +27,6 @@ export const metadata: Metadata = {
     "maritime logistics UAE",
   ],
 
-  metadataBase: new URL("https://clio-maritime.com"),
-
   alternates: {
     canonical: "/",
   },
@@ -37,7 +35,7 @@ export const metadata: Metadata = {
     title: "Top Vessel Management Services in UAE | CLIO Maritime",
     description:
       "CLIO Maritime provides reliable vessel management, technical management, crew management, and maritime logistics services in Dubai, UAE.",
-    url: "https://clio-maritime.com/",
+    url: "https://www.clio-maritime.com/",
     siteName: "CLIO Maritime",
     type: "website",
     locale: "en_AE",
