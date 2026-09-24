@@ -73,7 +73,7 @@ export default function MaritimeHero() {
           </div>
 
           {/* Description Card - Bottom Right */}
-          <div className="absolute bottom-2 sm:-bottom-1 right-2 sm:right-[-20] md:right-[-35] lg:right-[-50] z-10 max-w-[calc(100vw-3rem)] sm:max-w-[350px] md:max-w-[420px] lg:max-w-[480px] px-2 sm:px-4 py-1 sm:py-0 bg-white/80 sm:bg-transparent rounded-md sm:rounded-none">
+          <div className="absolute bottom-[-8px] sm:bottom-[-12px] right-[-10px] sm:right-[-35px] md:right-[-50px] lg:right-[-65px] z-10 max-w-[calc(100vw-3rem)] sm:max-w-[350px] md:max-w-[420px] lg:max-w-[480px] px-2 sm:px-4 py-1 sm:py-0 bg-white/80 sm:bg-transparent rounded-md sm:rounded-none">
             <p className="text-[10px] sm:text-sm leading-snug sm:leading-relaxed text-gray-700">
               {heroSubtitle}
             </p>
