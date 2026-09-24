@@ -38,13 +38,16 @@ export default function HeroSection() {
     points: ["Middle East", "Asia-Pacific", "Europe", "Americas"],
     image: "/images/network/Rectangle.png",
   };
+
   const sideText =
     networkData?.sideText ||
     "Clio Ship Management operates across key global shipping routes, delivering seamless vessel management, logistics coordination, and technical support wherever your fleet operates.";
 
-  const headingParts = headingText.split(" ");
-  const lastWord = headingParts.pop();
-  const restOfHeading = headingParts.join(" ");
+  const specialText = "ime Service";
+
+  const normalText = headingText.includes(specialText)
+    ? headingText.replace(specialText, "").trim()
+    : headingText;
 
   return (
     <div className="sm:pt-32 lg:pt-10 px-6 lg:px-20">
@@ -110,8 +113,8 @@ export default function HeroSection() {
                 whitespace-normal sm:whitespace-nowrap
               "
             >
-              {restOfHeading}{" "}
-              <span className={styles.outline}>{lastWord}</span>
+              {normalText}
+              <span className={styles.outline}>{specialText}</span>
             </h1>
 
             {/* ── LEFT OVERLAY CARD ─────────────────────────────────────────
