@@ -67,13 +67,13 @@ export function CareerHeroSection() {
         <div className="relative z-20 pt-1">
           <h1
             className="
-              max-w-[950px] font-bold tracking-[-0.03em] text-[#45474d]
-              text-3xl leading-[1.2]
-              sm:text-4xl sm:leading-[1.25]
-              md:text-[42px] md:leading-[1.22]
-              lg:text-[56px] lg:leading-[1.2]
-              xl:text-[64px]
-            "
+    max-w-[900px] font-bold tracking-[-0.03em] text-[#45474d]
+    text-xl leading-[1.2]
+    sm:text-2xl sm:leading-[1.25]
+    md:text-[32px] md:leading-[1.22]
+    lg:text-[42px] lg:leading-[1.2]
+    xl:text-[48px]
+  "
           >
             {heading}
           </h1>
