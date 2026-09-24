@@ -36,7 +36,7 @@ export function WhatWeDoSection() {
   const cards = sectionData?.cards || whatWeDoContent.cards;
 
   return (
-    <section className="w-full px-6 py-10 lg:px-34 lg:py-14">
+    <section id="section-about" className="w-full px-6 py-10 lg:px-34 lg:py-14">
       <div className="mx-auto w-full max-w-[1240px]">
         <h1 className="text-center text-3xl font-bold tracking-[-0.02em] text-[#901027] sm:text-5xl pt-8">
           {title}
