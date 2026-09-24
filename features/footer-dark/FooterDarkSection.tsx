@@ -117,7 +117,10 @@ export function FooterDarkSection() {
                 title={section.title}
                 items={section.links.map((link: any) => ({
                   label: link.label,
-                  href: link.url,
+                  href:
+                    section.title?.toLowerCase() === "services"
+                      ? "/about#section-about"
+                      : link.url,
                 }))}
               />
             ))}
