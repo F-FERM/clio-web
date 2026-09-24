@@ -30,9 +30,21 @@ export default function MaritimeHero() {
 
   const blogData = Array.isArray(data) ? data[0] : data;
 
-  const heroTitle = blogData?.heroTitle || "Maritime Knowledge. Industry Trends. Expert Insights.";
-  const heroSubtitle = blogData?.heroSubtitle || "Stay updated with the latest in ship management, global logistics, and maritime innovation—curated by Clio experts.";
+  const heroTitle =
+    blogData?.heroTitle ||
+    "Maritime Knowledge. Industry Trends. Expert Insights.";
+
+  const heroSubtitle =
+    blogData?.heroSubtitle ||
+    "Stay updated with the latest in ship management, global logistics, and maritime innovation—curated by Clio experts.";
+
   const heroImage = blogData?.heroImage || "/images/blog/Rectangle1.png";
+
+  const titleWords = heroTitle.trim().split(/\s+/);
+
+  const line1 = titleWords.slice(0, 2).join(" ");
+  const line2 = titleWords.slice(2, 5).join(" ");
+  const line3 = titleWords.slice(5).join(" ");
 
   return (
     <section className="w-full px-4 sm:px-6 pb-10 sm:pb-12 lg:px-20 lg:py-14">
@@ -52,9 +64,11 @@ export default function MaritimeHero() {
           />
 
           {/* Heading - Top Left */}
-          <div className="absolute top-1 sm:top-0 left-2 sm:left-6 lg:left-12 z-10 mt-0 sm:mt-[-0.05rem] pl-0 sm:pl-2 leading-[1.05] sm:leading-[1.1]">
-            <h1 className="max-w-[calc(100vw-1rem)] sm:max-w-[500px] lg:max-w-[750px] text-lg sm:text-2xl md:text-4xl lg:text-6xl font-bold tracking-[-0.03em] text-white sm:text-[#464646]">
-              {heroTitle}
+          <div className="absolute top-1 sm:top-0 left-2 sm:left-6 lg:left-30 z-10 mt-0 sm:mt-[-0.05rem] pl-0 sm:pl-2 leading-[1.05] sm:leading-[1.1]">
+            <h1 className="max-w-[calc(100vw-1rem)] sm:max-w-[500px] lg:max-w-[730px] text-[14px] sm:text-[20px] md:text-[30px] lg:text-[50px] font-bold tracking-[-0.03em] text-white sm:text-[#464646]">
+              <span className="block">{line1}</span>
+              <span className="block">{line2}</span>
+              <span className="block">{line3}</span>
             </h1>
           </div>
 
