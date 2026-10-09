@@ -1,5 +1,6 @@
 import Image from "next/image";
-import blogCelebration from "../../public/images/blog/celebration.png";
+import celebrationBg from "../../public/images/blog/celebration.png"; 
+import celebrationTitle from "../../public/images/blog/title.png"; 
 
 export default function BlogCelebration() {
   return (
@@ -10,20 +11,30 @@ export default function BlogCelebration() {
           Celebrating World Maritime Day
         </h2>
 
-        {/* Image card */}
+        {/* Card */}
         <div
           tabIndex={0}
-          className="group relative mt-8 aspect-square min-h-[320px] w-full overflow-hidden rounded-[20px] outline-none sm:aspect-[16/9] sm:min-h-0 sm:rounded-[24px] lg:aspect-[1464/622] lg:rounded-[30px]"
+          className="group relative mt-8 aspect-[4/5] w-full overflow-hidden rounded-[20px] outline-none sm:aspect-[16/9] sm:rounded-[24px] lg:aspect-[1464/622] lg:rounded-[30px]"
         >
+          {/* Layer 1: background photo */}
           <Image
-            src={blogCelebration}
+            src={celebrationBg}
             alt="CLIO team celebrating World Maritime Day"
             fill
             sizes="(max-width: 1240px) 100vw, 1240px"
-            className="object-cover object-center transition-transform duration-500 sm:group-hover:scale-[1.02]"
+            className="object-cover object-bottom transition-transform duration-500 sm:object-center sm:group-hover:scale-[1.02]"
           />
 
-          {/* Overlay: always visible on mobile, hover/focus on sm and up */}
+          {/* Layer 2: title image, fixed position at the top centre */}
+          <Image
+            src={celebrationTitle}
+            alt=""
+            aria-hidden="true"
+            sizes="(max-width: 640px) 90vw, 60vw"
+            className="pointer-events-none absolute left-1/2 top-[7%] h-auto w-[90%] -translate-x-1/2 sm:top-[6%] sm:w-[60%]"
+          />
+
+          {/* Layer 3: text. Always visible on mobile, hover/focus on sm and up */}
           <div
             className="
               absolute inset-0 flex items-end
